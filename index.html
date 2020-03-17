@@ -8,18 +8,110 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+<link href="https://fonts.googleapis.com/css?family=Aladin|Arapey|Fondamento|Gentium+Basic|Prata&display=swap" rel="stylesheet">
+
     <title>Gather Facilitation</title>
+
+    <style>
+
+    	.bg-light {
+    		background-color: #31A28B!important;
+    	}
+    	.navbar-light .navbar-nav .nav-link {
+    		font-family: 'Arapey', serif;
+    		font-size: 18pt;
+/*    		color: rgba(11, 89, 42, 0.7);
+*/    		color: white;
+
+    	}
+    	.navbar-brand {
+    		font-family: 'Prata', cursive;
+    		font-size: 2.5rem;
+    		color: rgb(93, 58, 60) !important;
+    	}
+
+    	.navbar-light .navbar-toggler {
+    		color: rgba(80, 26, 7, 0.67);
+    		border-color:rgba(80, 26, 7, 0.67);
+    	}
+    	.logo {
+    		width: 130px;
+    	}
+
+    	.jumbotron {
+    		font-family: 'Arapey', serif;
+    		background-size: cover;
+    		height: 600px;
+    		margin-bottom: 0;
+    	}
+
+    	#overview {
+    		background-image: url('watercolor-bg.jpg');
+    	}
+
+    	#overview .lead {
+    		font-size: 2.5rem;
+    		text-align: center;
+    		max-width: 800px;
+    		margin:0 auto;
+    		margin-top:120px;
+    		}
+
+    	#approach {
+    		background-image: url('elena-beetle4.jpg');
+    	}
+
+    	#approach .container {
+    		background:rgba(49, 162, 139, 0.92);
+    		padding:40px 50px;
+
+    	}
+
+    		@media screen and (max-width : 992px)   {
+    			#overview .lead  {
+    				font-size: 2rem;
+    				margin-top:80px;
+    			}
+
+    			.jumbotron {height: 500px;}
+
+    			#approach .container {
+    				margin: auto 0;
+    				max-width: 100%;
+    			}
+			}
+
+			@media screen and (max-width : 576px)   {
+    			#overview .lead  {
+    				font-size: 1.5rem;
+    				margin-top: 65px;
+    			}
+
+    			#approach {
+    				background: none;
+    			}
+
+    			#approach .container {
+    				padding: 50px 30px;
+    			}
+
+    			.jumbotron#approach {
+    				height: 500px;
+    				padding: 0;
+    			}
+			}
+    </style>
+
   </head>
   <body>
-  	<div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-	  <a class="navbar-brand" href="#">Gather</a>
+	  <a class="navbar-brand" href="#"><img class="logo" src="gather-logo.png" /></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-	    <ul class="navbar-nav">
+	    <ul id="menu-main-nav" class="navbar-nav nav-fill w-100">
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	          Offerings
@@ -41,14 +133,39 @@
 	      </li>
 	    </ul>
 	  </div>
-	</div>
 	</nav>
+
+
+<div class="jumbotron jumbotron-fluid" id="overview">
+  <div class="container">
+    <p class="lead">Facilitator Extraordinaire dedicated to helping individuals & groups explore inner landscapes, transform conflict, and heal & create collectively.</p>
+  </div>
 </div>
+
+<img class="d-block d-sm-none" src="elena-beetle4.jpg" width="100%" />
+<div class="jumbotron jumbotron-fluid" id="approach">
+  <div class="container">
+  	<h1>Approach</h1>
+    <h5>My approach is informed by a rich mixture of my studies in somatic psychotherapy and Processwork facilitation, my training & learning in social justice and anti-oppression, and my personal explorations through women's rites of passage work, travel and my Jewish lineage. I dance equally with the sacred and the profane, at once holding space for deep transformation while infusing my work with humor and play.</h5>
+  </div>
+</div>
+
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- LOAD Lazy IMG Loader -->
+	<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js">
+	</script>
+
+    <!-- RUN Lazy IMG Loader -->
+    <script>
+    	const observer = lozad();
+		observer.observe();
+    </script>
   </body>
 </html>

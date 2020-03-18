@@ -1,6 +1,10 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
+
+  	<link rel="icon" type="image/png" href="IMG/favicon.png">
+    <title>Gather Facilitation</title>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,11 +17,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link href="https://fonts.googleapis.com/css?family=Aladin|Arapey|Fondamento|Gentium+Basic|Prata&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Aladin|Arapey|Fondamento|Gentium+Basic|Architects+Daughter|Prata&display=swap" rel="stylesheet">
 
-    <title>Gather Facilitation</title>
 
     <style>
+
+    	h1,h2,h3,h4,h5,h6, p {
+    		font-family: 'Arapey',serif;
+    	}
+
+    	h2 {
+    		font-size:1.8rem;
+    	}
 
     	.bg-light {
     		background-color: #31A28B!important;
@@ -30,9 +41,9 @@
 
     	}
     	.navbar-brand {
-    		font-family: 'Prata', cursive;
+    		font-family: 'Arapey', cursive;
     		font-size: 2.5rem;
-    		color: rgb(93, 58, 60) !important;
+    		color: white !important;
     	}
 
     	.navbar-light .navbar-toggler {
@@ -66,14 +77,28 @@
     	#approach {
     		background: -webkit-image-set( url('IMG/elena-beetle-320w.jpg') 1x, url('IMG/elena-beetle-640w.jpg') 2x );
     		background-size: cover;
+    		background-attachment: fixed;
 
     	}
 
     	#approach .container {
-    		background:rgba(49, 162, 139, 0.92);
+    		background:rgba(49, 162, 139, 0.95);
     		padding:40px 50px;
 
     	}
+
+    	#offeringsTitle {
+    		margin: 30px 0 10px 0;
+    	}
+
+    	.offerings-copy {
+    		background: rgba(49, 162, 139, 0.92);
+    		padding: 20px;
+    		margin: 0 0 30px 0;
+    		min-height: 250px;
+
+    	}
+
 
     		@media screen and (max-width : 992px)   {
     			#overview .lead  {
@@ -89,9 +114,14 @@
     			}
 			}
 
+			@media screen and (min-width : 577px)   {
+
+    			
+    		}
+
 			@media screen and (max-width : 576px)   {
     			#overview .lead  {
-    				font-size: 1.5rem;
+    				font-size: 1.4rem;
     				margin-top: 65px;
     			}
 
@@ -108,8 +138,11 @@
     			}
 
     			.jumbotron#approach {
-    				height: 500px;
     				padding: 0;
+    			}
+
+    			.offerings-copy {
+    				padding-top:70px;
     			}
 			}
     </style>
@@ -118,7 +151,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-	  <a class="navbar-brand" href="#"><img class="logo" src="IMG/gather-logo.png" /></a>
+	  <a class="navbar-brand" href="#">Gather<!-- <img class="logo" src="IMG/gather-logo.png" /> --></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -162,6 +195,45 @@
   	<h1>Approach</h1>
     <h5>My approach is informed by a rich mixture of my studies in somatic psychotherapy, Processwork facilitation, my training & learning in social justice, anti-oppression work, personal explorations through women's rites of passage work, travel, and my Jewish lineage. I dance equally with the sacred and the profane— at once holding space for deep transformation while infusing my work with humor and play.</h5>
   </div>
+</div>
+
+
+<div class="container">
+    <div>
+        <h1 id="offeringsTitle">Offerings</h1>
+        <div class="row">
+          <div class="col-12 col-md-4 offerings" id="offerings1">
+
+          	<div class="offerings-copy">
+          	
+                <h2>Counseling</h2>
+                <p>1:1 sessions to individuals align more deeply with their life paths, purposes & dreams.</p>
+<!--                 <img class="offeringsImg" id="1" src="IMG/counseling.jpg" />
+ -->          </div>
+			</div>
+          
+          <div class="col-12 col-md-4 offerings" id="offerings2">
+
+          	<div class="offerings-copy">
+                <h2>Conflict Transformation</h2>
+                <p>Individual coaching and group processes to move from conflict and harm to mutual understanding and potential.</p>
+<!--                 <img class="offeringsImg" id="2"  src="IMG/conflict.jpg" />
+ -->
+ 			</div>
+          </div>
+
+          <div class="col-12 col-md-4 offerings" id="offerings3">
+
+          	<div class="offerings-copy">
+                <h2>Group Facilitation</h2>
+                <p>Social justice workshops, conflict resolution trainings, and curated creative experiences.  
+                </p>
+<!--                 <img class="offeringsImg" id="3" src="IMG/group.jpg" />
+ -->
+ 			</div>
+
+          </div>
+        </div>
 </div>
 
     

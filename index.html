@@ -17,10 +17,39 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link href="https://fonts.googleapis.com/css?family=Arapey&display=swap" rel="stylesheet">
+	<!-- Google Fonts -->
+ 	<link href="https://fonts.googleapis.com/css?family=Arapey:400,400i&display=swap" rel="stylesheet">
 
 
-    <style>
+<style>
+
+		.block{
+		  width: 100%;
+		  height: 100%;
+		  position: relative;
+		  overflow: hidden;
+		  font-size: 16px;
+		}
+		.block h2{
+		  position: relative;
+		  display: block;
+		  text-align: center;
+		  margin: 0;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  font-size: 10vw;
+		  color: white;
+		  font-weight: 400;
+		}
+		.img-parallax {
+		  width: 100vmax;
+		  z-index: -1;
+		  position: absolute;
+		  top: 0;
+		  left: 50%;
+		  transform: translate(-50%,0);
+		  pointer-events: none
+		}
 
     	h1,h2,h3,h4,h5,h6, p {
     		font-family: 'Arapey',serif;
@@ -28,6 +57,10 @@
 
     	h2 {
     		font-size:1.8rem;
+    	}
+
+    	p {
+    		font-size:1.3rem;
     	}
 
     	.bg-light {
@@ -78,6 +111,7 @@
     		background: -webkit-image-set( url('IMG/elena-beetle-320w.jpg') 1x, url('IMG/elena-beetle-640w.jpg') 2x );
     		background-size: cover;
     		background-attachment: fixed;
+    		background-position: top center;
 
     	}
 
@@ -87,17 +121,38 @@
 
     	}
 
-    	#offeringsTitle {
-    		margin: 30px 0 10px 0;
-    	}
-
     	.offerings-copy {
     		background: rgba(49, 162, 139, 0.92);
     		padding: 20px;
     		margin: 0 0 30px 0;
-    		min-height: 250px;
+    		min-height: 300px;
 
     	}
+
+    	#aboutImg {
+    		width: 40%;
+    		float: right;
+    		padding: 15px;
+    	}
+
+    	#elena-headshot {
+/*    		position: fixed;
+*/    		width: 100%;
+    	}
+
+    	#read-more {
+    		text-decoration: underline;
+    		float: right;
+    		font-family: 'Arapey', serif;
+    		font-size: 1.5rem;
+    	}
+
+    		@media screen and (min-width : 1200px)   {
+
+    			.offerings-copy {
+    				padding-top: 70px;
+    			}
+    		}
 
 
     		@media screen and (max-width : 992px)   {
@@ -112,11 +167,23 @@
     				margin: auto 0;
     				max-width: 100%;
     			}
+
+    			
+			}
+
+			@media screen and (max-width : 992px) and (min-width: 768px)  {
+
+			.offerings-copy p{
+    				font-size: 1rem;
+    			}
 			}
 
 			@media screen and (min-width : 577px)   {
 
-    			
+				#offeringsTitle {
+    				margin:60px 0 20px 0;
+    			}
+
     		}
 
 			@media screen and (max-width : 576px)   {
@@ -130,19 +197,22 @@
     			}
 
     			#approach .container {
-    				padding: 50px 30px;
-    			}
-
-    			.jumbotron {
-    				height: 450px;
+    				padding: 30px 20px;
     			}
 
     			.jumbotron#approach {
     				padding: 0;
+    				height: 450px;
     			}
 
     			.offerings-copy {
-    				padding-top:70px;
+    				padding-top:52px;
+    			}
+
+    			#aboutImg {
+    				width: 100%;
+    				padding:15px 0;
+    				border-radius: 10px;
     			}
 			}
     </style>
@@ -184,11 +254,16 @@
              IMG/watercolor-bg-640w.jpg 2x" src="IMG/watercolor-bg-640w.jpg" alt="watercolor background"/>
 <div class="jumbotron jumbotron-fluid" id="overview">
   <div class="container">
-    <p class="lead">Facilitator Extraordinaire dedicated to helping individuals & groups collectively explore inner landscapes, transform conflict, heal, and create.</p>
+    <p class="lead">Facilitator Extraordinaire dedicated to helping individuals & groups <i>gather</i> to explore inner landscapes, transform conflict, heal, and create.</p>
   </div>
 </div>
 
-<img class="d-block d-sm-none" src="IMG/elena-beetle2-320w.jpg" width="100%" alt="Elena Pinsky landscape shot"/>
+<!-- <img class="d-block d-sm-none" src="IMG/elena-beetle2-320w.jpg" width="100%" alt="Elena Pinsky landscape shot"/> -->
+
+<div class="block">
+  <img src="IMG/elena-beetle2-320w.jpg" data-speed="1" class="img-parallax d-block d-sm-none" alt="Elena Pinsky landscape shot">
+  <div class="d-block d-sm-none" style="height: 300px"></div>
+</div>
 
 <div class="jumbotron jumbotron-fluid" id="approach">
   <div class="container">
@@ -199,7 +274,6 @@
 
 
 <div class="container">
-    <div>
         <h1 id="offeringsTitle">Offerings</h1>
         <div class="row">
           <div class="col-12 col-md-4 offerings" id="offerings1">
@@ -209,8 +283,8 @@
                 <h2>Counseling</h2>
                 <p>1:1 sessions to individuals align more deeply with their life paths, purposes & dreams.</p>
 <!--                 <img class="offeringsImg" id="1" src="IMG/counseling.jpg" />
- -->          </div>
-			</div>
+ -->        </div>
+		  </div>
           
           <div class="col-12 col-md-4 offerings" id="offerings2">
 
@@ -231,12 +305,34 @@
 <!--                 <img class="offeringsImg" id="3" src="IMG/group.jpg" />
  -->
  			</div>
-
           </div>
+
         </div>
 </div>
 
-    
+<!-- <img data-src="IMG/elena-headshot.jpg" class="d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot"> -->
+
+<div class="container">
+	<div class="row">
+
+		<div class="col-12">
+			
+			<img class="lozad" data-src="IMG/elena-headshot.jpg" id="aboutImg" />
+			<h1>About</h1>
+			<p>Elena Pinsky works at the intersections of creativity and connection. A trained facilitator, she is excited to help groups transform conflict and explore collective healing. She also works 1:1 with individuals to help them align more deeply with their life paths and purposes.</p>
+
+			<button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">View More >></button>
+  
+ 			<div id="demo" class="collapse">
+				<p>To her career in interpersonal work, she brings five years of experience in operations management, deep empathy and compassion, and a keen understanding of the ways in which systems of oppression and inequitable distribution of power impact people at both interpersonal and institutional levels.</p><p>With an eye for beauty, Elena is never without a creative project, be it curating aesthetically-pleasing spaces, cooking, preserving, macrame-ing, screen-printing, watercoloring, woodworking, laser-cutting, face-painting, songwriting or planning a dinner party.</p>
+			</div>
+			
+		</div>
+
+		
+
+	</div>
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -248,6 +344,60 @@
 
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+
+//Parallax script
+
+$('.img-parallax').each(function(){
+  var img = $(this);
+  var imgParent = $(this).parent();
+  function parallaxImg () {
+    var speed = img.data('speed');
+    var imgY = imgParent.offset().top;
+    var winY = $(this).scrollTop();
+    var winH = $(this).height();
+    var parentH = imgParent.innerHeight();
+
+
+    // The next pixel to show on screen      
+    var winBottom = winY + winH;
+
+    // If block is shown on screen
+    if (winBottom > imgY && winY < imgY + parentH) {
+      // Number of pixels shown after block appear
+      var imgBottom = ((winBottom - imgY) * speed);
+      // Max number of pixels until block disappear
+      var imgTop = winH + parentH;
+      // Porcentage between start showing until disappearing
+      var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
+    }
+    img.css({
+      top: imgPercent + '%',
+      transform: 'translate(-50%, -' + imgPercent + '%)'
+    });
+  }
+  $(document).on({
+    scroll: function () {
+      parallaxImg();
+    }, ready: function () {
+      parallaxImg();
+    }
+  });
+});
+    </script>
+
+	<!--  Read more script -->
+	<script>
+		$(document).ready(function(){
+		  $("#demo").on("hide.bs.collapse", function(){
+		    $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span>View More >>');
+		  });
+		  $("#demo").on("show.bs.collapse", function(){
+		    $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span>View Less -');
+		  });
+		});
+	</script>
 
     <!-- LOAD Lazy IMG Loader -->
 	<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js">

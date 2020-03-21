@@ -97,6 +97,7 @@
     	#overview {
     		background: -webkit-image-set( url('IMG/watercolor-bg-320w.jpg') 1x, url('IMG/watercolor-bg-640w.jpg') 2x );
     		background-size: cover;
+            background-position: bottom;
     	}
 
     	#overview .lead {
@@ -154,11 +155,14 @@
     			}
     		}
 
+            @media screen and (min-width: 992px) {
+            }
+
 
     		@media screen and (max-width : 992px)   {
     			#overview .lead  {
     				font-size: 2rem;
-    				margin-top:80px;
+    				margin-top: 80px;
     			}
 
     			.jumbotron {height: 500px;}
@@ -173,23 +177,38 @@
 
 			@media screen and (max-width : 992px) and (min-width: 768px)  {
 
-			.offerings-copy p{
-    				font-size: 1rem;
-    			}
+    			.offerings-copy p{
+        				font-size: 1rem;
+        			}
 			}
 
-			@media screen and (min-width : 577px)   {
-
-				#offeringsTitle {
-    				margin:60px 0 20px 0;
-    			}
+			@media screen and (min-width : 577px) and (max-width: 992px) {
 
     		}
 
+            @media screen and (min-width : 577px) {
+
+                #offeringsTitle {
+                    margin: 60px 0 20px 0;
+                }
+
+                #approach {
+                    background: url('IMG/elena-beetle-1000w.jpg');
+                    background-size: cover;
+                    background-attachment: fixed;
+                    background-position: center top;
+                }
+
+                .offerings-copy {
+                    padding-top: 65px;
+                }
+            }
+
 			@media screen and (max-width : 576px)   {
     			#overview .lead  {
-    				font-size: 1.4rem;
-    				margin-top: 65px;
+    				font-size: 1.6rem;
+                    margin-top: 15%;
+                    padding-top: 50px;
     			}
 
     			#approach {
@@ -261,7 +280,7 @@
 <!-- <img class="d-block d-sm-none" src="IMG/elena-beetle2-320w.jpg" width="100%" alt="Elena Pinsky landscape shot"/> -->
 
 <div class="block">
-  <img src="IMG/elena-beetle2-320w.jpg" data-speed="1" class="img-parallax d-block d-sm-none" alt="Elena Pinsky landscape shot">
+  <img src="IMG/elena-beetle-320w.jpg" data-speed="1" class="img-parallax d-block d-sm-none" alt="Elena Pinsky landscape shot">
   <div class="d-block d-sm-none" style="height: 300px"></div>
 </div>
 

@@ -28,27 +28,13 @@
 		  height: 100%;
 		  position: relative;
 		  overflow: hidden;
-		  font-size: 16px;
 		}
-		.block h2{
-		  position: relative;
-		  display: block;
-		  text-align: center;
-		  margin: 0;
-		  top: 50%;
-		  transform: translateY(-50%);
-		  font-size: 10vw;
-		  color: white;
-		  font-weight: 400;
-		}
+
 		.img-parallax {
-		  width: 100vmax;
-		  z-index: -1;
-		  position: absolute;
-		  top: 0;
-		  left: 50%;
-		  transform: translate(-50%,0);
-		  pointer-events: none
+
+            z-index: 1;
+            position: relative;
+
 		}
 
     	h1,h2,h3,h4,h5,h6, p {
@@ -87,17 +73,14 @@
     		width: 130px;
     	}
 
-    	.jumbotron {
-    		font-family: 'Arapey', serif;
-    		background-size: cover;
-    		height: 600px;
-    		margin-bottom: 0;
-    	}
-
     	#overview {
     		background: -webkit-image-set( url('IMG/watercolor-bg-320w.jpg') 1x, url('IMG/watercolor-bg-640w.jpg') 2x );
     		background-size: cover;
             background-position: bottom;
+            font-family: 'Arapey', serif;
+            background-size: cover;
+            height: 600px;
+            margin-bottom: 0;
     	}
 
     	#overview .lead {
@@ -108,33 +91,50 @@
     		margin-top:120px;
     		}
 
-    	#approach {
+/*    	#approach {
     		background: -webkit-image-set( url('IMG/elena-beetle-320w.jpg') 1x, url('IMG/elena-beetle-640w.jpg') 2x );
     		background-size: cover;
     		background-attachment: fixed;
     		background-position: top center;
 
-    	}
+    	}*/
 
     	#approach .container {
     		background:rgba(49, 162, 139, 0.95);
     		padding:40px 50px;
+            border-radius: 8px;
+            position: relative;
+            z-index: 999;
+            bottom:30vw;
 
     	}
+
+        .offeringsImg {
+            border-radius: 50%;
+            width: 200px;
+            margin: 0 auto;
+            display: block;
+
+            margin-bottom: 30px;
+            border:3px solid white;
+        }
 
     	.offerings-copy {
     		background: rgba(49, 162, 139, 0.92);
     		padding: 20px;
     		margin: 0 0 30px 0;
     		min-height: 300px;
+            border-radius: 8px;
 
     	}
 
     	#aboutImg {
     		width: 40%;
-    		float: right;
-    		padding-left: 15px;
-    	}
+    		float: left;
+            padding: 0;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
 
     	#elena-headshot {
 /*    		position: fixed;
@@ -165,7 +165,7 @@
     				margin-top: 80px;
     			}
 
-    			.jumbotron {height: 500px;}
+    			#overview {height: 500px;}
 
     			#approach .container {
     				margin: auto 0;
@@ -192,12 +192,12 @@
                     margin: 60px 0 20px 0;
                 }
 
-                #approach {
-                    background: url('IMG/elena-beetle-1000w.jpg');
+/*                #approach {
+                    background: url('IMG/blindfold.jpg');
                     background-size: cover;
                     background-attachment: fixed;
                     background-position: center top;
-                }
+                }*/
 
                 .offerings-copy {
                     padding-top: 65px;
@@ -219,19 +219,20 @@
     				padding: 30px 20px;
     			}
 
-    			.jumbotron#approach {
+    			#approach {
     				padding: 0;
     				height: 450px;
     			}
 
     			.offerings-copy {
+                    margin: 15px;
     				padding-top:52px;
     			}
 
     			#aboutImg {
     				width: 100%;
-    				padding:15px 0;
-    				border-radius: 10px;
+/*                    border-radius: 0;
+                    margin:0 -15px;*/
     			}
 			}
     </style>
@@ -279,7 +280,15 @@
 
 <!-- <img class="d-block d-sm-none" src="IMG/elena-beetle2-320w.jpg" width="100%" alt="Elena Pinsky landscape shot"/> -->
 
-<div class="block">
+<div class="" id="approach" style="height: 1000px">
+        <img class="img-parallax" src="IMG/blindfold.jpg" data-speed="-2" alt="" style="" />
+    <div class="container">
+        <h1>Approach</h1>
+        <h5>My approach is informed by a rich mixture of my studies in somatic psychotherapy, Processwork facilitation, my training & learning in social justice, anti-oppression work, personal explorations through women's rites of passage work, travel, and my Jewish lineage. I dance equally with the sacred and the profane— at once holding space for deep transformation while infusing my work with humor and play.</h5>
+      </div>
+</div>
+
+<!-- <div class="block">
   <img src="IMG/elena-beetle-320w.jpg" data-speed="1" class="img-parallax d-block d-sm-none" alt="Elena Pinsky landscape shot">
   <div class="d-block d-sm-none" style="height: 300px"></div>
 </div>
@@ -289,7 +298,7 @@
   	<h1>Approach</h1>
     <h5>My approach is informed by a rich mixture of my studies in somatic psychotherapy, Processwork facilitation, my training & learning in social justice, anti-oppression work, personal explorations through women's rites of passage work, travel, and my Jewish lineage. I dance equally with the sacred and the profane— at once holding space for deep transformation while infusing my work with humor and play.</h5>
   </div>
-</div>
+</div> -->
 
 
 <div class="container">
@@ -297,32 +306,42 @@
         <div class="row">
           <div class="col-12 col-md-4 offerings" id="offerings1">
 
+
           	<div class="offerings-copy">
+
+                <img class="offeringsImg" id="1" src="IMG/counseling.jpg" />
+
           	
                 <h2>Counseling</h2>
                 <p>1:1 sessions to individuals align more deeply with their life paths, purposes & dreams.</p>
-<!--                 <img class="offeringsImg" id="1" src="IMG/counseling.jpg" />
- -->        </div>
+                
+        </div>
 		  </div>
           
           <div class="col-12 col-md-4 offerings" id="offerings2">
 
+
           	<div class="offerings-copy">
+
+                <img class="offeringsImg" id="3" src="IMG/group.jpg" />
+
                 <h2>Conflict Transformation</h2>
                 <p>Individual coaching and group processes to move from conflict and harm to mutual understanding and potential.</p>
-<!--                 <img class="offeringsImg" id="2"  src="IMG/conflict.jpg" />
- -->
+
  			</div>
           </div>
 
           <div class="col-12 col-md-4 offerings" id="offerings3">
 
+
           	<div class="offerings-copy">
+
+                <img class="offeringsImg" id="2"  src="IMG/conflict.jpg" />
+
                 <h2>Group Facilitation</h2>
                 <p>Social justice workshops, conflict resolution trainings, and curated creative experiences.  
                 </p>
-<!--                 <img class="offeringsImg" id="3" src="IMG/group.jpg" />
- -->
+
  			</div>
           </div>
 
@@ -336,8 +355,9 @@
 
 		<div class="col-12">
 			
-			<img class="lozad" data-src="IMG/elena-headshot.jpg" id="aboutImg" />
 			<h1>About</h1>
+
+            <img class="lozad" data-src="IMG/elena-headshot2.jpg" id="aboutImg" />
 			<p>Elena Pinsky works at the intersections of creativity and connection. A trained facilitator, she is excited to help groups transform conflict and explore collective healing. She also works 1:1 with individuals to help them align more deeply with their life paths and purposes.</p>
 
 			<button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">View More >></button>
@@ -388,12 +408,12 @@ $('.img-parallax').each(function(){
       var imgBottom = ((winBottom - imgY) * speed);
       // Max number of pixels until block disappear
       var imgTop = winH + parentH;
-      // Porcentage between start showing until disappearing
+      // Percentage between start showing until disappearing
       var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
     }
     img.css({
       top: imgPercent + '%',
-      transform: 'translate(-50%, -' + imgPercent + '%)'
+      transform: 'translate(0%, ' + ( + imgPercent) + '%)'
     });
   }
   $(document).on({

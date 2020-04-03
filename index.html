@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<!-- Google Fonts -->
- 	<link href="https://fonts.googleapis.com/css?family=Arapey:400,400i&display=swap" rel="stylesheet">
-
+ 	<link href="https://fonts.googleapis.com/css?family=Arapey:400,400i|Montserrat:300,400,800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -32,13 +31,14 @@
 
 		.img-parallax {
 
-            z-index: -1;
-            position: absolute;
+            z-index: 1;
+            position: relative;
 
 		}
 
-    	h1,h2,h3,h4,h5,h6, p {
+    	h1,h2,h3,h4,h5,h6 {
     		font-family: 'Arapey',serif;
+            text-align: center;
     	}
 
     	h2 {
@@ -47,6 +47,7 @@
 
     	p {
     		font-size:1.3rem;
+            font-family: 'Montserrat',sans-serif;
     	}
 
         section {
@@ -78,9 +79,9 @@
     	}
 
     	#overview {
-    		background: -webkit-image-set( url('IMG/watercolor-bg-320w.jpg') 1x, url('IMG/watercolor-bg-640w.jpg') 2x );
+    		background: url('IMG/watercolor.jpg');
     		background-size: cover;
-            background-position: bottom;
+            background-position: center;
             font-family: 'Arapey', serif;
             background-size: cover;
             height: 600px;
@@ -92,8 +93,15 @@
     		text-align: center;
     		max-width: 800px;
     		margin:0 auto;
-    		margin-top:120px;
+            font-family: 'Arapey', serif;
     		}
+
+        #overview .container {
+            background: rgba(255, 255, 255, 0.6);
+            max-width: 100%;
+            padding: 20px;
+            margin-top:100px;
+        }
 
 /*    	#approach {
     		background: -webkit-image-set( url('IMG/elena-beetle-320w.jpg') 1x, url('IMG/elena-beetle-640w.jpg') 2x );
@@ -114,6 +122,10 @@
             background-position: left top;
         }
 
+        #approach h1, .offerings-copy h2 {
+            color:white;
+        }
+
     	#approach .container {
     		background:rgba(49, 162, 139, 0.95);
     		padding:40px 50px;
@@ -122,6 +134,10 @@
             top:300px;
             max-width: 770px;
     	}
+
+        #offeringsTitle {
+            margin: 60px 0 20px 0;
+        }
 
         .offeringsImg {
             border-radius: 50%;
@@ -142,24 +158,41 @@
 
     	}
 
+        .about-copy {
+            position: absolute;
+            color:white;
+            max-width: 530px;
+            font-weight: lighter;
+            padding: 5vh 2% 2% 4%;
+            background: rgba(70,70,70,0.6);
+            border-radius: 8px;
+            margin: 5%;
+        }
+
     	#aboutImg {
-    		width: 40%;
+    		width: 32%;
     		float: left;
             padding: 0;
             border-radius: 8px;
             margin-right: 20px;
         }
 
+        #aboutImg2 {
+            width: 100%;
+
+        }
+
     	#elena-headshot {
-/*    		position: fixed;
-*/    		width: 100%;
+    		width: 100%;
     	}
+
+        
 
     	#read-more {
     		text-decoration: underline;
     		float: right;
-    		font-family: 'Arapey', serif;
     		font-size: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
     	}
 
     		@media screen and (min-width : 1200px)   {
@@ -171,7 +204,19 @@
                 #approach .container {
                     margin-left:32%;
                 }
+
+                #read-more {
+                    color:white;
+                }
     		}
+
+            @media screen and (max-width: 1200px) {
+                .about-copy {
+                    padding: 20px;
+                    border-radius: 0;
+                    margin: 20px;
+                }
+            }
 
             @media screen and (min-width: 992px) {
             }
@@ -180,7 +225,6 @@
     		@media screen and (max-width : 992px)   {
     			#overview .lead  {
     				font-size: 2rem;
-    				margin-top: 80px;
     			}
 
     			#overview {height: 500px;}
@@ -212,9 +256,7 @@
 
             @media screen and (min-width : 577px) {
 
-                #offeringsTitle {
-                    margin: 60px 0 20px 0;
-                }
+                
 
                 .offerings-copy {
                     padding-top: 65px;
@@ -224,8 +266,6 @@
 			@media screen and (max-width : 576px)   {
     			#overview .lead  {
     				font-size: 1.6rem;
-                    margin-top: 15%;
-                    padding-top: 50px;
     			}
 
     			#approach .container {
@@ -242,11 +282,9 @@
     				padding-top:52px;
     			}
 
-    			#aboutImg {
-    				width: 100%;
-/*                    border-radius: 0;
-                    margin:0 -15px;*/
-    			}
+                #aboutImg-container {
+                    height: 300px;
+                }
 			}
     </style>
 
@@ -283,8 +321,6 @@
 	  </div>
 	</nav>
 
-<img class="d-none" srcset="IMG/watercolor-bg-320w.jpg,
-             IMG/watercolor-bg-640w.jpg 2x" src="IMG/watercolor-bg-640w.jpg" alt="watercolor background"/>
 <div class="jumbotron jumbotron-fluid" id="overview">
   <div class="container">
     <p class="lead">Facilitator Extraordinaire dedicated to helping individuals & groups <i>gather</i> to explore inner landscapes, transform conflict, heal, and create.</p>
@@ -297,7 +333,7 @@
 <!--         <img class="img-parallax" src="IMG/blindfold.jpg" data-speed="1.5" alt="" style="" id="img-blindfold" /> -->
     <div class="container">
         <h1>Approach</h1>
-        <h5>My approach is informed by a rich mixture of my studies in somatic psychotherapy, Processwork facilitation, my training & learning in social justice, anti-oppression work, personal explorations through women's rites of passage work, travel, and my Jewish lineage. I dance equally with the sacred and the profane— at once holding space for deep transformation while infusing my work with humor and play.</h5>
+        <p>My approach is informed by a rich mixture of my studies in somatic psychotherapy, Processwork facilitation, my training & learning in social justice, anti-oppression work, personal explorations through women's rites of passage work, travel, and my Jewish lineage. I dance equally with the sacred and the profane— at once holding space for deep transformation while infusing my work with humor and play.</p>
       </div>
 </div>
 
@@ -366,21 +402,42 @@
 <!-- <img data-src="IMG/elena-headshot.jpg" class="d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot"> -->
 
 <section>
+
+<h1>About</h1>
+<div class="block" id="aboutImg-container">
+
+    <img data-src="IMG/elena-headshot-orange-sm.jpg" class=" img-parallax d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot" data-speed="1.5">
+    
+</div>
+
+<div class="about-copy d-none d-lg-block">
+
+    <p>Elena Pinsky works at the intersections of creativity and connection. A trained facilitator, she is excited to help groups transform conflict and explore collective healing. She also works 1:1 with individuals to help them align more deeply with their life paths and purposes.</p>
+    <p>To her career in interpersonal work, she brings five years of experience in operations management, deep empathy and compassion, and a keen understanding of the ways in which systems of oppression and inequitable distribution of power impact people at both interpersonal and institutional levels.</p><p>With an eye for beauty, Elena is never without a creative project, be it curating aesthetically-pleasing spaces, cooking, preserving, macrame-ing, screen-printing, watercoloring, woodworking, laser-cutting, face-painting, songwriting or planning a dinner party.</p>
+</div>
+
+<img class="lozad d-none d-sm-block" data-src="IMG/elena-headshot-orange.jpg" id="aboutImg2" />
+
 <div class="container">
 	<div class="row">
 
 		<div class="col-12">
-			
-			<h1>About</h1>
 
-            <img class="lozad" data-src="IMG/elena-headshot2.jpg" id="aboutImg" />
+            
+
+            <div class="about-copy-sm d-lg-none">
+			
+
+<!--             <img class="lozad" data-src="IMG/elena-headshot2.jpg" id="aboutImg" /> -->
 			<p>Elena Pinsky works at the intersections of creativity and connection. A trained facilitator, she is excited to help groups transform conflict and explore collective healing. She also works 1:1 with individuals to help them align more deeply with their life paths and purposes.</p>
 
-			<button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">View More >></button>
+			<button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">Read More ></button>
   
  			<div id="demo" class="collapse">
 				<p>To her career in interpersonal work, she brings five years of experience in operations management, deep empathy and compassion, and a keen understanding of the ways in which systems of oppression and inequitable distribution of power impact people at both interpersonal and institutional levels.</p><p>With an eye for beauty, Elena is never without a creative project, be it curating aesthetically-pleasing spaces, cooking, preserving, macrame-ing, screen-printing, watercoloring, woodworking, laser-cutting, face-painting, songwriting or planning a dinner party.</p>
 			</div>
+
+        </div>
 			
 		</div>
 
@@ -405,7 +462,6 @@
     <script>
 
 //Parallax script
-
 $('.img-parallax').each(function(){
   var img = $(this);
   var imgParent = $(this).parent();
@@ -426,12 +482,12 @@ $('.img-parallax').each(function(){
       var imgBottom = ((winBottom - imgY) * speed);
       // Max number of pixels until block disappear
       var imgTop = winH + parentH;
-      // Percentage between start showing until disappearing
-      var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
+      // Porcentage between start showing until disappearing
+      var imgPercent = (-50 + ((imgBottom / imgTop) * 100)) + (50 - (speed * 50));
     }
     img.css({
-      top: -15 + '%',
-      transform: 'translate(0%, ' + ( + imgPercent) + '%)'
+      top: 0 + '%',
+      transform: 'translate(0%, ' + imgPercent + '%)'
     });
   }
   $(document).on({

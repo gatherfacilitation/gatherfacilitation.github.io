@@ -32,8 +32,8 @@
 
 		.img-parallax {
 
-            z-index: 1;
-            position: relative;
+            z-index: -1;
+            position: absolute;
 
 		}
 
@@ -48,6 +48,10 @@
     	p {
     		font-size:1.3rem;
     	}
+
+        section {
+            background: white;
+        }
 
     	.bg-light {
     		background-color: #31A28B!important;
@@ -99,14 +103,24 @@
 
     	}*/
 
+        #img-blindfold {
+            top: 680px;
+        }
+
+        #approach {
+            background: url('IMG/blindfold.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: left top;
+        }
+
     	#approach .container {
     		background:rgba(49, 162, 139, 0.95);
     		padding:40px 50px;
             border-radius: 8px;
             position: relative;
-            z-index: 999;
-            bottom:30vw;
-
+            top:300px;
+            max-width: 770px;
     	}
 
         .offeringsImg {
@@ -153,6 +167,10 @@
     			.offerings-copy {
     				padding-top: 70px;
     			}
+
+                #approach .container {
+                    margin-left:32%;
+                }
     		}
 
             @media screen and (min-width: 992px) {
@@ -168,8 +186,6 @@
     			#overview {height: 500px;}
 
     			#approach .container {
-    				margin: auto 0;
-    				max-width: 100%;
     			}
 
     			
@@ -186,18 +202,19 @@
 
     		}
 
+            @media screen and (max-width : 768px)  {
+
+                #approach .container {
+                    border-radius: 0;
+                }
+
+            }
+
             @media screen and (min-width : 577px) {
 
                 #offeringsTitle {
                     margin: 60px 0 20px 0;
                 }
-
-/*                #approach {
-                    background: url('IMG/blindfold.jpg');
-                    background-size: cover;
-                    background-attachment: fixed;
-                    background-position: center top;
-                }*/
 
                 .offerings-copy {
                     padding-top: 65px;
@@ -209,10 +226,6 @@
     				font-size: 1.6rem;
                     margin-top: 15%;
                     padding-top: 50px;
-    			}
-
-    			#approach {
-    				background: none;
     			}
 
     			#approach .container {
@@ -280,8 +293,8 @@
 
 <!-- <img class="d-block d-sm-none" src="IMG/elena-beetle2-320w.jpg" width="100%" alt="Elena Pinsky landscape shot"/> -->
 
-<div class="" id="approach" style="height: 1000px">
-        <img class="img-parallax" src="IMG/blindfold.jpg" data-speed="-2" alt="" style="" />
+<div class="" id="approach" style="height: 800px">
+<!--         <img class="img-parallax" src="IMG/blindfold.jpg" data-speed="1.5" alt="" style="" id="img-blindfold" /> -->
     <div class="container">
         <h1>Approach</h1>
         <h5>My approach is informed by a rich mixture of my studies in somatic psychotherapy, Processwork facilitation, my training & learning in social justice, anti-oppression work, personal explorations through women's rites of passage work, travel, and my Jewish lineage. I dance equally with the sacred and the profane— at once holding space for deep transformation while infusing my work with humor and play.</h5>
@@ -299,7 +312,7 @@
     <h5>My approach is informed by a rich mixture of my studies in somatic psychotherapy, Processwork facilitation, my training & learning in social justice, anti-oppression work, personal explorations through women's rites of passage work, travel, and my Jewish lineage. I dance equally with the sacred and the profane— at once holding space for deep transformation while infusing my work with humor and play.</h5>
   </div>
 </div> -->
-
+<section>
 
 <div class="container">
         <h1 id="offeringsTitle">Offerings</h1>
@@ -348,8 +361,11 @@
         </div>
 </div>
 
+</section>
+
 <!-- <img data-src="IMG/elena-headshot.jpg" class="d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot"> -->
 
+<section>
 <div class="container">
 	<div class="row">
 
@@ -372,6 +388,8 @@
 
 	</div>
 </div>
+
+</section>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -412,7 +430,7 @@ $('.img-parallax').each(function(){
       var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
     }
     img.css({
-      top: imgPercent + '%',
+      top: -15 + '%',
       transform: 'translate(0%, ' + ( + imgPercent) + '%)'
     });
   }

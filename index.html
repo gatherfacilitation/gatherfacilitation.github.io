@@ -46,12 +46,13 @@
     	}
 
     	p {
-    		font-size:1.3rem;
+    		font-size:1rem;
             font-family: 'Montserrat',sans-serif;
     	}
 
         section {
             background: white;
+            margin-top: 20px;
         }
 
     	.bg-light {
@@ -122,38 +123,39 @@
             background-position: left top;
         }
 
-        #approach h1, .offerings-copy h2 {
+        #approach h1, .offerings-copy h3 {
             color:white;
         }
 
     	#approach .container {
-    		background:rgba(49, 162, 139, 0.95);
+    		background:rgba(49, 162, 139, 0.96);
     		padding:40px 50px;
             border-radius: 8px;
             position: relative;
             top:300px;
             max-width: 770px;
+            color: white;
     	}
 
         #offeringsTitle {
-            margin: 60px 0 20px 0;
+            margin: 0 0 20px 0;
         }
 
         .offeringsImg {
             border-radius: 50%;
-            width: 200px;
+            width: 100%;
+            max-width: 140px;
             margin: 0 auto;
             display: block;
 
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             border:3px solid white;
         }
 
     	.offerings-copy {
     		background: rgba(49, 162, 139, 0.92);
-    		padding: 20px;
+    		padding: 10px;
     		margin: 0 0 30px 0;
-    		min-height: 300px;
             border-radius: 8px;
 
     	}
@@ -189,26 +191,13 @@
         
 
     	#read-more {
-    		text-decoration: underline;
     		float: right;
-    		font-size: 1.5rem;
+    		font-size: 1rem;
             font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
     	}
 
-    		@media screen and (min-width : 1200px)   {
 
-    			.offerings-copy {
-    				padding-top: 70px;
-    			}
-
-                #approach .container {
-                    margin-left:32%;
-                }
-
-                #read-more {
-                    color:white;
-                }
-    		}
 
             @media screen and (max-width: 1200px) {
                 .about-copy {
@@ -218,8 +207,7 @@
                 }
             }
 
-            @media screen and (min-width: 992px) {
-            }
+
 
 
     		@media screen and (max-width : 992px)   {
@@ -232,25 +220,65 @@
     			#approach .container {
     			}
 
+
+
     			
 			}
 
-			@media screen and (max-width : 992px) and (min-width: 768px)  {
+            @media screen and (min-width : 768px)  {
+                .offerings-copy {
+                    margin:0 2%;
+                    min-height: 450px;
+                }
 
-    			.offerings-copy p{
-        				font-size: 1rem;
-        			}
-			}
+                .offerings-container {
+                    margin: 0 5%;
+                }
+            }
 
-			@media screen and (min-width : 577px) and (max-width: 992px) {
+            @media screen and (min-width: 992px) {.offerings-copy {
+                    min-height: 410px;
+                }
 
-    		}
+                .offerings-container {
+                    margin: 0 10%;
+                }
+            }
 
-            @media screen and (max-width : 768px)  {
+            @media screen and (min-width : 1200px)   {
+
+                .offerings-copy {
+                    padding-top: 70px;
+                    min-height: 350px;
+                }
+
+                #approach .container {
+                    margin-left:32%;
+                }
+
+                #read-more {
+                    color:white;
+                }
+            }
+
+            @media screen and (max-width : 767px)  {
+
+                .container {
+                    padding: 0 20px;
+                }
 
                 #approach .container {
                     border-radius: 0;
                 }
+
+                .offerings-copy {
+                    margin: 5% 12%;
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin: 0;
+                 }
 
             }
 
@@ -259,7 +287,7 @@
                 
 
                 .offerings-copy {
-                    padding-top: 65px;
+                    padding-top: 35px;
                 }
             }
 
@@ -277,13 +305,16 @@
     				height: 450px;
     			}
 
+                #offeringsTitle {
+                    margin:20px 0 5px 0;
+                }
+
     			.offerings-copy {
-                    margin: 15px;
-    				padding-top:52px;
+                    margin: 5% 8%;
     			}
 
                 #aboutImg-container {
-                    height: 300px;
+                    height: 320px;
                 }
 			}
     </style>
@@ -350,7 +381,8 @@
 </div> -->
 <section>
 
-<div class="container">
+    <div class="offerings-container">
+
         <h1 id="offeringsTitle">Offerings</h1>
         <div class="row">
           <div class="col-12 col-md-4 offerings" id="offerings1">
@@ -361,7 +393,7 @@
                 <img class="offeringsImg" id="1" src="IMG/counseling.jpg" />
 
           	
-                <h2>Counseling</h2>
+                <h3>Counseling</h3>
                 <p>1:1 sessions to individuals align more deeply with their life paths, purposes & dreams.</p>
                 
         </div>
@@ -374,7 +406,7 @@
 
                 <img class="offeringsImg" id="3" src="IMG/group.jpg" />
 
-                <h2>Conflict Transformation</h2>
+                <h3>Conflict Transformation</h3>
                 <p>Individual coaching and group processes to move from conflict and harm to mutual understanding and potential.</p>
 
  			</div>
@@ -387,7 +419,7 @@
 
                 <img class="offeringsImg" id="2"  src="IMG/conflict.jpg" />
 
-                <h2>Group Facilitation</h2>
+                <h3>Group Facilitation</h3>
                 <p>Social justice workshops, conflict resolution trainings, and curated creative experiences.  
                 </p>
 
@@ -395,7 +427,7 @@
           </div>
 
         </div>
-</div>
+    </div>
 
 </section>
 
@@ -403,10 +435,9 @@
 
 <section>
 
-<h1>About</h1>
 <div class="block" id="aboutImg-container">
 
-    <img data-src="IMG/elena-headshot-orange-sm.jpg" class=" img-parallax d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot" data-speed="1.5">
+    <img data-src="IMG/elena-headshot-orange-sm.jpg" class=" img-parallax d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot" data-speed="-0.5">
     
 </div>
 
@@ -431,10 +462,11 @@
 <!--             <img class="lozad" data-src="IMG/elena-headshot2.jpg" id="aboutImg" /> -->
 			<p>Elena Pinsky works at the intersections of creativity and connection. A trained facilitator, she is excited to help groups transform conflict and explore collective healing. She also works 1:1 with individuals to help them align more deeply with their life paths and purposes.</p>
 
-			<button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">Read More ></button>
+			<button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">Read More +</button>
   
  			<div id="demo" class="collapse">
-				<p>To her career in interpersonal work, she brings five years of experience in operations management, deep empathy and compassion, and a keen understanding of the ways in which systems of oppression and inequitable distribution of power impact people at both interpersonal and institutional levels.</p><p>With an eye for beauty, Elena is never without a creative project, be it curating aesthetically-pleasing spaces, cooking, preserving, macrame-ing, screen-printing, watercoloring, woodworking, laser-cutting, face-painting, songwriting or planning a dinner party.</p>
+                <br/>
+				<p>To her career in interpersonal work, she brings five years of experience in operations management, deep empathy and compassion, and a keen understanding of the ways in which systems of oppression and inequitable distribution of power impact people at both interpersonal and institutional levels.</p><br/><p>With an eye for beauty, Elena is never without a creative project, be it curating aesthetically-pleasing spaces, cooking, preserving, macrame-ing, screen-printing, watercoloring, woodworking, laser-cutting, face-painting, songwriting or planning a dinner party.</p>
 			</div>
 
         </div>
@@ -483,7 +515,7 @@ $('.img-parallax').each(function(){
       // Max number of pixels until block disappear
       var imgTop = winH + parentH;
       // Porcentage between start showing until disappearing
-      var imgPercent = (-50 + ((imgBottom / imgTop) * 100)) + (50 - (speed * 50));
+      var imgPercent = (-60 + ((imgBottom / imgTop) * 100)) + (50 - (speed * 50));
     }
     img.css({
       top: 0 + '%',
@@ -504,10 +536,10 @@ $('.img-parallax').each(function(){
 	<script>
 		$(document).ready(function(){
 		  $("#demo").on("hide.bs.collapse", function(){
-		    $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span>View More >>');
+		    $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span>Read More +');
 		  });
 		  $("#demo").on("show.bs.collapse", function(){
-		    $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span>View Less -');
+		    $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span>Read Less -');
 		  });
 		});
 	</script>

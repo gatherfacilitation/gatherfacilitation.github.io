@@ -22,19 +22,9 @@
 
 <style>
 
-		.block{
-		  width: 100%;
-		  height: 100%;
-		  position: relative;
-		  overflow: hidden;
-		}
-
-		.img-parallax {
-
-            z-index: 1;
-            position: relative;
-
-		}
+        html {
+            scroll-behavior: smooth;
+        }
 
         h1, h2, h3 {
             text-align: center;
@@ -63,6 +53,10 @@
             text-decoration: underline;
         }
 
+        hr {
+           border: 2px solid #31A28B;
+        }
+
     	.bg-light {
     		background-color: #31A28B!important;
     	}
@@ -88,6 +82,18 @@
     	.logo {
     		width: 130px;
     	}
+
+        .block{
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .img-parallax {
+            z-index: 1;
+            position: relative;
+        }
 
     	#overview {
     		background: url('IMG/watercolor.jpg');
@@ -174,16 +180,21 @@
 
     	}
 
-        .past-events {
+        .past-events-bg {
             background: url('IMG/forest-path.jpeg');
             background-repeat: no-repeat;
             background-size: 100%;
             padding-top:80px;
+            background-size:cover;
         }
 
         .events-copy {
-            background: #ffffffe0;
-            border-radius: 8px;
+            background: #31A28B;
+            padding: 30px;
+        }
+
+        .events-copy p {
+            color:white;
         }
 
         .about-copy {
@@ -221,6 +232,13 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: bolder;
     	}
+
+        #linked-in {
+            text-align: right;
+            display: block;
+            text-decoration: none;
+            font-weight: bolder;
+        }
 
         .partners {
             width: 300px;
@@ -286,7 +304,21 @@ footer p {
                     min-height: 450px;
                 }
 
-    
+                .current-events-bg {
+                    background: url('IMG/overlook.JPG');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    min-height: 600px;
+                    display: flex;
+                }
+
+                .current-events {
+                    background:#ffffffc4;
+                    padding: 30px;
+                    margin-top: 180px;
+                    -webkit-backdrop-filter: blur(3px);
+                    border-radius: 8px 8px 0 0;
+                }
             }
 
             @media screen and (min-width: 992px) {.offerings-copy {
@@ -367,6 +399,10 @@ footer p {
                     margin: 5% 8%;
     			}
 
+                .events-copy {
+                    padding: 15px;
+                }
+
                 #aboutImg-container {
                     height: 320px;
                 }
@@ -392,19 +428,19 @@ footer p {
 	          Offerings
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item" href="#">1:1 Counseling</a>
-	          <a class="dropdown-item" href="#">Group Facilitation</a>
-	          <a class="dropdown-item" href="#">Conflict Mediation</a>
+	          <a class="dropdown-item" href="#offerings">1:1 Counseling</a>
+	          <a class="dropdown-item" href="#offerings">Group Facilitation</a>
+	          <a class="dropdown-item" href="#offerings">Conflict Mediation</a>
 	        </div>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Events</a>
+	        <a class="nav-link" href="#events">Events</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">About</a>
+	        <a class="nav-link" href="#about">About</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Contact</a>
+	        <a class="nav-link" href="#contact">Contact</a>
 	      </li>
 	    </ul>
 	  </div>
@@ -417,6 +453,7 @@ footer p {
 </div>
 
 <div class="" id="approach" style="height: 800px">
+    <a class="anchor" name="approach"></a>
 
     <div class="container">
         <h1>Approach</h1>
@@ -427,6 +464,7 @@ footer p {
 <section>
 
     <div class="offerings-container">
+        <a class="anchor" name="offerings"></a>
 
         <h1 id="offeringsTitle">Offerings</h1>
         <div class="row">
@@ -473,7 +511,11 @@ footer p {
 
         <br/>
 
-        <p><strong>Rates:</strong> My rates are currently set up on a sliding-scale basis. Please get in touch with me directly for more information!</p>
+        <hr>
+
+        <p style="text-align: center;"><strong>Rates:</strong> My rates are currently set up on a sliding-scale basis. Please <a href="#contact">get in touch</a> with me directly for more information!</p>
+
+        <hr>
     </div>
 
 </section>
@@ -482,9 +524,12 @@ footer p {
 
     <h2>Current Events</h2>
 
-<img class="lozad" style="width:100%" data-src="IMG/overlook.JPG" />
+<div class="current-events-bg">
 
-    <div class="container">
+    <img class="d-block d-md-none lozad" style="width:100%" data-src="IMG/overlook.JPG" />
+
+    <div class="container current-events">
+    <a class="anchor" name="events"></a>
     
     <h4><i>Terra Incognita</i>—Exploring Creativity & Conflict | 2020</h4> 
     <h5 style="font-family: 'Montserrat', sans-serif;">An Embodied Retreat for your Creative Soul</h5>
@@ -495,30 +540,39 @@ footer p {
 
     <li>This retreat is designed for both curious individuals looking to deeper understand the source of their creativity & folks who don’t see themselves as creative wanting to open new channels</li></ul>
 
+    </div>
 </div>
-
-<div class="past-events">
 
 <div class="container">
 
-    <div class="events-copy col-12 col-md-8">
-        <h3>Past Events</h3>
+<div class="past-events">
 
-        <h4><i>Feeding the Self</i>—interactive multi-sensory shabbat experience | November 2019</h4>
-        <p>So often, we eat rushing, standing up, while talking to friends. The intimate relationship between ourselves and our food is diminished. What happens to our taste buds when our sight is blocked? What does it take to bring pleasure to the act of feeding ourselves? Participants will be asked to wear a blindfold and observe silence while they are served a 4-course meal.</p>
+    <div class="row">
 
-        <br/>
+        <div class="events-copy col-12 col-lg-8">
+            <h3>Past Events</h3>
 
-        <h4><i>Feeding Another</i>—interactive multi-sensory shabbat experience | December 2019</h4>
-        What is our relationship to giving and receiving nourishment? How do we negotiate these themes in relationship? Participants will be asked to bring a partner to dinner, during which they will only be able to feed one another - never themselves - and communicate non-verbally.
+            <h4><i>Feeding the Self</i>—interactive multi-sensory shabbat experience | November 2019</h4>
+            <p>So often, we eat rushing, standing up, while talking to friends. The intimate relationship between ourselves and our food is diminished. What happens to our taste buds when our sight is blocked? What does it take to bring pleasure to the act of feeding ourselves? Participants will be asked to wear a blindfold and observe silence while they are served a 4-course meal.</p>
 
-        <br/><br/>
+            <br/>
 
-        <h4><i>“White | Woman | Shame | Blame | Game”: workshop | June 2019</i>
+            <h4><i>Feeding Another</i>—interactive multi-sensory shabbat experience | December 2019</h4>
+            <p>What is our relationship to giving and receiving nourishment? How do we negotiate these themes in relationship? Participants will be asked to bring a partner to dinner, during which they will only be able to feed one another - never themselves - and communicate non-verbally.</p>
 
-        (Co-facilitated with <a href="http://www.annieroselondon.com/">Annie-Rose London</a>)</h4>
+            <br/>
 
-        <p>Moving past guilt in service of becoming stronger anti-racist humyns. This workshop explores the ways shame and guilt - particularly as internalized by female-identified and assigned people - intersect with white fragility and vigilance and can make us, as white women, less resilient and capable as anti-racists.</p><br><p>How does our guilt and shame and lack of self-assurance make us fragile and terrified of "messing up" with race, and thus afraid to speak out or over-react when being called out/in? How does it make us hyper vigilant of other white people, severing ties with them rather than leveraging our access and privilege to build bridges and educate? This workshop focuses on working out the experiences of white-identified women and AFAB folks of all genders.<br/><br/><a href="https://www.feminismallnight.com">Feminism All Night.com</a></p>
+            <h4><i>“White | Woman | Shame | Blame | Game”: workshop | June 2019</i>
+
+            (Co-facilitated with <a href="http://www.annieroselondon.com/">Annie-Rose London</a>)</h4>
+
+            <p>Moving past guilt in service of becoming stronger anti-racist humyns. This workshop explores the ways shame and guilt - particularly as internalized by female-identified and assigned people - intersect with white fragility and vigilance and can make us, as white women, less resilient and capable as anti-racists.</p><p>How does our guilt and shame and lack of self-assurance make us fragile and terrified of "messing up" with race, and thus afraid to speak out or over-react when being called out/in? How does it make us hyper vigilant of other white people, severing ties with them rather than leveraging our access and privilege to build bridges and educate? This workshop focuses on working out the experiences of white-identified women and AFAB folks of all genders.<br/><br/><a href="https://www.feminismallnight.com">Feminism All Night.com</a></p>
+        </div>
+
+        <div class="col-12 col-lg-4 past-events-bg d-none d-lg-block">
+<!--             <img src="IMG/forest-path.jpeg" style="width: 100%" /> -->
+        </div>
+
     </div>
 
 </div>
@@ -529,9 +583,11 @@ footer p {
 
 <section>
 
+    <a class="anchor" name="about"></a>
+
 <div class="block" id="aboutImg-container">
 
-    <img data-src="IMG/elena-headshot-orange-sm.jpg" class=" img-parallax d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot" data-speed="-1">
+    <img data-src="IMG/elena-headshot-orange-sm.jpg" class=" img-parallax d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot" data-speed="-0.3">
     
 </div>
 
@@ -572,6 +628,8 @@ footer p {
 
 </section>
 
+<hr>
+
 <section>
 
     <div class="container">
@@ -589,15 +647,19 @@ footer p {
 
             <li>Restorative Justice Training, Tiers I & II | <strong>OUSD</strong> | Oakland, CA | 2017</li>
             </ul>
-See job experience on LINKED IN (Add link)
+<a id="linked-in" href="https://www.linkedin.com/in/elenapinsky/" target="_blank">See full background on Linked-in ></a>
         </ul>
         </p>
+
+        <br/>
         
 </div>
 
 </section>
 
 <section style="background-color: #31A28B;margin-top: 0; padding-top: 20px;">
+
+    <a class="anchor" name="contact"></a>
     <div class="container">
         <a name="form185555046" id="formAnchor185555046"></a>
     </div>
@@ -606,10 +668,10 @@ See job experience on LINKED IN (Add link)
 <section>
     <div class="container">
         <h3>Partners</h3>
-        <img class="partners lozad" data-src="IMG/feminism-all-night.png" />
-        <img class="partners lozad" data-src="IMG/tree-of-life-logo.png" />
-        <img class="partners lozad" data-src="IMG/OUSD-program.png" />
-        <img class="partners lozad" data-src="IMG/avodah-jewish-service-corps.jpg" />
+        <a href="https://www.feminismallnight.com/" target="_blank"><img class="partners lozad" data-src="IMG/feminism-all-night.png" /></a>
+        <a href="https://treeoflifeinitiation.org/" target="_blank"><img class="partners lozad" data-src="IMG/tree-of-life-logo.png" /></a>
+        <a href="https://www.ousd.org/" target="_blank"><img class="partners lozad" data-src="IMG/OUSD-program.png" /></a>
+        <a href="https://avodah.net/what-we-do/jewish-service-corps/" target="_blank"><img class="partners lozad" data-src="IMG/avodah-jewish-service-corps.jpg" /></a>
     </div>
 </section>
 

@@ -199,6 +199,12 @@
             border:3px solid white;
         }
 
+        #offerings1 .offerings-copy {
+            min-height: 370px;
+        }
+
+
+
     	.offerings-copy {
     		background: rgba(49, 162, 139, 0.92);
     		padding: 10px;
@@ -332,6 +338,7 @@
 
 	#approach .container {
 	}
+
     #events {
     background: url('IMG/forest-path.jpeg');
             background-repeat: no-repeat;
@@ -342,10 +349,16 @@
 	}
 }
 
+@media screen and (max-width: 992px) and (min-width: 768px) {
+
+    #offerings3 {
+        margin-top: 40px;
+    }
+}
+
 @media screen and (min-width : 768px)  {
     .offerings-copy {
         margin:0 2%;
-        min-height: 450px;
     }
 
     .current-events-bg {
@@ -387,6 +400,10 @@
 
     #read-more {
         color:white;
+    }
+
+    #partners img {
+        padding: 0 50px;
     }
 }
 
@@ -529,7 +546,7 @@
 
         <h1 id="offeringsTitle">Offerings</h1>
         <div class="row">
-          <div class="col-12 col-md-4 offerings" id="offerings1">
+          <div class="col-12 col-md-6 col-lg-4 offerings" id="offerings1">
 
 
           	<div class="offerings-copy">
@@ -543,7 +560,7 @@
         </div>
 		  </div>
           
-          <div class="col-12 col-md-4 offerings" id="offerings2">
+          <div class="col-12 col-md-6 col-lg-4 offerings" id="offerings2">
 
 
           	<div class="offerings-copy">
@@ -556,7 +573,7 @@
  			</div>
           </div>
 
-          <div class="col-12 col-md-4 offerings" id="offerings3">
+          <div class="col-12 col-lg-4 offerings" id="offerings3">
 
           	<div class="offerings-copy">
 
@@ -718,17 +735,17 @@
 
         <h2>Partners</h2>
 
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
+        <div class="row" id="partners">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <a href="https://www.feminismallnight.com/" target="_blank"><img class="partners lozad" data-src="IMG/feminism-all-night.png" /></a>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <a href="https://treeoflifeinitiation.org/" target="_blank"><img class="partners lozad" data-src="IMG/tree-of-life-logo.png" /></a>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <a href="https://www.ousd.org/" target="_blank"><img class="partners lozad" data-src="IMG/OUSD-program.png" /></a>
             </div>
-            <div class="col-12 col-md-6 col-lg-12">
+            <div class="col-12 col-md-6 col-lg-12 col-xl-3">
                 <a href="https://avodah.net/what-we-do/jewish-service-corps/" target="_blank"><img class="partners lozad" data-src="IMG/avodah.jpg" /></a>
             </div>
         

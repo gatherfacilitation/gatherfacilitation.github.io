@@ -225,8 +225,24 @@
 
     	}
 
+        #current-events-title {
+            background: #31A28B;
+            padding: 10px 0 8px 0;
+            margin:0 -35px 20px 0;
+            color:white;
+        }
+
         .current-events {
             background:white;
+        }
+        
+        #past-events-title {
+            background: white;
+            color:#31A28B;
+            width: 100%;
+            padding: 5px 0 2px 0;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         .past-events-bg {
@@ -235,13 +251,13 @@
             background-size: 100%;
             padding-top:80px;
             background-size:cover;
-            border-radius: 0 0 8px 0;
+            border-radius: 8px 0 0 8px;
         }
 
         .events-copy {
             background: #31A28B;
             padding: 30px;
-            border-radius: 0 0 0 8px;
+            border-radius: 0 8px 8px 0;
         }
 
         .events-copy p {
@@ -620,7 +636,7 @@
             <div class="container current-events">
             <a class="anchor" name="events"></a>
 
-            <h1>Current Events</h1>
+            <h1 id="current-events-title">Current Events</h1>
             
             <h4><i>Terra Incognita</i>—Exploring Creativity & Conflict | 2020</h4> 
             <h5 style="font-family: 'Montserrat', sans-serif;">An Embodied Retreat for your Creative Soul</h5>
@@ -651,7 +667,7 @@
         </div>
 
         <div class="events-copy col-12 col-lg-8">
-            <h1>Past Events</h1>
+            <h1 id="past-events-title">Past Events</h1>
 
             <h4><i>Feeding the Self</i>—interactive multi-sensory shabbat experience | November 2019</h4>
             <p>So often, we eat rushing, standing up, while talking to friends. The intimate relationship between ourselves and our food is diminished. What happens to our taste buds when our sight is blocked? What does it take to bring pleasure to the act of feeding ourselves? Participants will be asked to wear a blindfold and observe silence while they are served a 4-course meal.</p>

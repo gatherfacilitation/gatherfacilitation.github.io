@@ -158,8 +158,10 @@
         #approach {
             background: url('IMG/blindfold.jpg');
             background-size: cover;
-            background-attachment: fixed;
+            background-attachment: scroll;
             background-position: left top;
+            width: 100%;
+            height: 800px;
 
         }
 
@@ -549,7 +551,7 @@
   </div>
 </div>
 
-<div class="" id="approach" style="height: 800px">
+<div class="scroll-fix" id="approach" style="height: 800px">
     <a class="anchor" name="approach"></a>
 
     <div class="container">
@@ -820,6 +822,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script>
+
+    // fixed position mobile fix
+    $(window).scroll(function() {
+  var scrolledY = $(window).scrollTop();
+  $('.scroll-fix').css('background-position', 'left ' + (225+(scrolledY)) + 'px');
+});
+
 
 //Parallax script
 $('.img-parallax').each(function(){

@@ -99,9 +99,8 @@
     	}
 
     	.navbar-light .navbar-toggler {
-    		color: rgba(80, 26, 7, 0.67);
-/*    		border-color:rgba(80, 26, 7, 0.67);
-*/    	}
+    		color: white;
+  	}
     	.logo {
     		width: 130px;
     	}
@@ -117,6 +116,63 @@
             text-transform: uppercase;
         }
 
+/*        BEGIN MOBILE FULL-WIDTH NAV*/
+
+        #mobileNav li {
+            list-style-type: none;
+        }
+
+        .overlay {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 9999;
+          top: 0;
+          left: 0;
+          background-color: #31A28B;
+          background-color: rgba(49,162,139, 0.9);
+          overflow-x: hidden;
+          transition: 0.5s;
+        }
+
+        .overlay-content {
+          position: relative;
+          top: 15%;
+          width: 100%;
+          margin-top: 30px;
+        }
+
+        .overlay a {
+          padding: 8px;
+          text-decoration: none;
+          font-size: 36px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+          color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+          position: absolute;
+          top: 20px;
+          right: 45px;
+          font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .overlay a {font-size: 20px}
+          .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+          }
+        }
+
+/*        END MOBILE FULL WIDTH NAV
+*/
         .block{
           width: 100%;
           height: 100%;
@@ -372,7 +428,6 @@
 @media screen and (max-width: 1200px) {
     .about-copy {
         padding: 20px;
-        border-radius: 0;
         margin: 20px;
     }
 }
@@ -544,8 +599,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
 	  <a class="navbar-brand" href="#"><strong>Gather</strong> <br/><span class="logo-facilitation">Facilitation</span></a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" >
+	            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
 	    <ul id="menu-main-nav" class="navbar-nav nav-fill w-100">
@@ -579,6 +634,32 @@
 	    </ul>
 	  </div>
 	</nav>
+
+<!--   MOBILE NAV -->
+    <nav>
+        <div id="mobileNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <ul>
+
+                    <li><a href="#approach">Approach</a></li>
+
+                    <li><a href="#offerings">Offerings</a></li>
+
+                    <li><a href="#about">Bio</a></li>
+
+                    <li><a href="#events">Events</a></li>
+
+                    <li><a href="#background">Background</a></li>
+
+                    <li><a href="#partners">Partners</a></li>
+
+                    <li><a ref="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
     <div class="jumbotron jumbotron-fluid" id="overview">
   <div class="container">
     <p class="lead">Facilitation for personal healing journeys, conflict transformation, group processes, community building, and exploration of inner landscapes &amp; creativity.</p>
@@ -606,57 +687,6 @@
             </div>
         </div>
     </div>
-</section>
-
-
-<section>
-
-    <a class="anchor" name="about"></a>
-
-    <div class="block" id="aboutImg-container">
-
-        <img data-src="IMG/elena-headshot-orange-sm.jpg" class=" img-parallax d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot" data-speed="-0.3">
-        
-    </div>
-
-    <div class="about-copy d-none d-lg-block">
-
-        <h1>About Elena Pinsky</h1>
-
-        <p>I am an artist & facilitator extraordinaire working at the intersections of creativity & connection. To all of my Gather offerings, I bring empathy, compassion, a keen understanding of relational dynamics and a social justice lens. I hold a vision of an interdependent, thriving & playful world close to my heart.</p>
-
-    <p>My work is infused with a spiritual tenor, as I weave in learnings from my Jewish heritage and Tree of Life, my two-year women's rites of passage journey. I am grateful for Buddhist teachings in meditation and mindfulness. I am never without a creative project, be it curating aesthetically-pleasing spaces, cooking, preserving, macrame-ing, screen-printing, singing, watercoloring, woodworking, laser-cutting, face-painting, songwriting or planning a dinner party.</p>
-
-    </div>
-
-    <img class="lozad d-none d-sm-block" data-src="IMG/elena-headshot-orange.jpg" id="aboutImg2" />
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-
-                <div class="about-copy-sm d-lg-none">
-
-                    <h1>About Elena Pinsky</h1>
-
-                    <hr>
-                
-                <p>I am an artist & facilitator extraordinaire working at the intersections of creativity & connection. To all of my Gather offerings, I bring empathy, compassion, a keen understanding of relational dynamics and a social justice lens. I hold a vision of an interdependent, thriving & playful world close to my heart.</p>
-
-                <button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">Read More +</button>
-      
-                <div id="demo" class="collapse">
-                    <br/>
-                    <p>My work is infused with a spiritual tenor, as I weave in learnings from my Jewish heritage and Tree of Life, my two-year women's rites of passage journey. I am grateful for Buddhist teachings in meditation and mindfulness. I am never without a creative project, be it curating aesthetically-pleasing spaces, cooking, preserving, macrame-ing, screen-printing, singing, watercoloring, woodworking, laser-cutting, face-painting, songwriting or planning a dinner party.</p>
-                </div>
-
-            </div>
-                
-            </div>
-
-        </div>
-    </div>
-
 </section>
 
 <section>
@@ -716,6 +746,56 @@
         <h4 style="text-align: center;"><strong>Rates:</strong> My rates are currently set up on a sliding-scale basis. Please <a href="#contact">get in touch</a> with me to schedule a free consultation or request more information!</h4>
 
         <hr>
+    </div>
+
+</section>
+
+<section>
+
+    <a class="anchor" name="about"></a>
+
+    <div class="block" id="aboutImg-container">
+
+        <img data-src="IMG/elena-headshot-orange-sm.jpg" class=" img-parallax d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot" data-speed="-0.3">
+        
+    </div>
+
+    <div class="about-copy d-none d-lg-block">
+
+        <h1>About Elena Pinsky</h1>
+
+        <p>I am an artist & facilitator extraordinaire working at the intersections of creativity & connection. To all of my Gather offerings, I bring empathy, compassion, a keen understanding of relational dynamics and a social justice lens. I hold a vision of an interdependent, thriving & playful world close to my heart.</p>
+
+        <p>My work is infused with a spiritual tenor, as I weave in learnings from my Jewish heritage and Tree of Life, my two-year women's rites of passage journey. I am grateful for Buddhist teachings in meditation and mindfulness. I am never without a creative project, be it curating aesthetically-pleasing spaces, cooking, preserving, macrame-ing, screen-printing, singing, watercoloring, woodworking, laser-cutting, face-painting, songwriting or planning a dinner party.</p>
+
+    </div>
+
+    <img class="lozad d-none d-sm-block" data-src="IMG/elena-headshot-orange.jpg" id="aboutImg2" />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="about-copy-sm d-lg-none">
+
+                    <h1>About Elena Pinsky</h1>
+
+                    <hr>
+                
+                <p>I am an artist & facilitator extraordinaire working at the intersections of creativity & connection. To all of my Gather offerings, I bring empathy, compassion, a keen understanding of relational dynamics and a social justice lens. I hold a vision of an interdependent, thriving & playful world close to my heart.</p>
+
+                <button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">Read More +</button>
+      
+                <div id="demo" class="collapse">
+                    <br/>
+                    <p>My work is infused with a spiritual tenor, as I weave in learnings from my Jewish heritage and Tree of Life, my two-year women's rites of passage journey. I am grateful for Buddhist teachings in meditation and mindfulness. I am never without a creative project, be it curating aesthetically-pleasing spaces, cooking, preserving, macrame-ing, screen-printing, singing, watercoloring, woodworking, laser-cutting, face-painting, songwriting or planning a dinner party.</p>
+                </div>
+
+            </div>
+                
+            </div>
+
+        </div>
     </div>
 
 </section>
@@ -876,6 +956,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script>
+
+    // MOBILE FULL WIDTH NAV
+
+    function openNav() {
+      document.getElementById("mobileNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("mobileNav").style.width = "0%";
+    }
 
     // fixed position mobile fix
     $(window).scroll(function() {

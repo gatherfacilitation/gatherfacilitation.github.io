@@ -158,7 +158,7 @@
         #approach {
             background: url('IMG/blindfold.jpg');
             background-size: cover;
-            background-attachment: scroll;
+            background-attachment: fixed;
             background-position: left top;
             width: 100%;
             height: 800px;
@@ -446,6 +446,10 @@
 
     #approach .container {
         border-radius: 0;
+    }
+
+    #approach {
+        background-attachment: scroll;
     }
 
     .offerings {
@@ -825,8 +829,11 @@
 
     // fixed position mobile fix
     $(window).scroll(function() {
-  var scrolledY = $(window).scrollTop();
-  $('.scroll-fix').css('background-position', 'left ' + (225+(scrolledY)) + 'px');
+
+    var scrolledY = $(window).scrollTop();
+    if ($(window).width() < 768) {
+        $('.scroll-fix').css('background-position', 'left ' + (225+(scrolledY)) + 'px');
+        }
 });
 
 

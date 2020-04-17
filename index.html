@@ -306,15 +306,20 @@
 
     	}
 
-        #current-events-title {
+        .current-events-title {
             background: #31A28B;
             padding: 10px 0 8px 0;
-            margin:0 -35px 20px 0;
             color:white;
+            border-radius: 8px 0 0 0;
+            margin-top: 0;
         }
 
         .current-events {
-            background:white;
+            background:#9dd4c9;
+        }
+
+        .current-events-copy {
+            padding:15px;
         }
         
         #past-events-title {
@@ -332,13 +337,13 @@
             background-size: 100%;
             padding-top:80px;
             background-size:cover;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 0 0 8px;
         }
 
         .events-copy {
             background: #31A28B;
-            padding: 30px;
-            border-radius: 0 8px 8px 0;
+            padding: 30px !important;
+            border-radius: 0 0 8px 0;
         }
 
         .events-copy p {
@@ -440,17 +445,6 @@
 
 	#overview {height: 500px;}
 
-	#approach .container {
-	}
-
-    #events {
-    background: url('IMG/forest-path.jpeg');
-            background-repeat: no-repeat;
-            background-size: 100%;
-            padding-top:80px;
-            background-size:cover;
-            border-radius: 0 0 8px 0;
-	}
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
@@ -468,16 +462,10 @@
     .current-events-bg {
         background: url('IMG/green-door.jpg');
         background-repeat: no-repeat;
-        background-size: contain;
-    }
+        background-size: cover;
+        border-radius: 0 8px 0 0;
+        background-position: right;}
 
-    .current-events {
-        background:#ffffffc4;
-/*        padding: 30px;
-        margin-top: 180px;
-        -webkit-backdrop-filter: blur(3px);
-        border-radius: 8px 8px 0 0;*/
-    }
 }
 
 @media screen and (min-width: 992px) {.offerings-copy {
@@ -798,25 +786,32 @@
 
 <section id="events">
 
+    <h1 class="current-events-title d-lg-none">Current Events</h1>
+
     <div class="container">
 
-    <div class="row">
+    <div class="row no-gutters">
 
         <div class="col-12 col-lg-7">
 
             <div class="current-events">
-            <a class="anchor" name="events"></a>
+                <a class="anchor" name="events"></a>
 
-            <h1 id="current-events-title">Current Events</h1>
-            
-            <h4><i>Terra Incognita</i>—Exploring Creativity & Conflict | 2020</h4> 
-            <h5 style="font-family: 'Montserrat', sans-serif;">An Embodied Retreat for your Creative Soul</h5>
-            <p>Join us for a special journey into the unknown.</p>
-        <ul>
-            <li>Explore the forces that both inspire us to & block us from alchemizing our dreams into matter</li>
-            <li>Ask how our Jewish lineage informs this holy process</li><li>Learn basic conflict resolution skills, work with movement-based, storytelling & artistic modalities + celebrate Shabbat</li>
+            <h1 class="current-events-title d-none d-lg-block">Current Events</h1>
 
-            <li>This retreat is designed for both curious individuals looking to deeper understand the source of their creativity & folks who don’t see themselves as creative wanting to open new channels</li></ul>
+                <div class="current-events-copy">
+
+                    <h4><i>Terra Incognita</i>—Exploring Creativity & Conflict | 2020</h4> 
+                    <h5 style="font-family: 'Montserrat', sans-serif;">An Embodied Retreat for your Creative Soul</h5>
+                    <p>Join us for a special journey into the unknown.</p>
+                    <ul>
+                        <li>Explore the forces that both inspire us to & block us from alchemizing our dreams into matter</li>
+                        <li>Ask how our Jewish lineage informs this holy process</li><li>Learn basic conflict resolution skills, work with movement-based, storytelling & artistic modalities + celebrate Shabbat</li>
+
+                        <li>This retreat is designed for both curious individuals looking to deeper understand the source of their creativity & folks who don’t see themselves as creative wanting to open new channels</li>
+                    </ul>
+
+                </div>
 
             </div>
         </div>
@@ -831,7 +826,7 @@
 
 <div class="past-events">
 
-    <div class="row">
+    <div class="row no-gutters">
 
                 <div class="col-12 col-lg-4 past-events-bg d-none d-lg-block">
 <!--             <img src="IMG/forest-path.jpeg" style="width: 100%" /> -->

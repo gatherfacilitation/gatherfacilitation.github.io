@@ -231,8 +231,8 @@
             background-attachment: fixed;
             background-position: left top;
             width: 100%;
-            height: 800px;
-
+            background-repeat: no-repeat;
+            height: 100%;
         }
 
         .approach-credit {
@@ -310,12 +310,7 @@
             background: #31A28B;
             padding: 10px 0 8px 0;
             color:white;
-            border-radius: 8px 0 0 0;
-            margin-top: 0;
-        }
-
-        .current-events {
-            background:#9dd4c9;
+            margin: 0;
         }
 
         .current-events-copy {
@@ -459,12 +454,20 @@
         margin:0 2%;
     }
 
+    .current-events-title {
+        border-radius: 8px 8px 0 0;
+    }
+
     .current-events-bg {
         background: url('IMG/green-door.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 0 8px 0 0;
         background-position: right;}
+
+    .current-events-copy {
+        background:#9dd4c9;
+    }
 
 }
 
@@ -474,6 +477,10 @@
 
     .offerings-container {
         margin: 0 10%;
+    }
+
+    .current-events-title {
+        border-radius: 8px 0 0 0;
     }
 }
 
@@ -513,6 +520,7 @@
 
     #approach {
         background-attachment: scroll;
+        background-size:280%;
     }
 
     .offerings {
@@ -549,11 +557,6 @@
 
 	#approach .container {
 		padding: 30px 20px;
-	}
-
-	#approach {
-		padding: 0;
-		height: 450px;
 	}
 
     #offeringsTitle {
@@ -650,15 +653,17 @@
   </div>
 </div>
 
-<div class="scroll-fix" id="approach" style="height: 800px">
-    <a class="anchor" name="approach"></a>
+<div style="background:black;height: 800px;">
+    <div class="scroll-fix" id="approach">
+        <a class="anchor" name="approach"></a>
 
-    <div class="container">
-        <h1>Approach</h1>
-        <p>My approach is informed by a mixture of my studies in Hakomi somatic psychotherapy &amp; Process Work facilitation. I have trained in conflict mediation, social justice frameworks &amp; anti-oppression modalities. To my work, I bring five years of professional experience in operations &amp; people management for sustainable food systems.</p><br/><p>I dance equally with the sacred and the profane — at once holding space for deep transformation while infusing my work with humor & play, always making room for creativity.</p>
-      </div>
+        <div class="container">
+            <h1>Approach</h1>
+            <p>My approach is informed by a mixture of my studies in Hakomi somatic psychotherapy &amp; Process Work facilitation. I have trained in conflict mediation, social justice frameworks &amp; anti-oppression modalities. To my work, I bring five years of professional experience in operations &amp; people management for sustainable food systems.</p><br/><p>I dance equally with the sacred and the profane — at once holding space for deep transformation while infusing my work with humor & play, always making room for creativity.</p>
+          </div>
 
-      <p class="approach-credit">Photo by <a href="http://www.juliamaryanska.com/" target="_blank">Julia Maryanska</a></p>
+          <p class="approach-credit">Photo by <a href="http://www.juliamaryanska.com/" target="_blank">Julia Maryanska</a></p>
+    </div>
 </div>
 
 <section id="why-gather-section">
@@ -786,7 +791,7 @@
 
 <section id="events">
 
-    <h1 class="current-events-title d-lg-none">Current Events</h1>
+    <h1 class="current-events-title d-md-none">Current Events</h1>
 
     <div class="container">
 
@@ -797,7 +802,7 @@
             <div class="current-events">
                 <a class="anchor" name="events"></a>
 
-            <h1 class="current-events-title d-none d-lg-block">Current Events</h1>
+            <h1 class="current-events-title d-none d-md-block">Current Events</h1>
 
                 <div class="current-events-copy">
 
@@ -964,7 +969,7 @@
 
     var scrolledY = $(window).scrollTop();
     if ($(window).width() < 768) {
-        $('.scroll-fix').css('background-position', 'left ' + (225+(scrolledY)) + 'px');
+        $('.scroll-fix').css('background-position', 'left ' + (-583 + (scrolledY)) + 'px');
         }
 });
 

@@ -24,6 +24,8 @@
 
         html {
             scroll-behavior: smooth;
+            margin-top: 80px;
+            background: black;
         }
 
         h1 {
@@ -76,6 +78,12 @@
     		background-color: #31A28B!important;
             z-index: 999;
     	}
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            transition: 0.5s;
+        }
     	.navbar-light .navbar-nav .nav-link {
     		font-family: 'Arapey', serif;
     		font-size: 18pt;
@@ -98,6 +106,13 @@
             text-decoration: none;
             line-height: 0.95;
     	}
+
+        .nav-down {
+            top:0px;
+        }
+        .nav-up {
+            top:-80px;
+        }
 
     	.navbar-light .navbar-toggler {
     		color: white;
@@ -481,6 +496,11 @@
 
     .current-events-title {
         border-radius: 8px 0 0 0;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100%;
     }
 }
 
@@ -962,6 +982,7 @@
 
     function closeNav() {
       document.getElementById("mobileNav").style.width = "0%";
+
     }
 
     // fixed position mobile fix
@@ -969,9 +990,50 @@
 
     var scrolledY = $(window).scrollTop();
     if ($(window).width() < 768) {
-        $('.scroll-fix').css('background-position', 'left ' + (-583 + (scrolledY)) + 'px');
+        $('.scroll-fix').css('background-position', 'left ' + (-550 + (scrolledY)) + 'px');
         }
 });
+        
+
+// HIDE NAV WHILE SCROLLING DOWN
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('nav').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('nav').removeClass('nav-down').addClass('nav-up');
+            
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('nav').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
 
 
 //Parallax script

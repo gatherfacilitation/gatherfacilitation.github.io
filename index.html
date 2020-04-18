@@ -29,7 +29,7 @@
         }
 
         h1 {
-            margin: 40px 0 30px 0;
+            margin: 15px 0 20px 0;
         }
 
         h1, h2, h3 {
@@ -55,16 +55,6 @@
             position: relative;
         }
 
-        #why-gather-section {
-            padding-top:0;
-            height: 430px;
-        }
-
-        #contact-section {
-            background: #31A28B;
-            margin-top:50px;
-            min-height: 700px;
-        }
 
         a {
             color:black;
@@ -123,13 +113,12 @@
     	}
 
         .logo-facilitation {
-            font-size:9pt;
+            font-size:12pt;
             margin:0 auto;
             padding:0;
             display:block;
             text-align: left;
-            letter-spacing: 3.5px;
-            width: 115px;
+            letter-spacing: 4px;
             text-transform: uppercase;
         }
 
@@ -241,6 +230,8 @@
             top: 680px;
         }
 
+
+
         #approach {
             background: url('IMG/blindfold.jpg');
             background-size: cover;
@@ -280,15 +271,22 @@
             z-index: 9;
     	}
 
-        .why-gather-bg {
-            padding:25px;
+        #why-gather-section {
+            padding-top:0;
+            height: 500px;
+        }
+
+        #contact-section {
+            background: #31A28B;
+            margin-top:50px;
+            min-height: 700px;
         }
 
         .why-gather {
-            margin: 120px 0;
             background:white;
             padding:15px;
             border: 5px solid #31A28B;
+            margin-top:70px;
         }
 
         .offerings-container {
@@ -451,17 +449,31 @@
 
 	#overview {height: 500px;}
 
+    .why-gather {
+        margin: 120px 0;
+    }
+
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
+
+    .offerings-copy {
+        min-height: 400px;
+    }
+
+    #offerings1, #offerings2 {
+        min-height: 420px;
+        margin: 0 0px 20px 0;
+    }
 
 }
 
 @media screen and (min-width : 768px)  {
 
+
+
     .offerings-copy {
         margin:0 2%;
-        min-height: 500px;
     }
 
     #events {
@@ -485,8 +497,10 @@
 
 }
 
-@media screen and (min-width: 992px) {.offerings-copy {
-        min-height: 410px;
+@media screen and (min-width: 992px) {
+
+    .offerings-copy {
+        min-height: 550px;
     }
 
     .offerings-container {
@@ -501,13 +515,21 @@
         position: fixed;
         width: 100%;
     }
+
+    #why-gather-section {
+        height: 330px;
+    }
 }
 
 @media screen and (min-width : 1200px)   {
 
+    #why-gather-section {
+        height: 275px;
+    }
+
     .offerings-copy {
         padding-top: 70px;
-        min-height: 450px;
+        min-height: 470px;
     }
 
     #approach .container {
@@ -583,8 +605,16 @@
 		padding: 30px 20px;
 	}
 
+    #why-gather-section {
+        height: 550px;
+    }
+
     .why-gather-bg {
-        padding: 30px 0;
+        padding: 5px;
+    }
+
+    .why-gather {
+        margin-top:70px;
     }
 
     #offeringsTitle {

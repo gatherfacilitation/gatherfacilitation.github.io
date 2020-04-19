@@ -36,13 +36,17 @@
             text-align: center;
         }
 
-    	h1,h2,h3,h4,h5,h6 {
+    	h1,h2,h3,h4,h5,h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     		font-family: 'Arapey',serif;
     	}
 
     	h2 {
     		font-size:2.3rem;
     	}
+
+        h4 a {
+            font-size: 1.5rem;
+        }
 
     	p, li, a {
     		font-size:1rem;
@@ -65,6 +69,10 @@
            border: 2px solid #31A28B;
         }
 
+        .fullImgWrapper img{
+            width: 100%;
+        }
+
     	.bg-light {
     		background-color: #31A28B!important;
             z-index: 999;
@@ -74,6 +82,7 @@
             position: fixed;
             width: 100%;
             transition: 0.5s;
+            top:0;
         }
     	.navbar-light .navbar-nav .nav-link {
     		font-family: 'Arapey', serif;
@@ -102,7 +111,7 @@
             top:0px;
         }
         .nav-up {
-            top:-80px;
+            top:-82px;
         }
 
     	.navbar-light .navbar-toggler {
@@ -218,19 +227,9 @@
             margin-top:100px;
         }
 
-/*    	#approach {
-    		background: -webkit-image-set( url('IMG/elena-beetle-320w.jpg') 1x, url('IMG/elena-beetle-640w.jpg') 2x );
-    		background-size: cover;
-    		background-attachment: fixed;
-    		background-position: top center;
-
-    	}*/
-
         #img-blindfold {
             top: 680px;
         }
-
-
 
         #approach {
             background: url('IMG/blindfold.jpg');
@@ -350,6 +349,10 @@
             border-radius: 0 0 8px 0;
         }
 
+        .events-copy h4, .events-copy h4 a {
+            color: #212529;
+        }
+
         .events-copy p {
             color:white;
         }
@@ -467,6 +470,15 @@
         margin: 0 0px 20px 0;
     }
 
+    .current-events-bg {
+        background: url('IMG/green-door.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0;
+        background-position: right;
+        height: 450px;
+    }
+
 }
 
 @media screen and (min-width : 768px)  {
@@ -484,13 +496,6 @@
     .current-events-title {
         border-radius: 8px 8px 0 0;
     }
-
-    .current-events-bg {
-        background: url('IMG/green-door.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 0 8px 0 0;
-        background-position: right;}
 
     .current-events-copy {
         background:#9dd4c9;
@@ -510,6 +515,14 @@
 
     .current-events-title {
         border-radius: 8px 0 0 0;
+    }
+
+    .current-events-bg {
+        background: url('IMG/green-door.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0 8px 0 0;
+        background-position: right;
     }
 
     .navbar {
@@ -598,8 +611,21 @@
 }
 
 @media screen and (max-width : 576px)   {
-	#overview .lead  {
-		font-size: 1.6rem;
+
+    h4, h4 a {
+        font-size: 1.3rem;
+    }
+
+    p, p a {
+        font-size: 0.9rem;
+    }
+
+    li, li a {
+        font-size: 0.8rem;
+    }
+	
+    #overview .lead  {
+		font-size: 1.5rem;
 	}
 
 	#approach .container {
@@ -607,7 +633,7 @@
 	}
 
     #why-gather-section {
-        height: 550px;
+        height: 450px;
     }
 
     .why-gather-bg {
@@ -615,7 +641,7 @@
     }
 
     .why-gather {
-        margin-top:70px;
+        margin:70px 0;
     }
 
     #offeringsTitle {
@@ -626,8 +652,15 @@
         margin: 5% 8%;
 	}
 
+    .past-events {
+        margin-left:-15px;
+        margin-right:-15px;
+    }
+
+    
+
     .events-copy {
-        padding: 15px;
+        padding: 15px !important;
     }
 
     #aboutImg-container {
@@ -636,6 +669,10 @@
 
     #frame-one185555046 {
         width: 100%;
+    }
+
+    #linked-in {
+        font-size: 100%;
     }
 }
     </style>
@@ -791,7 +828,7 @@
 
         <hr>
 
-        <h4 style="text-align: center;"><strong>Rates:</strong> My rates are currently set up on a sliding-scale basis. Please <a href="#contact">get in touch</a> with me to schedule a free consultation or request more information!</h4>
+        <h4 style="text-align: center;"><em>Rates:</em> My rates are currently set up on a sliding-scale basis. Please <a href="#contact">get in touch</a> with me to schedule a free consultation or request more information!</h4>
 
         <hr>
     </div>
@@ -852,6 +889,10 @@
 
     <h1 class="current-events-title d-md-none">Current Events</h1>
 
+    <div class="fullImgWrapper">
+        <img src="IMG/green-door-sm.jpg" class="d-block d-md-none lozad">
+    </div>
+
     <div class="container">
 
     <div class="row no-gutters">
@@ -861,13 +902,14 @@
             <div class="current-events">
                 <a class="anchor" name="events"></a>
 
+            
+
             <h1 class="current-events-title d-none d-md-block">Current Events</h1>
 
                 <div class="current-events-copy">
 
                     <h4><i>Terra Incognita</i>—Exploring Creativity & Conflict | 2020</h4> 
-                    <h5 style="font-family: 'Montserrat', sans-serif;">An Embodied Retreat for your Creative Soul</h5>
-                    <p>Join us for a special journey into the unknown.</p>
+                    <p>An Embodied Retreat for your Creative Soul — join us for a special journey into the unknown.</p>
                     <ul>
                         <li>Explore the forces that both inspire us to & block us from alchemizing our dreams into matter</li>
                         <li>Ask how our Jewish lineage informs this holy process</li><li>Learn basic conflict resolution skills, work with movement-based, storytelling & artistic modalities + celebrate Shabbat</li>
@@ -899,12 +941,12 @@
         <div class="events-copy col-12 col-lg-8">
             <h1 id="past-events-title">Past Events</h1>
 
-            <h4><i>Feeding the Self</i>—interactive multi-sensory shabbat experience | November 2019</h4>
+            <h4><i>Feeding the Self</i>—interactive multi-sensory shabbat experience | Nov. 2019</h4>
             <p>So often, we eat rushing, standing up, while talking to friends. The intimate relationship between ourselves and our food is diminished. What happens to our taste buds when our sight is blocked? What does it take to bring pleasure to the act of feeding ourselves? Participants will be asked to wear a blindfold and observe silence while they are served a 4-course meal.</p>
 
             <br/>
 
-            <h4><i>Feeding Another</i>—interactive multi-sensory shabbat experience | December 2019</h4>
+            <h4><i>Feeding Another</i>—interactive multi-sensory shabbat experience | Dec. 2019</h4>
             <p>What is our relationship to giving and receiving nourishment? How do we negotiate these themes in relationship? Participants will be asked to bring a partner to dinner, during which they will only be able to feed one another - never themselves - and communicate non-verbally.</p>
 
             <br/>

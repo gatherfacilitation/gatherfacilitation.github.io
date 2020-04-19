@@ -24,8 +24,8 @@
 
         html {
             scroll-behavior: smooth;
-            margin-top: 80px;
-            background: black;
+            margin-top: 86px;
+            background: #31A28B;
         }
 
         h1 {
@@ -81,7 +81,7 @@
         .navbar {
             position: fixed;
             width: 100%;
-            transition: 0.5s;
+            transition: 0.2s;
             top:0;
         }
     	.navbar-light .navbar-nav .nav-link {
@@ -277,8 +277,10 @@
 
         #contact-section {
             background: #31A28B;
-            margin-top:50px;
-            min-height: 700px;
+        }
+
+        .why-gather-bg {
+            padding-top:1px;
         }
 
         .why-gather {
@@ -453,13 +455,13 @@
 
 	#overview {height: 500px;}
 
-    .why-gather {
-        margin: 120px 0;
-    }
-
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
+
+    #why-gather-section {
+        height: 400px;
+    }
 
     .offerings-copy {
         min-height: 400px;
@@ -537,10 +539,6 @@
 
 @media screen and (min-width : 1200px)   {
 
-    #why-gather-section {
-        height: 275px;
-    }
-
     .offerings-copy {
         padding-top: 70px;
         min-height: 470px;
@@ -604,7 +602,7 @@
     }
 
     .why-gather {
-        padding:45px;
+        padding: 20px;
         line-height: 2;
     }
 
@@ -673,6 +671,11 @@
 
     #linked-in {
         font-size: 100%;
+    }
+
+    .partners {
+        width: 280px;
+        padding: 0 0 20px 0;
     }
 }
     </style>
@@ -1069,11 +1072,25 @@
     // fixed position mobile fix
     $(window).scroll(function() {
 
-    var scrolledY = $(window).scrollTop();
-    if ($(window).width() < 768) {
-        $('.scroll-fix').css('background-position', 'left ' + (-550 + (scrolledY)) + 'px');
+        var scrolledY = $(window).scrollTop();
+        if ($(window).width() < 768) {
+            $('.scroll-fix').css('background-position', 'left ' + (-550 + (scrolledY)) + 'px');
+            }
+
+        else {};
+
+        // console.log(scrolledY);
+
+        // Hide Approach photo credit when scrolled down
+
+        if (scrolledY > 1500) {
+            $('.approach-credit').css('display', 'none');
         }
-});
+
+        else {
+            $('.approach-credit').css('display', 'block');
+        }
+    });
         
 
 // HIDE NAV WHILE SCROLLING DOWN

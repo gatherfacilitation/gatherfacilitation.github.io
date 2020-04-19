@@ -60,6 +60,7 @@
         #contact-section {
             background: #31A28B;
             margin-top:50px;
+            min-height: 700px;
         }
 
         a {
@@ -305,15 +306,20 @@
 
     	}
 
-        #current-events-title {
+        .current-events-title {
             background: #31A28B;
             padding: 10px 0 8px 0;
-            margin:0 -35px 20px 0;
             color:white;
+            border-radius: 8px 0 0 0;
+            margin-top: 0;
         }
 
         .current-events {
-            background:white;
+            background:#9dd4c9;
+        }
+
+        .current-events-copy {
+            padding:15px;
         }
         
         #past-events-title {
@@ -331,13 +337,13 @@
             background-size: 100%;
             padding-top:80px;
             background-size:cover;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 0 0 8px;
         }
 
         .events-copy {
             background: #31A28B;
-            padding: 30px;
-            border-radius: 0 8px 8px 0;
+            padding: 30px !important;
+            border-radius: 0 0 8px 0;
         }
 
         .events-copy p {
@@ -432,9 +438,6 @@
     }
 }
 
-
-
-
 @media screen and (max-width : 992px)   {
 	#overview .lead  {
 		font-size: 2rem;
@@ -442,17 +445,6 @@
 
 	#overview {height: 500px;}
 
-	#approach .container {
-	}
-
-    #events {
-    background: url('IMG/forest-path.jpeg');
-            background-repeat: no-repeat;
-            background-size: 100%;
-            padding-top:80px;
-            background-size:cover;
-            border-radius: 0 0 8px 0;
-	}
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
@@ -470,16 +462,10 @@
     .current-events-bg {
         background: url('IMG/green-door.jpg');
         background-repeat: no-repeat;
-        background-size: contain;
-    }
+        background-size: cover;
+        border-radius: 0 8px 0 0;
+        background-position: right;}
 
-    .current-events {
-        background:#ffffffc4;
-/*        padding: 30px;
-        margin-top: 180px;
-        -webkit-backdrop-filter: blur(3px);
-        border-radius: 8px 8px 0 0;*/
-    }
 }
 
 @media screen and (min-width: 992px) {.offerings-copy {
@@ -549,8 +535,6 @@
 }
 
 @media screen and (min-width : 577px) {
-
-    
 
     .offerings-copy {
         padding-top: 35px;
@@ -642,19 +626,19 @@
           <div class="overlay-content">
             <ul>
 
-                    <li><a href="#approach">Approach</a></li>
+                    <li><a href="#approach" onclick="closeNav()" >Approach</a></li>
 
-                    <li><a href="#offerings">Offerings</a></li>
+                    <li><a href="#offerings" onclick="closeNav()" >Offerings</a></li>
 
-                    <li><a href="#about">Bio</a></li>
+                    <li><a href="#about" onclick="closeNav()" >Bio</a></li>
 
-                    <li><a href="#events">Events</a></li>
+                    <li><a href="#events" onclick="closeNav()" >Events</a></li>
 
-                    <li><a href="#background">Background</a></li>
+                    <li><a href="#background" onclick="closeNav()" >Background</a></li>
 
-                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#partners" onclick="closeNav()" >Partners</a></li>
 
-                    <li><a ref="#contact">Contact</a></li>
+                    <li><a href="#contact" onclick="closeNav()" >Contact</a></li>
             </ul>
           </div>
         </div>
@@ -802,14 +786,20 @@
 
 <section id="events">
 
+    <h1 class="current-events-title d-lg-none">Current Events</h1>
+
     <div class="container">
 
-    <div class="row">
+    <div class="row no-gutters">
 
         <div class="col-12 col-lg-7">
 
             <div class="current-events">
-            <a class="anchor" name="events"></a>
+                <a class="anchor" name="events"></a>
+
+            <h1 class="current-events-title d-none d-lg-block">Current Events</h1>
+
+                <div class="current-events-copy">
 
             <h1 id="current-events-title">Current Events</h1>
             
@@ -846,7 +836,7 @@
 
 <div class="past-events">
 
-    <div class="row">
+    <div class="row no-gutters">
 
                 <div class="col-12 col-lg-4 past-events-bg d-none d-lg-block">
 <!--             <img src="IMG/forest-path.jpeg" style="width: 100%" /> -->
@@ -903,7 +893,7 @@
             <li>Restorative Justice Training | <a class="ed-links" href="http://ousd.org">Oakland Unified School District</a> in Oakland, CA | 2017</li><li>Jewish Service Corps | <a class="ed-links" href="http:avodah.net">Avodah</a> in New Orleans | 2011</li>
         </ul>
 
-<a class="anchor" name="partners"></a>
+
 
 <a id="linked-in" href="https://www.linkedin.com/in/elenapinsky/" target="_blank">See full background on <strong>Linked-in</strong></a>
         </ul>
@@ -912,6 +902,7 @@
         <br/>
         <hr>
 
+        <a class="anchor" name="partners" ></a>
 
         <h1>Partners</h1>
 

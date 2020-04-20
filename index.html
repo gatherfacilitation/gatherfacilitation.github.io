@@ -20,8 +20,675 @@
 	<!-- Google Fonts -->
  	<link href="https://fonts.googleapis.com/css?family=Arapey:400,400i|Montserrat:300,400,800&display=swap" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="CSS/custom.css">
+<style>
+
+        html {
+            scroll-behavior: smooth;
+            margin-top: 86px;
+            background: #31A28B;
+        }
+
+        h1 {
+            margin: 15px 0 20px 0;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+    	h1,h2,h3,h4,h5,h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+    		font-family: 'Arapey',serif;
+    	}
+
+    	h2 {
+    		font-size:2.3rem;
+    	}
+
+        h4 a {
+            font-size: 1.5rem;
+        }
+
+    	p, li, a {
+    		font-size:1rem;
+            font-family: 'Montserrat',sans-serif;
+    	}
+
+        section {
+            background: white;
+            padding-top: 40px;
+            position: relative;
+        }
+
+
+        a {
+            color:black;
+            text-decoration: underline;
+        }
+
+        hr {
+           border: 2px solid #31A28B;
+        }
+
+        .fullImgWrapper img{
+            width: 100%;
+        }
+
+    	.bg-light {
+    		background-color: #31A28B!important;
+            z-index: 999;
+    	}
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            transition: 0.2s;
+            top:0;
+        }
+    	.navbar-light .navbar-nav .nav-link {
+    		font-family: 'Arapey', serif;
+    		font-size: 18pt;
+/*    		color: rgba(11, 89, 42, 0.7);
+*/    		color: white;
+            text-decoration: none;
+    	}
+
+        .dropdown-item {
+            font-family: 'Arapey', serif;
+            font-size: 14pt;
+            text-decoration: none;
+            text-align: center;
+        }
+
+    	.navbar-brand {
+    		font-family: 'Arapey', cursive;
+    		font-size: 3rem;
+    		color: white !important;
+            text-decoration: none;
+            line-height: 0.95;
+    	}
+
+        .nav-down {
+            top:0px;
+        }
+        .nav-up {
+            top:-82px;
+        }
+
+    	.navbar-light .navbar-toggler {
+    		color: white;
+  	}
+    	.logo {
+    		width: 130px;
+    	}
+
+        .logo-facilitation {
+            font-size:12pt;
+            margin:0 auto;
+            padding:0;
+            display:block;
+            text-align: left;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+/*        BEGIN MOBILE FULL-WIDTH NAV*/
+
+        #mobileNav li {
+            list-style-type: none;
+        }
+
+        .overlay {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 9999;
+          top: 0;
+          left: 0;
+          background-color: #31A28B;
+          background-color: rgba(49,162,139, 0.9);
+          overflow-x: hidden;
+          transition: 0.5s;
+        }
+
+        .overlay-content {
+          position: relative;
+          top: 15%;
+          width: 100%;
+          margin-top: 30px;
+        }
+
+        .overlay a {
+          padding: 8px;
+          text-decoration: none;
+          font-size: 36px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+          color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+          position: absolute;
+          top: 20px;
+          right: 45px;
+          font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .overlay a {font-size: 20px}
+          .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+          }
+        }
+
+/*        END MOBILE FULL WIDTH NAV
+*/
+        .block{
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .img-parallax {
+            z-index: 1;
+            position: relative;
+        }
+
+    	#overview {
+    		background: url('IMG/watercolor.jpg');
+    		background-size: cover;
+            background-position: center;
+            font-family: 'Arapey', serif;
+            background-size: cover;
+            height: 600px;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 9;
+    	}
+
+    	#overview .lead {
+    		font-size: 2.5rem;
+    		text-align: center;
+    		max-width: 800px;
+    		margin:0 auto;
+            font-family: 'Arapey', serif;
+    		}
+
+        #overview .container {
+            background: rgba(255, 255, 255, 0.6);
+            max-width: 100%;
+            padding: 20px;
+            margin-top:100px;
+        }
+
+        #img-blindfold {
+            top: 680px;
+        }
+
+        #approach {
+            background: url('IMG/blindfold.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: left top;
+            width: 100%;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+
+        .approach-credit {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 0;
+            background:rgba(0,0,0,0.3);
+            padding:3px;
+            border-radius: 3px;
+        }
+
+        .approach-credit, .approach-credit a {
+            color: darkgrey;
+        }
+
+        #approach h1, .offerings-copy h3 {
+            color:white;
+        }
+
+    	#approach .container {
+    		background:rgba(49, 162, 139, 0.96);
+    		padding:40px 50px;
+            border-radius: 8px;
+            position: relative;
+            top:300px;
+            max-width: 770px;
+            color: white;
+            z-index: 9;
+    	}
+
+        #why-gather-section {
+            padding-top:0;
+            height: 500px;
+        }
+
+        #contact-section {
+            background: #31A28B;
+        }
+
+        .why-gather-bg {
+            padding-top:1px;
+            background: #9dd4c9;
+        }
+
+        .why-gather {
+            background:white;
+            padding:15px;
+            border: 5px solid #31A28B;
+            margin-top:70px;
+        }
+
+        .offerings-container {
+            margin: 0 5%;
+        }
+
+        #offeringsTitle {
+        }
+
+        .offeringsImg {
+            border-radius: 50%;
+            width: 100%;
+            max-width: 140px;
+            margin: 0 auto;
+            display: block;
+
+            margin-bottom: 10px;
+            border:3px solid white;
+        }
+    	.offerings-copy {
+    		background: rgba(49, 162, 139, 0.92);
+    		padding: 10px;
+    		margin: 0 0 30px 0;
+            border-radius: 8px;
+
+    	}
+
+        .current-events-title {
+            background: #31A28B;
+            padding: 10px 0 8px 0;
+            color:white;
+            margin: 0;
+        }
+
+        .current-events-copy {
+            padding:15px;
+        }
+        
+        #past-events-title {
+            background: white;
+            color:#31A28B;
+            width: 100%;
+            padding: 5px 0 2px 0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            margin-top:0;
+        }
+
+        .past-events-bg {
+            background: url('IMG/forest-path.jpeg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            padding-top:80px;
+            background-size:cover;
+            border-radius: 0 0 0 8px;
+        }
+
+        .events-copy {
+            background: #31A28B;
+            padding: 30px !important;
+            border-radius: 0 0 8px 0;
+        }
+
+        .events-copy h4, .events-copy h4 a {
+            color: #212529;
+        }
+
+        .events-copy p {
+            color:white;
+        }
+
+        .about-copy {
+            position: absolute;
+            color:white;
+            max-width: 530px;
+            font-weight: lighter;
+            padding: 5vh 2% 2% 2%;
+            background: rgba(70,70,70,0.6);
+            border-radius: 8px;
+            margin: 5%;
+        }
+
+    	#aboutImg {
+    		width: 32%;
+    		float: left;
+            padding: 0;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        #aboutImg2 {
+            width: 100%;
+
+        }
+
+    	#elena-headshot {
+    		width: 100%;
+    	}
+
+    	#read-more {
+    		float: right;
+    		font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+    	}
+
+        .ed-links {
+            font-weight: bolder;
+        }
+
+        #linked-in {
+            text-align: right;
+            display: block;
+            font-size: 110%;
+
+        }
+
+        .partners {
+            width: 300px;
+            margin:0 auto;
+            padding:12px;
+            display: block;
+        }
+
+        #mh-logo {
+            height: 120px;
+            width: inherit;
+        }
+
+        #frame-one185555046 {
+            width: 500px;
+            margin: 0 auto !important;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            background: grey;
+            color:white;
+            position: absolute;
+            width: 100%;
+        }
+
+        footer a {
+            color:white;
+            text-decoration: underline;
+            font-size: 10pt;
+        }
+
+        footer p {
+            padding: 15px;
+            margin:0;
+            font-weight: 100;
+            font-size: 10pt;
+        }
+
+
+
+@media screen and (max-width: 1200px) {
+    .about-copy {
+        padding: 20px;
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width : 992px)   {
+	#overview .lead  {
+		font-size: 2rem;
+	}
+
+	#overview {height: 500px;}
+
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+
+    #why-gather-section {
+        height: 400px;
+    }
+
+    .offerings-copy {
+        min-height: 400px;
+    }
+
+    #offerings1, #offerings2 {
+        min-height: 420px;
+        margin: 0 0px 20px 0;
+    }
+
+    .current-events-bg {
+        background: url('IMG/green-door.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0;
+        background-position: right;
+        height: 450px;
+    }
+
+}
+
+@media screen and (min-width : 768px)  {
+
+
+
+    .offerings-copy {
+        margin:0 2%;
+    }
+
+    #events {
+        margin-top: 80px;
+    }
+
+    .current-events-title {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .current-events-copy {
+        background:#9dd4c9;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    .offerings-copy {
+        min-height: 550px;
+    }
+
+    .offerings-container {
+        margin: 0 10%;
+    }
+
+    .current-events-title {
+        border-radius: 8px 0 0 0;
+    }
+
+    .current-events-bg {
+        background: url('IMG/green-door.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0 8px 0 0;
+        background-position: right;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+    }
+
+    #why-gather-section {
+        height: 330px;
+    }
+}
+
+@media screen and (min-width : 1200px)   {
+
+    .offerings-copy {
+        padding-top: 70px;
+        min-height: 470px;
+    }
+
+    #approach .container {
+        margin-left:32%;
+    }
+
+    #read-more {
+        color:white;
+    }
+
+    #partners img {
+        padding: 0 30px;
+    }
+
+    #mh-logo {
+        height: 90px;
+    }
+}
+
+@media screen and (max-width : 767px)  {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    #approach .container {
+        border-radius: 0;
+    }
+
+    #approach {
+        background-attachment: scroll;
+        background-size:280%;
+    }
+
+    .offerings {
+        padding: 0;
+    }
+
+    .offerings-copy {
+        margin: 5% 12%;
+    }
+
+    .events-copy {
+        border-radius: 8px;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 0;
+     }
+
+}
+
+@media screen and (min-width : 577px) {
+
+    .offerings-copy {
+        padding-top: 35px;
+    }
+
+    .why-gather {
+        padding: 20px;
+        line-height: 2;
+    }
+
+}
+
+@media screen and (max-width : 576px)   {
+
+    h4, h4 a {
+        font-size: 1.3rem;
+    }
+
+    p, p a {
+        font-size: 0.9rem;
+    }
+
+    li, li a {
+        font-size: 0.8rem;
+    }
+	
+    #overview .lead  {
+		font-size: 1.5rem;
+	}
+
+	#approach .container {
+		padding: 30px 20px;
+	}
+
+    #why-gather-section {
+        height: 450px;
+    }
+
+    .why-gather-bg {
+        padding: 5px;
+    }
+
+    .why-gather {
+        margin:70px 0;
+    }
+
+    #offeringsTitle {
+        margin:20px 0 5px 0;
+    }
+
+	.offerings-copy {
+        margin: 5% 8%;
+	}
+
+    .past-events {
+        margin-left:-15px;
+        margin-right:-15px;
+    }
+
+    
+
+    .events-copy {
+        padding: 15px !important;
+    }
+
+    #aboutImg-container {
+        height: 320px;
+    }
+
+    #frame-one185555046 {
+        width: 100%;
+    }
+
+    #linked-in {
+        font-size: 100%;
+    }
+
+    .partners {
+        width: 280px;
+        padding: 0 0 20px 0;
+    }
+}
+    </style>
 
   </head>
   <body>
@@ -101,7 +768,7 @@
 
         <div class="container">
             <h1>Approach</h1>
-            <p>My approach is informed by my studies in Hakomi somatic psychotherapy &amp; Process Work facilitation. I have trained in conflict mediation, social justice frameworks &amp; anti-oppression modalities. To my work, I bring five years of professional experience in operations &amp; people management.</p><br/><p>I dance equally with the sacred and the profane — at once holding space for deep transformation while infusing my work with humor & play, always making room for creativity.</p>
+            <p>My approach is informed by my studies in Hakomi somatic psychotherapy &amp; Process Work facilitation. I have trained in conflict mediation, social justice frameworks &amp; anti-oppression modalities. To my work, I bring five years of professional experience in operations &amp; people management.</p><br/><p>My facilitation style is always infused with humor, creativity & play, as I incorporate elements of visual art, movement, improv and storytelling.</p>
           </div>
 
           <p class="approach-credit">Photo by <a href="http://www.juliamaryanska.com/" target="_blank">Julia Maryanska</a></p>
@@ -129,7 +796,7 @@
 
         <h1 id="offeringsTitle">Offerings</h1>
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-6 col-xl-4 offerings" id="offerings1">
+          <div class="col-12 col-md-6 col-lg-4 offerings" id="offerings1">
 
 
           	<div class="offerings-copy">
@@ -137,12 +804,12 @@
                 <img class="offeringsImg" id="1" src="IMG/counseling.jpg" />
 
                 <h3>Counseling</h3>
-                <p>I lead individuals through 1:1 sessions to help them align more deeply with their life paths, purposes & dreams.</p>
+                <p>I lead individuals through 1:1 sessions to help them align more deeply with their life paths, purposes & dreams. I utilize embodied techniques to help explore inner landscapes.</p>
                 
             </div>
 		  </div>
           
-          <div class="col-12 col-md-6 col-lg-6 col-xl-4 offerings" id="offerings2">
+          <div class="col-12 col-md-6 col-lg-4 offerings" id="offerings2">
 
 
           	<div class="offerings-copy">
@@ -155,14 +822,14 @@
  			</div>
           </div>
 
-          <div class="col-12 col-lg-12 col-xl-4 offerings" id="offerings3">
+          <div class="col-12 col-lg-4 offerings" id="offerings3">
 
           	<div class="offerings-copy">
 
                 <img class="offeringsImg" id="2"  src="IMG/conflict.jpg" />
 
                <h3>Group Facilitation</h3>
-                <p>Tailored to the needs of each group, I offer social justice workshops, conflict resolution trainings, meeting facilitation and community building processes. I also design curated experiences that explore curiosity and tap into innate creativity.</p>
+                <p>I offer social justice workshops, conflict mediation trainings, meeting facilitation and community building processes. I also design curated experiences to allow participants to explore curiosity and tap into innate creativity.</p>
 
  			</div>
           </div>
@@ -194,7 +861,7 @@
 
         <h1>About Elena Pinsky</h1>
 
-        <p>I am a facilitator & artist working at the intersections of creativity & connection. To all of my Gather offerings, I bring empathy, compassion, a keen understanding of relational dynamics and a social justice lens. I hold a vision of an interdependent, thriving & playful world close to my heart.</p>
+        <p>I am a facilitator & artist working at the intersections of creativity & connection. To all of my Gather offerings, I bring empathy, compassion, a keen understanding of relational dynamics and a social justice lens. I hold a vision of an interdependent & thriving world close to my heart. I dance equally with the sacred and the profane — at once holding space for deep transformation while infusing my work with humor & play, always making room for creativity.</p>
 
         <p>My work is infused with a spiritual tenor, as I weave in learnings from my Jewish heritage and Tree of Life, my two-year women's rites of passage journey. I am grateful for Buddhist teachings in meditation and mindfulness. I am never without a creative project, be it cooking for a dinner party, watercoloring, laser-cutting or singing & songwriting.</p>
 
@@ -212,7 +879,7 @@
 
                     <hr>
                 
-                <p>I am a facilitator & artist working at the intersections of creativity & connection. To all of my Gather offerings, I bring empathy, compassion, a keen understanding of relational dynamics and a social justice lens. I hold a vision of an interdependent, thriving & playful world close to my heart.</p>
+                <p>I am a facilitator & artist working at the intersections of creativity & connection. To all of my Gather offerings, I bring empathy, compassion, a keen understanding of relational dynamics and a social justice lens. I hold a vision of an interdependent & thriving world close to my heart. I dance equally with the sacred and the profane — at once holding space for deep transformation while infusing my work with humor & play, always making room for creativity.</p>
 
                 <button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">Read More +</button>
       
@@ -262,10 +929,7 @@
                         <li>This retreat is designed for both curious individuals looking to deeper understand the source of their creativity & folks who don’t see themselves as creative wanting to open new channels</li>
                     </ul>
 
-<!--                     <img src="IMG/moishe-house-peer-led-retreats.jpg"/>
- -->
-
-                    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScc7deQonuR0Z9byULFgSFYg6YHiEokqTsfaTsXI_rUIeNwiw/viewform" target="_blank">Apply Now</a>
+                    <a class="ed-links" href="https://docs.google.com/forms/d/e/1FAIpQLScc7deQonuR0Z9byULFgSFYg6YHiEokqTsfaTsXI_rUIeNwiw/viewform" target="_blank">Apply Here!</a>
 
                 </div>
 
@@ -353,16 +1017,16 @@
         <h1>Partners</h1>
 
         <div class="row" id="partners">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <a href="https://www.feminismallnight.com/" target="_blank"><img class="partners lozad" data-src="IMG/feminism-all-night.png" /></a>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <a href="https://treeoflifeinitiation.org/" target="_blank"><img class="partners lozad" data-src="IMG/tree-of-life-logo.png" /></a>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <a href="https://www.ousd.org/" target="_blank"><img class="partners lozad" data-src="IMG/OUSD-program.png" /></a>
             </div>
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-12 col-xl-3">
                 <a href="https://avodah.net/what-we-do/jewish-service-corps/" target="_blank"><img class="partners lozad" data-src="IMG/avodah.jpg" /></a>
             </div>
             <div class="col-12 col-lg-6 ">

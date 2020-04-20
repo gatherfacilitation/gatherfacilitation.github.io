@@ -468,10 +468,10 @@
 
 
 @media screen and (max-width: 1200px) {
-.about-copy {
-    padding: 20px;
-    margin: 20px;
-}
+    .about-copy {
+        padding: 20px;
+        margin: 20px;
+    }
 }
 
 @media screen and (max-width : 992px)   {
@@ -491,14 +491,6 @@
         margin:0 2%;
     }
 
-    #offerings1 .offerings-copy {
-        margin-left: 20px;
-    }
-
-    #offerings2 .offerings-copy {
-        margin-right: 20px;
-    }
-
     #offerings1 .offerings-copy h3{
         margin: 10px 0 20px 0;
     }
@@ -512,7 +504,7 @@
     }
 
     #offerings3 .offerings-copy {
-            height: 350px;
+            height: 330px;
         }
 
     #offerings1 .offerings-copy, #offerings2 .offerings-copy {
@@ -530,6 +522,14 @@
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
+
+    #offerings1 .offerings-copy {
+        margin-left: 20px;
+    }
+
+    #offerings2 .offerings-copy {
+        margin-right: 20px;
+    }
 
     #offerings1 .offerings-copy, #offerings2 .offerings-copy {
         height: 430px;
@@ -552,6 +552,16 @@
         height: 450px;
     }
 
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    #offerings1 .offerings-copy {
+        margin-left: 20px;
+    }
+
+    #offerings2 .offerings-copy {
+        margin-right: 20px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -588,11 +598,11 @@
 
     .offerings-copy {
         padding-top: 70px;
-        min-height: 470px;
+        min-height: 480px;
     }
 
     #offerings1 .offerings-copy, #offerings2 .offerings-copy {
-        min-height: 470px;
+        min-height: 480px;
     }
 
     #approach .container {

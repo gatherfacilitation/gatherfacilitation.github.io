@@ -176,7 +176,7 @@
         display: block;
         background:#31A28B;
         margin: 0 auto;
-        border: 2px solid #31A28B;
+        border: 2px solid #156756;
         border-radius: 8px;
     }
 
@@ -332,6 +332,13 @@
         margin: 0;
     }
 
+    #moishe-retreats {
+        width: 200px;
+        margin: 20px auto;
+        display: block;
+        border: 5px solid white;
+        border-radius: 15px;
+    }
     .current-events-copy {
         padding:15px;
     }

@@ -5,7 +5,7 @@
     }
 
     h1 {
-        margin: 0 0 15px 0;
+        margin: 25px 0 10px 0;
     }
 
     h1, h2, h3 {
@@ -31,7 +31,7 @@
 
     section {
         background: white;
-        padding-top: 40px;
+        padding-top: 20px;
         position: relative;
     }
 
@@ -103,7 +103,7 @@
         padding:0;
         display:block;
         text-align: left;
-        letter-spacing: 4px;
+        letter-spacing: 3.7px;
         text-transform: uppercase;
     }
 
@@ -254,13 +254,17 @@
         color: darkgrey;
     }
 
+    #approach h1 {
+        margin-top:0;
+    }
+
     #approach h1, .offerings-copy h3 {
         color:white;
     }
 
 	#approach .container {
 		background:rgba(49, 162, 139, 0.96);
-		padding:40px 50px;
+		padding: 25px 40px 20px 40px;
         border-radius: 8px;
         position: relative;
         top:300px;
@@ -280,7 +284,7 @@
     .why-gather-bg {
         padding-top:1px;
         background: #9dd4c9;
-        min-height: 280px;
+        min-height: 340px;
     }
 
     .why-gather {
@@ -370,7 +374,7 @@
         color:white;
         max-width: 530px;
         font-weight: lighter;
-        padding: 5vh 2% 2% 2%;
+        padding: 20px 2% 2% 2%;
         background: rgba(70,70,70,0.6);
         border-radius: 8px;
         margin: 5%;
@@ -478,6 +482,14 @@
 
     .offerings-copy {
         margin:0 2%;
+    }
+
+    #offerings1 .offerings-copy {
+        margin-left: 20px;
+    }
+
+    #offerings2 .offerings-copy {
+        margin-right: 20px;
     }
 
     #offerings1 .offerings-copy h3{

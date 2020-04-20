@@ -5,7 +5,7 @@
     }
 
     h1 {
-        margin: 15px 0 20px 0;
+        margin: 0 0 10px 0;
     }
 
     h1, h2, h3 {
@@ -315,6 +315,12 @@
 
 	}
 
+    .offerings-copy p {
+        padding:0 20px 20px 20px;
+        font-size:1.1rem;
+        line-height: 1.5;
+    }
+
     .current-events-title {
         background: #31A28B;
         padding: 10px 0 8px 0;
@@ -368,6 +374,10 @@
         background: rgba(70,70,70,0.6);
         border-radius: 8px;
         margin: 5%;
+    }
+
+    .about-copy-sm {
+        margin-top: 20px;
     }
 
 	#aboutImg {
@@ -472,9 +482,9 @@
         min-height: 400px;
     }
 
-    #offerings1, #offerings2 {
-        min-height: 420px;
-        margin: 0 0px 20px 0;
+    #offerings1 .offerings-copy, #offerings2 .offerings-copy {
+        min-height: 430px;
+        margin-bottom: 40px;
     }
 
     .events-copy {
@@ -631,7 +641,7 @@ h4, h4 a {
 }
 
 p, p a {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 li, li a {
@@ -655,6 +665,11 @@ li, li a {
 
 .why-gather {
     margin:70px 0;
+}
+
+.why-gather p {
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 #offeringsTitle {

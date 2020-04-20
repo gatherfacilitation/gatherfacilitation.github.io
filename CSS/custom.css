@@ -280,7 +280,7 @@
     .why-gather-bg {
         padding-top:1px;
         background: #9dd4c9;
-        min-height: 350px;
+        min-height: 280px;
     }
 
     .why-gather {
@@ -295,14 +295,6 @@
     }
 
     #offeringsTitle {
-    }
-
-    #offerings1 .offerings-copy h3{
-        margin: 10px 0 50px 0;
-    }
-
-    #offerings2 .offerings-copy img{
-        margin-bottom:12px;
     }
 
     .offeringsImg {
@@ -320,7 +312,6 @@
 		padding: 10px;
 		margin: 0 0 30px 0;
         border-radius: 8px;
-        height: 500px;
 
 	}
 
@@ -481,19 +472,52 @@
 
 }
 
-@media screen and (max-width: 992px) and (min-width: 768px) {
+@media screen and (min-width : 768px)  {
 
-    .why-gather-bg {
-        min-height: 410px;
-    }
+
 
     .offerings-copy {
-        min-height: 400px;
+        margin:0 2%;
+    }
+
+    #offerings1 .offerings-copy h3{
+        margin: 10px 0 50px 0;
+    }
+
+    #offerings2 .offerings-copy img{
+        margin-bottom:12px;
     }
 
     #offerings1 .offerings-copy, #offerings2 .offerings-copy {
-        min-height: 430px;
+        height: 380px;
+    }
+
+    #offerings3 .offerings-copy {
+            height: 350px;
+        }
+
+    #offerings1 .offerings-copy, #offerings2 .offerings-copy {
         margin-bottom: 40px;
+    }
+
+    .current-events-title {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .current-events-copy {
+        background:#9dd4c9;
+    }
+
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+
+    #offerings1 .offerings-copy, #offerings2 .offerings-copy {
+        height: 430px;
+    }
+
+    .why-gather-bg {
+        min-height: 410px;
     }
 
     .events-copy {
@@ -511,32 +535,9 @@
 
 }
 
-@media screen and (min-width : 768px)  {
-
-
-
-    .offerings-copy {
-        margin:0 2%;
-    }
-
-    #events {
-        margin-top: 80px;
-    }
-
-    .current-events-title {
-        border-radius: 8px 8px 0 0;
-    }
-
-    .current-events-copy {
-        background:#9dd4c9;
-    }
-
-}
-
 @media screen and (min-width: 992px) {
 
     .offerings-copy {
-        min-height: 550px;
     }
 
     .offerings-container {
@@ -568,6 +569,10 @@
 
     .offerings-copy {
         padding-top: 70px;
+        min-height: 470px;
+    }
+
+    #offerings1 .offerings-copy, #offerings2 .offerings-copy {
         min-height: 470px;
     }
 
@@ -632,88 +637,87 @@
 
 @media screen and (min-width : 577px) {
 
-.offerings-copy {
-    padding-top: 35px;
-}
+    .offerings-copy {
+        padding: 20px 0 0 0;
+    }
 
-.why-gather {
-    padding: 20px;
-    line-height: 2;
-}
-
+    .why-gather {
+        padding: 20px;
+        line-height: 2;
+    }
 }
 
 @media screen and (max-width : 576px)   {
 
-h4, h4 a {
-    font-size: 1.3rem;
-}
+    h4, h4 a {
+        font-size: 1.3rem;
+    }
 
-p, p a {
-    font-size: 1rem;
-}
+    p, p a {
+        font-size: 1rem;
+    }
 
-li, li a {
-    font-size: 0.9rem;
-}
+    li, li a {
+        font-size: 0.9rem;
+    }
 
-#overview .lead  {
-	font-size: 1.5rem;
-}
+    #overview .lead  {
+    	font-size: 1.5rem;
+    }
 
-#approach .container {
-	padding: 30px 20px;
-}
+    #approach .container {
+    	padding: 30px 20px;
+    }
 
-#why-gather-section {
-}
+    #why-gather-section {
+    }
 
-.why-gather-bg {
-    padding: 5px;
-}
+    .why-gather-bg {
+        padding: 5px;
+    }
 
-.why-gather {
-    margin:70px 0;
-}
+    .why-gather {
+        margin:70px 0;
+    }
 
-.why-gather p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-}
+    .why-gather p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
 
-#offeringsTitle {
-    margin:20px 0 5px 0;
-}
+    #offeringsTitle {
+        margin:20px 0 5px 0;
+    }
 
-.offerings-copy {
-    margin: 5% 8%;
-}
+    .offerings-copy {
+        margin: 5% 8%;
+    }
 
-.past-events {
-    margin-left:-15px;
-    margin-right:-15px;
-}
+    .past-events {
+        margin-left:-15px;
+        margin-right:-15px;
+    }
 
 
 
-.events-copy {
-    padding: 15px !important;
-}
+    .events-copy {
+        padding: 15px !important;
+    }
 
-#aboutImg-container {
-    height: 320px;
-}
+    #aboutImg-container {
+        height: 320px;
+    }
 
-#frame-one185555046 {
-    width: 100%;
-}
+    #frame-one185555046 {
+        width: 100%;
+    }
 
-#linked-in {
-    font-size: 100%;
-}
+    #linked-in {
+        font-size: 100%;
+    }
 
-.partners {
-    width: 280px;
-    padding: 0 0 20px 0;
-}
+    .partners {
+        width: 280px;
+        padding: 0 0 20px 0;
+    }
 }

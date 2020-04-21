@@ -278,20 +278,18 @@
     }
 
     #contact-section {
-        background: #31A28B;
+        background: #0c362d;
     }
 
     .why-gather-bg {
-        padding-top:1px;
+        padding:60px;
         background: #9dd4c9;
-        min-height: 340px;
     }
 
     .why-gather {
         background:white;
         padding:15px;
         border: 5px solid #31A28B;
-        margin-top:40px;
     }
 
     .offerings-container {
@@ -446,7 +444,7 @@
 
     footer {
         text-align: center;
-        background: grey;
+        background: #000b09;
         color:white;
         position: absolute;
         width: 100%;
@@ -535,10 +533,6 @@
         height: 430px;
     }
 
-    .why-gather-bg {
-        min-height: 410px;
-    }
-
     .events-copy {
         border-radius:0 0 8px 8px;
     }
@@ -565,13 +559,6 @@
 }
 
 @media screen and (min-width: 992px) {
-
-    .offerings-copy {
-    }
-
-    .offerings-container {
-        margin: 0 10%;
-    }
 
     .current-events-title {
         border-radius: 8px 0 0 0;
@@ -639,10 +626,6 @@
     #approach {
         background-attachment: scroll;
         background-size:280%;
-    }
-
-    .why-gather-bg {
-        min-height: 500px;
     }
 
     .offerings {

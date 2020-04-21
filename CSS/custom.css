@@ -35,6 +35,10 @@
         position: relative;
     }
 
+    #events {
+        margin-top:50px;
+    }
+
 
     a {
         color:black;
@@ -290,6 +294,11 @@
         background:white;
         padding:15px;
         border: 5px solid #31A28B;
+    }
+
+    .why-gather p {
+        font-family: 'Arapey', serif;
+        font-size: 1.2rem;
     }
 
     .offerings-container {
@@ -654,7 +663,7 @@
     }
 
     .why-gather {
-        padding: 20px;
+        padding: 20px 35px;
         line-height: 2;
     }
 }
@@ -693,7 +702,7 @@
     }
 
     .why-gather p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         line-height: 1.5;
     }
 

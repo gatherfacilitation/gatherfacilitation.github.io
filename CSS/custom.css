@@ -445,13 +445,13 @@
     footer {
         text-align: center;
         background: #000b09;
-        color:white;
+        color: grey;
         position: absolute;
         width: 100%;
     }
 
     footer a {
-        color:white;
+        color: grey;
         text-decoration: underline;
         font-size: 10pt;
     }

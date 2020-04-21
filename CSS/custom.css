@@ -234,10 +234,14 @@
         top: 680px;
     }
 
+    #approach-wrapper {
+        background:#625848;
+        height: 800px;
+    }
+
     #approach {
         background: url('../IMG/blindfold.jpg');
         background-size: cover;
-        background-attachment: fixed;
         background-position: left top;
         width: 100%;
         background-repeat: no-repeat;
@@ -490,7 +494,13 @@
 
 }
 
-@media screen and (min-width : 768px)  {
+@media screen and (min-width: 769px) {
+    #approach {
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (min-width : 767px)  {
 
 
 
@@ -618,7 +628,7 @@
     }
 }
 
-@media screen and (max-width : 769px)  {
+@media screen and (max-width : 767px)  {
 
     h1 {
         font-size: 2rem;

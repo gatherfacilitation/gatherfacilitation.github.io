@@ -148,8 +148,8 @@
 
     .overlay .closebtn {
       position: absolute;
-      top: 20px;
-      right: 45px;
+      top: 0;
+      right: 18px;
       font-size: 60px;
     }
 
@@ -622,7 +622,7 @@
     }
 }
 
-@media screen and (max-width : 767px)  {
+@media screen and (max-width : 769px)  {
 
     h1 {
         font-size: 2rem;

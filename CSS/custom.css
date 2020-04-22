@@ -111,6 +111,11 @@
         text-transform: uppercase;
     }
 
+    #hamburger-button {
+        font-size:35px;
+        cursor:pointer;
+    }
+
 /*        BEGIN MOBILE FULL-WIDTH NAV*/
 
     #mobileNav li {
@@ -132,7 +137,6 @@
 
     .overlay-content {
       position: relative;
-      top: 15%;
       width: 100%;
       margin-top: 30px;
     }
@@ -285,7 +289,7 @@
     }
 
     #contact-section {
-        background: #0c362d;
+        background: #125245;
     }
 
     .why-gather-bg {

@@ -35,6 +35,10 @@
         position: relative;
     }
 
+    #events {
+        margin-top:50px;
+    }
+
 
     a {
         color:black;
@@ -148,8 +152,8 @@
 
     .overlay .closebtn {
       position: absolute;
-      top: 20px;
-      right: 45px;
+      top: 0;
+      right: 18px;
       font-size: 60px;
     }
 
@@ -203,12 +207,9 @@
 		background: url('../IMG/watercolor.jpg');
 		background-size: cover;
         background-position: center;
-        font-family: 'Arapey', serif;
         background-size: cover;
         height: 600px;
         margin-bottom: 0;
-        position: relative;
-        z-index: 9;
 	}
 
 	#overview .lead {
@@ -230,14 +231,20 @@
         top: 680px;
     }
 
+    #approach-wrapper {
+        background:#625848;
+        height: 800px;
+    }
+
     #approach {
         background: url('../IMG/blindfold.jpg');
         background-size: cover;
-        background-attachment: fixed;
         background-position: left top;
         width: 100%;
         background-repeat: no-repeat;
         height: 100%;
+        background-attachment: scroll;
+        background-attachment: fixed;
     }
 
     .approach-credit {
@@ -278,20 +285,23 @@
     }
 
     #contact-section {
-        background: #31A28B;
+        background: #0c362d;
     }
 
     .why-gather-bg {
-        padding-top:1px;
+        padding:60px;
         background: #9dd4c9;
-        min-height: 340px;
     }
 
     .why-gather {
         background:white;
         padding:15px;
         border: 5px solid #31A28B;
-        margin-top:40px;
+    }
+
+    .why-gather p {
+        font-family: 'Arapey', serif;
+        font-size: 1.2rem;
     }
 
     .offerings-container {
@@ -446,14 +456,14 @@
 
     footer {
         text-align: center;
-        background: grey;
-        color:white;
+        background: #000b09;
+        color: grey;
         position: absolute;
         width: 100%;
     }
 
     footer a {
-        color:white;
+        color: grey;
         text-decoration: underline;
         font-size: 10pt;
     }
@@ -483,9 +493,13 @@
 
 }
 
-@media screen and (min-width : 768px)  {
+@media screen and (min-width: 768px) {
+    #approach {
+        background-attachment: fixed;
+    }
+}
 
-
+@media screen and (min-width : 767px)  {
 
     .offerings-copy {
         margin:0 2%;
@@ -500,7 +514,7 @@
     }
 
     #offerings1 .offerings-copy, #offerings2 .offerings-copy {
-        height: 380px;
+        height: 385px;
     }
 
     #offerings3 .offerings-copy {
@@ -532,11 +546,7 @@
     }
 
     #offerings1 .offerings-copy, #offerings2 .offerings-copy {
-        height: 430px;
-    }
-
-    .why-gather-bg {
-        min-height: 410px;
+        height: 440px;
     }
 
     .events-copy {
@@ -565,13 +575,6 @@
 }
 
 @media screen and (min-width: 992px) {
-
-    .offerings-copy {
-    }
-
-    .offerings-container {
-        margin: 0 10%;
-    }
 
     .current-events-title {
         border-radius: 8px 0 0 0;
@@ -638,11 +641,6 @@
 
     #approach {
         background-attachment: scroll;
-        background-size:280%;
-    }
-
-    .why-gather-bg {
-        min-height: 500px;
     }
 
     .offerings {
@@ -671,7 +669,7 @@
     }
 
     .why-gather {
-        padding: 20px;
+        padding: 20px 35px;
         line-height: 2;
     }
 }
@@ -698,6 +696,10 @@
     	padding: 30px 20px;
     }
 
+    #approach {
+        background-size:280%;
+    }
+
     #why-gather-section {
     }
 
@@ -710,7 +712,7 @@
     }
 
     .why-gather p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         line-height: 1.5;
     }
 
@@ -719,7 +721,7 @@
     }
 
     .offerings-copy {
-        margin: 5% 8%;
+        margin: 4% 5%;
     }
 
     .past-events {

@@ -215,9 +215,10 @@
 		background: url('../IMG/watercolor.jpg');
 		background-size: cover;
         background-position: center;
-        background-size: cover;
         height: 600px;
         margin-bottom: 0;
+        position: relative;
+        z-index: 9;
 	}
 
 	#overview .lead {

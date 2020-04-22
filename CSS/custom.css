@@ -45,6 +45,10 @@
         text-decoration: underline;
     }
 
+    a:hover {
+        color: #31A28B;
+    }
+
     hr {
        border: 2px solid #31A28B;
     }
@@ -191,8 +195,8 @@
     .button:hover {
         text-decoration: none;
         color: white;
-        border: 3px solid white;
-        transition: 0.5s;
+        border: 2px solid white;
+        transition: 0.2s;
     }
 
     .block{
@@ -384,6 +388,10 @@
 
     .events-copy h4, .events-copy h4 a {
         color: #212529;
+    }
+
+    .events-copy h4 a:hover {
+        color: white;
     }
 
     .events-copy p {

@@ -517,7 +517,7 @@
     }
 
     #offerings1 .offerings-copy, #offerings2 .offerings-copy {
-        height: 380px;
+        height: 385px;
     }
 
     #offerings3 .offerings-copy {
@@ -549,7 +549,7 @@
     }
 
     #offerings1 .offerings-copy, #offerings2 .offerings-copy {
-        height: 430px;
+        height: 440px;
     }
 
     .events-copy {
@@ -628,7 +628,7 @@
     }
 }
 
-@media screen and (max-width : 767px)  {
+@media screen and (max-width : 768px)  {
 
     h1 {
         font-size: 2rem;
@@ -721,7 +721,7 @@
     }
 
     .offerings-copy {
-        margin: 5% 8%;
+        margin: 4% 5%;
     }
 
     .past-events {

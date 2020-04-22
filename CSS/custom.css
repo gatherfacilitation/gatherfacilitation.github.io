@@ -237,7 +237,7 @@
     }
 
     #approach {
-        background: url('../IMG/blindfold.jpg');
+        background: url('../IMG/blindfold2.jpg');
         background-size: cover;
         background-position: left top;
         width: 100%;
@@ -456,7 +456,7 @@
 
     footer {
         text-align: center;
-        background: #000b09;
+        background: #032d26;
         color: grey;
         position: absolute;
         width: 100%;
@@ -697,7 +697,7 @@
     }
 
     #approach {
-        background-size:280%;
+        background-size:250%;
     }
 
     #why-gather-section {

@@ -494,7 +494,7 @@
 
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
     #approach {
         background-attachment: fixed;
     }
@@ -502,7 +502,9 @@
 
 @media screen and (min-width : 767px)  {
 
-
+    #approach .container {
+        border-radius: 0;
+    }
 
     .offerings-copy {
         margin:0 2%;
@@ -628,7 +630,7 @@
     }
 }
 
-@media screen and (max-width : 768px)  {
+@media screen and (max-width : 767px)  {
 
     h1 {
         font-size: 2rem;
@@ -636,10 +638,6 @@
 
     .container {
         padding: 0 20px;
-    }
-
-    #approach .container {
-        border-radius: 0;
     }
 
     #approach {

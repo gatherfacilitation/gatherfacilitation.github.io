@@ -372,7 +372,7 @@
     }
 
     .past-events-bg {
-        background: url('../IMG/forest-path.jpeg');
+        background: url('../IMG/forest-path2.jpeg');
         background-repeat: no-repeat;
         background-size: 100%;
         padding-top:80px;
@@ -578,7 +578,7 @@
     }
 
     .current-events-bg {
-        background: url('../IMG/green-door.jpg');
+        background: url('../IMG/green-door2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 0;
@@ -605,7 +605,7 @@
     }
 
     .current-events-bg {
-        background: url('../IMG/green-door.jpg');
+        background: url('../IMG/green-door2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 0 8px 0 0;

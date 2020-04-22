@@ -386,7 +386,19 @@
 
 <footer>
     <div class="container">
-        <p>Made with love by <a href="https://nuanced.design">Nuanced Design</a>.</p>
+        <div class="row no-gutters">
+            
+            <div class="col-12 col-md-4 copyright">
+                <p><span id="current-year"></span> © Gather Facilitation</p>
+            </div>
+
+            <div class="col-12 col-md-4 copyright">
+                <p><a href="privacy.html">Privacy &amp; Terms</a></p>
+            </div>
+            
+            <div class="col-12 col-md-4 credits">
+                <p> Made with ❤ by <a href="https://nuanced.design">Nuanced Design</a>.</p>
+            </div>
     </div>
 </footer>
 
@@ -521,6 +533,11 @@ $('.img-parallax').each(function(){
     }
   });
 });
+
+// Get current year for copyright
+
+document.getElementById("current-year").innerHTML = new Date().getFullYear();
+
     </script>
 
 	<!--  Read more script -->

@@ -243,6 +243,8 @@
         width: 100%;
         background-repeat: no-repeat;
         height: 100%;
+        background-attachment: scroll;
+        background-attachment: fixed;
     }
 
     .approach-credit {
@@ -499,10 +501,6 @@
 
 @media screen and (min-width : 767px)  {
 
-    #approach .container {
-        border-radius: 0;
-    }
-
     .offerings-copy {
         margin:0 2%;
     }
@@ -637,9 +635,12 @@
         padding: 0 20px;
     }
 
+    #approach .container {
+        border-radius: 0;
+    }
+
     #approach {
         background-attachment: scroll;
-        background-size:280%;
     }
 
     .offerings {
@@ -693,6 +694,10 @@
 
     #approach .container {
     	padding: 30px 20px;
+    }
+
+    #approach {
+        background-size:280%;
     }
 
     #why-gather-section {

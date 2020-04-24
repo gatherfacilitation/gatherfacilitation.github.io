@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
    	<!-- Expiration header -->
-    <meta http-equiv="last-modified" content="Apr-24-2020 17:18" />
+    <meta http-equiv="last-modified" content="Mar-17-2020 17:18" />
 	<meta http-equiv="cache-control" content="Private" />
 	<meta http-equiv="Expires" content="600" />
 
@@ -109,9 +109,6 @@
           <p class="approach-credit">Photo by <a href="http://www.juliamaryanska.com/" target="_blank">Julia Maryanska</a></p>
     </div>
 </div> -->
-
-<a class="anchor" name="approach"></a>
-
 <section id="approach-section">
     <div id="approach-wrapper2">
 
@@ -463,26 +460,16 @@
 
     }
 
-    // Check if touch device
-
-    function isTouchSupported() {
-        var msTouchEnabled = window.navigator.msMaxTouchPoints;
-        var generalTouchEnabled = "ontouchstart" in document.createElement("div");
-     
-        if (msTouchEnabled || generalTouchEnabled) {
-            return true;
-        }
-        return false;
-    }
-
     // fixed position mobile fix
     $(window).scroll(function() {
 
         var scrolledY = $(window).scrollTop();
 
-            { if (isTouchSupported())
-                $('#approach-wrapper2').css('background-position', '-115px ' + (100 + (scrolledY / 1.2)) + 'px');
-            }
+        // if ( $(window).width() < 769 ) {
+        //     $('.scroll-fix').css('background-position', 'left ' + (-550 + (scrolledY)) + 'px');
+        //     }
+
+        // else {};
 
         // console.log(scrolledY);
 

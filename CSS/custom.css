@@ -5,7 +5,7 @@
     }
 
     h1 {
-        margin: 25px 0 10px 0;
+        margin: 30px 0 20px 0;
     }
 
     h1, h2, h3 {
@@ -35,10 +35,18 @@
         position: relative;
     }
 
+    #events {
+        padding-top:50px;
+    }
+
 
     a {
         color:black;
         text-decoration: underline;
+    }
+
+    a:hover {
+        color: #31A28B;
     }
 
     hr {
@@ -107,6 +115,11 @@
         text-transform: uppercase;
     }
 
+    #hamburger-button {
+        font-size:35px;
+        cursor:pointer;
+    }
+
 /*        BEGIN MOBILE FULL-WIDTH NAV*/
 
     #mobileNav li {
@@ -128,7 +141,6 @@
 
     .overlay-content {
       position: relative;
-      top: 15%;
       width: 100%;
       margin-top: 30px;
     }
@@ -148,8 +160,8 @@
 
     .overlay .closebtn {
       position: absolute;
-      top: 20px;
-      right: 45px;
+      top: 0;
+      right: 18px;
       font-size: 60px;
     }
 
@@ -183,8 +195,8 @@
     .button:hover {
         text-decoration: none;
         color: white;
-        border: 3px solid white;
-        transition: 0.5s;
+        border: 2px solid white;
+        transition: 0.2s;
     }
 
     .block{
@@ -203,8 +215,6 @@
 		background: url('../IMG/watercolor.jpg');
 		background-size: cover;
         background-position: center;
-        font-family: 'Arapey', serif;
-        background-size: cover;
         height: 600px;
         margin-bottom: 0;
         position: relative;
@@ -230,14 +240,20 @@
         top: 680px;
     }
 
+    #approach-wrapper {
+        background:#625848;
+        height: 800px;
+    }
+
     #approach {
-        background: url('../IMG/blindfold.jpg');
+        background: url('../IMG/blindfold3.jpg');
         background-size: cover;
-        background-attachment: fixed;
         background-position: left top;
         width: 100%;
         background-repeat: no-repeat;
         height: 100%;
+        background-attachment: scroll;
+        background-attachment: fixed;
     }
 
     .approach-credit {
@@ -278,20 +294,23 @@
     }
 
     #contact-section {
-        background: #31A28B;
+        background: #125245;
     }
 
     .why-gather-bg {
-        padding-top:1px;
+        padding:60px;
         background: #9dd4c9;
-        min-height: 340px;
     }
 
     .why-gather {
         background:white;
         padding:15px;
         border: 5px solid #31A28B;
-        margin-top:40px;
+    }
+
+    .why-gather p {
+        font-family: 'Arapey', serif;
+        font-size: 1.2rem;
     }
 
     .offerings-container {
@@ -354,7 +373,7 @@
     }
 
     .past-events-bg {
-        background: url('../IMG/forest-path.jpeg');
+        background: url('../IMG/forest-path2.jpeg');
         background-repeat: no-repeat;
         background-size: 100%;
         padding-top:80px;
@@ -370,6 +389,10 @@
 
     .events-copy h4, .events-copy h4 a {
         color: #212529;
+    }
+
+    .events-copy h4 a:hover {
+        color: white;
     }
 
     .events-copy p {
@@ -446,25 +469,37 @@
 
     footer {
         text-align: center;
-        background: grey;
-        color:white;
+        background: #032d26;
+        color: grey;
         position: absolute;
         width: 100%;
+        display: flex;
+        align-items: center;
+        min-height: 60px;
     }
 
-    footer a {
-        color:white;
+    .credits a {
+        color: grey;
         text-decoration: underline;
         font-size: 10pt;
     }
 
     footer p {
-        padding: 15px;
-        margin:0;
+        padding: 10px 0 10px 0;
+        margin: 0;
         font-weight: 100;
         font-size: 10pt;
     }
 
+    .copyright p {
+        color: rgb(193, 193, 193);
+    }
+
+    .copyright a {
+        text-decoration: none;
+        color: white;
+        font-size: 10pt;
+    }
 
 
 @media screen and (max-width: 1200px) {
@@ -483,9 +518,13 @@
 
 }
 
-@media screen and (min-width : 768px)  {
+@media screen and (min-width: 768px) {
+    #approach {
+        background-attachment: fixed;
+    }
+}
 
-
+@media screen and (min-width : 767px)  {
 
     .offerings-copy {
         margin:0 2%;
@@ -500,7 +539,7 @@
     }
 
     #offerings1 .offerings-copy, #offerings2 .offerings-copy {
-        height: 380px;
+        height: 385px;
     }
 
     #offerings3 .offerings-copy {
@@ -532,11 +571,7 @@
     }
 
     #offerings1 .offerings-copy, #offerings2 .offerings-copy {
-        height: 430px;
-    }
-
-    .why-gather-bg {
-        min-height: 410px;
+        height: 440px;
     }
 
     .events-copy {
@@ -544,7 +579,7 @@
     }
 
     .current-events-bg {
-        background: url('../IMG/green-door.jpg');
+        background: url('../IMG/green-door2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 0;
@@ -566,19 +601,12 @@
 
 @media screen and (min-width: 992px) {
 
-    .offerings-copy {
-    }
-
-    .offerings-container {
-        margin: 0 10%;
-    }
-
     .current-events-title {
         border-radius: 8px 0 0 0;
     }
 
     .current-events-bg {
-        background: url('../IMG/green-door.jpg');
+        background: url('../IMG/green-door2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 0 8px 0 0;
@@ -622,6 +650,13 @@
     }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+
+    .about-wrapper {
+        max-height: 780px;
+    }
+}
+
 @media screen and (max-width : 767px)  {
 
     h1 {
@@ -638,11 +673,6 @@
 
     #approach {
         background-attachment: scroll;
-        background-size:280%;
-    }
-
-    .why-gather-bg {
-        min-height: 500px;
     }
 
     .offerings {
@@ -671,7 +701,7 @@
     }
 
     .why-gather {
-        padding: 20px;
+        padding: 20px 35px;
         line-height: 2;
     }
 }
@@ -698,6 +728,10 @@
     	padding: 30px 20px;
     }
 
+    #approach {
+        background-size:250%;
+    }
+
     #why-gather-section {
     }
 
@@ -710,7 +744,7 @@
     }
 
     .why-gather p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         line-height: 1.5;
     }
 
@@ -719,7 +753,7 @@
     }
 
     .offerings-copy {
-        margin: 5% 8%;
+        margin: 4% 5%;
     }
 
     .past-events {

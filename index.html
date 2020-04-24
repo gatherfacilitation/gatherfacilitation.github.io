@@ -29,7 +29,7 @@
     <div class="container">
 	  <a class="navbar-brand" href="#"><strong>Gather</strong> <br/><span class="logo-facilitation">Facilitation</span></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" >
-	            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	            <span id="hamburger-button" onclick="openNav()">&#9776;</span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
 	    <ul id="menu-main-nav" class="navbar-nav nav-fill w-100">
@@ -95,7 +95,7 @@
   </div>
 </div>
 
-<div style="background:black;height: 800px;">
+<div id="approach-wrapper">
     <div class="scroll-fix" id="approach">
         <a class="anchor" name="approach"></a>
 
@@ -134,7 +134,7 @@
 
           	<div class="offerings-copy">
 
-                <img class="offeringsImg" id="1" src="IMG/counseling.jpg" />
+                <img class="offeringsImg lozad" id="1" data-src="IMG/counseling2.jpg" />
 
                 <h3>Counseling</h3>
                 <p>I lead individuals through 1:1 sessions to help them align more deeply with their life paths, purposes & dreams. I utilize embodied techniques to help explore inner landscapes.</p>
@@ -147,7 +147,7 @@
 
           	<div class="offerings-copy">
 
-                <img class="offeringsImg" id="3" src="IMG/group.jpg" />
+                <img class="offeringsImg lozad" id="3" data-src="IMG/group2.jpg" />
 
                 <h3>Conflict Transformation</h3>
                 <p>I coach individuals, mediate pairs and facilitate groups to help them move from the perpetuation of conflict and harm to the cultivation of mutual understanding and potential for change and expansion.</p>
@@ -159,7 +159,7 @@
 
           	<div class="offerings-copy">
 
-                <img class="offeringsImg" id="2"  src="IMG/conflict.jpg" />
+                <img class="offeringsImg lozad" id="2"  data-src="IMG/conflict2.jpg" />
 
                <h3>Group Facilitation</h3>
                 <p>I offer social justice workshops, conflict resolution trainings, meeting facilitation and community building processes. I also design curated experiences for participants to explore curiosity and tap into innate creativity.</p>
@@ -169,16 +169,18 @@
 
         </div>
 
-        <br/>
+        <h1>Rates</h1>
 
         <hr>
 
-        <h4 style="text-align: center;"><em>Rates:</em> My rates are currently set up on a sliding-scale basis. Please <a href="#contact">get in touch</a> with me to schedule a free consultation or request more information!</h4>
+        <h4 style="text-align: center;"> My rates are currently set up on a sliding-scale basis. Please <a href="#contact">get in touch</a> with me to schedule a free consultation or request more information!</h4>
 
         <hr>
     </div>
 
 </section>
+
+<br/>
 
 <section>
 
@@ -186,7 +188,7 @@
 
     <div class="block" id="aboutImg-container">
 
-        <img data-src="IMG/elena-headshot-orange-sm.jpg" class=" img-parallax d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot" data-speed="-0.3">
+        <img data-src="IMG/elena-headshot-orange-sm2.jpg" class=" d-block d-sm-none lozad" id="elena-headshot" alt="Elena Pinsky headshot" data-speed="-0.3">
         
     </div>
 
@@ -200,31 +202,34 @@
 
     </div>
 
-    <img class="lozad d-none d-sm-block" data-src="IMG/elena-headshot-orange.jpg" id="aboutImg2" />
+    <div class="about-wrapper">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
+        <img class="lozad d-none d-sm-block" data-src="IMG/elena-headshot-orange2.jpg" id="aboutImg2" />
 
-                <div class="about-copy-sm d-lg-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
 
-                    <h1>About Elena Pinsky</h1>
+                    <div class="about-copy-sm d-lg-none">
 
-                    <hr>
-                
-                <p>I am a facilitator & artist working at the intersections of creativity & connection. To all of my Gather offerings, I bring empathy, compassion, a keen understanding of relational dynamics and a social justice lens. I hold a vision of an interdependent & thriving world close to my heart. I dance equally with the sacred and the profane — at once holding space for deep transformation while braiding in humor & play, always making room for creativity.</p>
+                        <h1>About Elena Pinsky</h1>
 
-                <button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">Read More +</button>
-      
-                <div id="demo" class="collapse">
-                    <br/>
-                    <p>My work is infused with a spiritual tenor, as I weave in learnings from my Jewish heritage, a two-year women's rites of passage journey and Buddhist teachings in meditation and mindfulness. I am never without a project, be it cooking for a dinner party, watercoloring or singing & songwriting.</p>
+                        <hr>
+                    
+                    <p>I am a facilitator & artist working at the intersections of creativity & connection. To all of my Gather offerings, I bring empathy, compassion, a keen understanding of relational dynamics and a social justice lens. I hold a vision of an interdependent & thriving world close to my heart. I dance equally with the sacred and the profane — at once holding space for deep transformation while braiding in humor & play, always making room for creativity.</p>
+
+    <!--                 <button type="button" class="btn" id="read-more" data-toggle="collapse" data-target="#demo">Read More +</button>
+          
+                    <div id="demo" class="collapse">
+                        <br/> -->
+                        <p>My work is infused with a spiritual tenor, as I weave in learnings from my Jewish heritage, a two-year women's rites of passage journey and Buddhist teachings in meditation and mindfulness. I am never without a project, be it cooking for a dinner party, watercoloring or singing & songwriting.</p>
+                    <!-- </div> -->
+
+                </div>
+                    
                 </div>
 
             </div>
-                
-            </div>
-
         </div>
     </div>
 
@@ -242,12 +247,10 @@
 
     <div class="row no-gutters">
 
-        <div class="col-12 col-lg-7">
+        <div class="col-12 col-lg-6">
 
             <div class="current-events">
                 <a class="anchor" name="events"></a>
-
-            
 
             <h1 class="current-events-title d-none d-md-block">Current Events</h1>
 
@@ -271,7 +274,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-lg-5 current-events-bg ">
+        <div class="col-12 col-lg-6 current-events-bg ">
         </div>
     </div>
 
@@ -302,7 +305,7 @@
 
             <h4><i>“White | Woman | Shame | Blame | Game”: </i> workshop | June 2019
 
-            (Co-facilitated with <a href="http://www.annieroselondon.com/">Annie-Rose London</a>) at <a href="https://www.feminismallnight.com">Feminism All Night</a></h4>
+            (Co-facilitated with <a href="http://www.annieroselondon.com/" target="_blank">Annie-Rose London</a>) at <a href="https://www.feminismallnight.com" target="_blank">Feminism All Night</a></h4>
 
             <p>Moving past guilt in service of becoming stronger anti-racist humyns. This workshop explores the ways shame and guilt - particularly as internalized by female-identified and assigned people - intersect with white fragility and vigilance and can make us, as white women, less resilient and capable as anti-racists.</p><p>How does our guilt and shame and lack of self-assurance make us fragile and terrified of "messing up" with race, and thus afraid to speak out or over-react when being called out/in? How does it make us hyper vigilant of other white people, severing ties with them rather than leveraging our access and privilege to build bridges and educate? This workshop focuses on working out the experiences of white-identified women and AFAB folks of all genders.</p>
         </div>
@@ -317,7 +320,7 @@
 
 </section>
 
-
+<br/><br/>
 <section>
 
     <a class="anchor" name="background"></a>
@@ -370,7 +373,7 @@
 </div>
 
 <hr>
-
+<br/><br/>
 </section>
 
 
@@ -384,7 +387,19 @@
 
 <footer>
     <div class="container">
-        <p>Made with love by <a href="https://nuanced.design">Nuanced Design</a>.</p>
+        <div class="row no-gutters">
+            
+            <div class="col-12 col-md-4 copyright">
+                <p><span id="current-year"></span> © Gather Facilitation</p>
+            </div>
+
+            <div class="col-12 col-md-4 copyright">
+                <p><a href="privacy.html">Privacy &amp; Terms</a></p>
+            </div>
+            
+            <div class="col-12 col-md-4 credits">
+                <p> Made with ❤ by <a href="https://nuanced.design">Nuanced Design</a>.</p>
+            </div>
     </div>
 </footer>
 
@@ -519,10 +534,15 @@ $('.img-parallax').each(function(){
     }
   });
 });
+
+// Get current year for copyright
+
+document.getElementById("current-year").innerHTML = new Date().getFullYear();
+
     </script>
 
 	<!--  Read more script -->
-	<script>
+	<!-- <script>
 		$(document).ready(function(){
 		  $("#demo").on("hide.bs.collapse", function(){
 		    $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span>Read More +');
@@ -531,7 +551,7 @@ $('.img-parallax').each(function(){
 		    $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span>Read Less -');
 		  });
 		});
-	</script>
+	</script> -->
 
     <!-- LOAD Lazy IMG Loader -->
 	<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js">

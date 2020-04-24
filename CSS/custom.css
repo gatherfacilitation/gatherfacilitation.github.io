@@ -1,6 +1,5 @@
     html {
         scroll-behavior: smooth;
-        margin-top: 86px;
         background: #31A28B;
     }
 
@@ -66,6 +65,13 @@
 		background-color: #31A28B!important;
         z-index: 999;
 	}
+
+    #navBG {
+        height: 86px;
+        background: #31A28B;
+        z-index: 9;
+        position: relative;
+    }
 
     .navbar {
         position: fixed;
@@ -252,7 +258,7 @@
     }
 
     #approach-section {
-        height: 800px;
+        height: 150vh;
         background:#625848;
     }
 
@@ -264,11 +270,27 @@
         height: 100%;
         width: 100%;
         background: #125245;
-        background-size: 150%;
+        background-size: 200vh;
         background-image: url('../IMG/blindfold3.jpg');
         background-attachment: fixed;
         background-repeat: no-repeat;
 
+    }
+
+    #approach2 {
+        position: relative;
+        bottom: 120vh;
+        margin-bottom: -100vh;
+    }
+
+    #approach2 .container {
+        background:rgba(49, 162, 139, 0.96);
+        padding: 25px 40px 20px 40px;
+        border-radius: 8px;
+        position: relative;
+        max-width: 770px;
+        color: white;
+        z-index: 9;
     }
 
     #approach {
@@ -313,22 +335,6 @@
         color: white;
         z-index: 9;
 	}
-
-    #approach2 {
-        position: relative;
-        bottom:500px;
-        margin-bottom: -360px;
-    }
-
-    #approach2 .container {
-        background:rgba(49, 162, 139, 0.96);
-        padding: 25px 40px 20px 40px;
-        border-radius: 8px;
-        position: relative;
-        max-width: 770px;
-        color: white;
-        z-index: 9;
-    }
 
     #why-gather-section {
         padding-top:0;
@@ -542,11 +548,22 @@
         font-size: 10pt;
     }
 
+@media screen and (min-width: 1700px) {
+
+    #approach-wrapper2 {
+        background-size:100%;
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
     .about-copy {
         padding: 20px;
         margin: 20px;
+    }
+
+    #approach-wrapper2 {
+        background-position-x:-100px;
     }
 }
 
@@ -557,12 +574,6 @@
 
 #overview {height: 500px;}
 
-}
-
-@media screen and (min-width: 768px) {
-    #approach {
-        background-attachment: fixed;
-    }
 }
 
 @media screen and (min-width : 767px)  {
@@ -659,8 +670,6 @@
         width: 100%;
     }
 
-    #why-gather-section {
-    }
 }
 
 @media screen and (min-width : 1200px)   {
@@ -674,7 +683,7 @@
         min-height: 480px;
     }
 
-    #approach .container {
+    #approach2 .container {
         margin-left:32%;
     }
 
@@ -708,13 +717,13 @@
         padding: 0 20px;
     }
 
-    #approach .container {
+/*    #approach2 .container {
         border-radius: 0;
-    }
-
+    }*/
+/*
     #approach {
         background-attachment: scroll;
-    }
+    }*/
 
     .offerings {
         padding: 0;
@@ -765,13 +774,13 @@
     	font-size: 1.5rem;
     }
 
-    #approach .container {
+    #approach2 .container {
     	padding: 30px 20px;
     }
 
-    #approach {
+/*    #approach {
         background-size:250%;
-    }
+    }*/
 
     #why-gather-section {
     }

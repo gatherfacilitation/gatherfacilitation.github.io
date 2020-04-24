@@ -270,12 +270,12 @@
         height: 100%;
         width: 100%;
         background: #125245;
-        background-size: 200vh;
+        background-size: 130vw;
         background-image: url('../IMG/blindfold3.jpg');
         background-attachment: scroll;
         background-attachment: fixed;
         background-repeat: no-repeat;
-        background-position: left top;
+        background-position: -100px top;
 
     }
 
@@ -550,13 +550,6 @@
         font-size: 10pt;
     }
 
-@media screen and (min-width: 1700px) {
-
-    #approach-wrapper2 {
-        background-size:100%;
-    }
-}
-
 
 @media screen and (max-width: 1200px) {
     .about-copy {
@@ -564,9 +557,6 @@
         margin: 20px;
     }
 
-    #approach-wrapper2 {
-        background-position-x:-100px;
-    }
 }
 
 @media screen and (max-width : 992px)   {
@@ -683,6 +673,11 @@
         min-height: 480px;
     }
 
+    #approach-wrapper2 {
+        background-size:100%;
+        background-position: left top;
+    }
+
     #approach2 .container {
         margin-left:32%;
     }
@@ -717,13 +712,9 @@
         padding: 0 20px;
     }
 
-/*    #approach2 .container {
-        border-radius: 0;
-    }*/
-/*
-    #approach {
-        background-attachment: scroll;
-    }*/
+    #approach-wrapper2 {
+        background-size: 200vh;
+    }
 
     .offerings {
         padding: 0;

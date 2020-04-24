@@ -480,7 +480,7 @@
         var scrolledY = $(window).scrollTop();
 
             { if (isTouchSupported())
-                $('#approach-wrapper2').css('background-position', '-115px ' + (100 + (scrolledY / 1.2)) + 'px');
+                $('#approach-wrapper2').css('background-position-y', (100 + (scrolledY / 1.2)) + 'px');
             }
 
         // console.log(scrolledY);
@@ -606,6 +606,18 @@ document.getElementById("current-year").innerHTML = new Date().getFullYear();
         const loadIMG = document.querySelector('.lozad')
         // ... trigger the load of a image before it appears on the viewport
         observer.triggerLoad(loadIMG);
+
+
+    // BG IMG LOAD
+
+      $(window).on("load", function() {
+    var lazyloadImages = document.querySelectorAll("img.lozad");    
+
+    lazyloadImages.forEach(function(img) {
+          img.src = img.dataset.src;
+        });
+      });
+
     </script>
   </body>
 </html>

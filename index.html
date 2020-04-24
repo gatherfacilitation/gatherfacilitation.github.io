@@ -269,7 +269,7 @@
     <h1 class="current-events-title d-md-none">Current Events</h1>
 
     <div class="fullImgWrapper">
-        <img src="IMG/green-door-sm.jpg" class="d-block d-md-none lozad">
+        <img data-src="IMG/green-door-sm.jpg" class="d-block d-md-none lozad">
     </div>
 
     <div class="container">
@@ -294,7 +294,7 @@
                         <li>This retreat is designed for both curious individuals looking to deeper understand the source of their creativity & folks who don’t see themselves as creative wanting to open new channels</li>
                     </ul>
 
-                     <img src="IMG/moishe-house-peer-led-retreats.jpg"/ id="moishe-retreats">
+                     <img class="lozad" data-src="IMG/moishe-house-peer-led-retreats.jpg"/ id="moishe-retreats">
 
                     <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScc7deQonuR0Z9byULFgSFYg6YHiEokqTsfaTsXI_rUIeNwiw/viewform" target="_blank">Apply Now</a>
 
@@ -303,7 +303,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-lg-6 current-events-bg ">
+        <div class="col-12 col-lg-6 current-events-bg lozad" data-background-image="IMG/green-door2.jpg">
         </div>
     </div>
 
@@ -315,8 +315,7 @@
 
     <div class="row no-gutters">
 
-                <div class="col-12 col-lg-4 past-events-bg d-none d-lg-block">
-<!--             <img src="IMG/forest-path.jpeg" style="width: 100%" /> -->
+                <div class="col-12 col-lg-4 past-events-bg d-none d-lg-block lozad" data-background-image="IMG/forest-path2.jpeg">
         </div>
 
         <div class="events-copy col-12 col-lg-8">
@@ -603,6 +602,10 @@ document.getElementById("current-year").innerHTML = new Date().getFullYear();
     <script>
     	const observer = lozad();
 		observer.observe();
+
+        const loadIMG = document.querySelector('img')
+        // ... trigger the load of a image before it appears on the viewport
+        observer.triggerLoad(loadIMG);
     </script>
   </body>
 </html>

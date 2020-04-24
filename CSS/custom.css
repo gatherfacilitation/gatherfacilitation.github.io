@@ -1,6 +1,7 @@
     html {
         scroll-behavior: smooth;
         background: #31A28B;
+        z-index: 9;
     }
 
     h1 {

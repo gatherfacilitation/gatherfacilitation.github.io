@@ -35,6 +35,11 @@
         position: relative;
     }
 
+    #main-content {
+        z-index: 99;
+        position: relative;
+        background: white;    }
+
     #events {
         padding-top:50px;
     }
@@ -67,6 +72,7 @@
         width: 100%;
         transition: 0.2s;
         top:0;
+        z-index: 99999
     }
 	.navbar-light .navbar-nav .nav-link {
 		font-family: 'Arapey', serif;
@@ -130,7 +136,7 @@
       height: 100%;
       width: 0;
       position: fixed;
-      z-index: 9999;
+      z-index: 99999;
       top: 0;
       left: 0;
       background-color: #31A28B;
@@ -218,7 +224,7 @@
         height: 600px;
         margin-bottom: 0;
         position: relative;
-        z-index: 9;
+        z-index: 999;
 	}
 
 	#overview .lead {
@@ -245,6 +251,26 @@
         height: 800px;
     }
 
+    #approach-section {
+        height: 800px;
+        background:#625848;
+    }
+
+    #approach-wrapper2 {
+        z-index: 1;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #125245;
+        background-size: 150%;
+        background-image: url('../IMG/blindfold3.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+    }
+
     #approach {
         background: url('../IMG/blindfold3.jpg');
         background-size: cover;
@@ -260,7 +286,6 @@
         position: fixed;
         bottom: 10px;
         right: 10px;
-        z-index: 0;
         background:rgba(0,0,0,0.3);
         padding:3px;
         border-radius: 3px;
@@ -288,6 +313,22 @@
         color: white;
         z-index: 9;
 	}
+
+    #approach2 {
+        position: relative;
+        bottom:500px;
+        margin-bottom: -360px;
+    }
+
+    #approach2 .container {
+        background:rgba(49, 162, 139, 0.96);
+        padding: 25px 40px 20px 40px;
+        border-radius: 8px;
+        position: relative;
+        max-width: 770px;
+        color: white;
+        z-index: 9;
+    }
 
     #why-gather-section {
         padding-top:0;

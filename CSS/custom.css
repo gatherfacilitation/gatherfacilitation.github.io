@@ -4,6 +4,10 @@
         z-index: 9;
     }
 
+    body {
+        background: #032d26;
+    }
+
     h1 {
         margin: 30px 0 20px 0;
     }
@@ -274,7 +278,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background: #032d26;
+        background: #125245;
         background-size: 130vw;
         background-image: url('../IMG/blindfold3.jpg');
         background-attachment: scroll;

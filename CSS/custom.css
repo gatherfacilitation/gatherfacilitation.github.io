@@ -72,10 +72,13 @@
 	}
 
     #navBG {
+        padding-top: 200px;
         height: 86px;
         background: #31A28B;
         z-index: 9;
         position: relative;
+        top: -200px;
+        margin-bottom: -120px;
     }
 
     .navbar {

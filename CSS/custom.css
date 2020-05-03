@@ -156,6 +156,12 @@
       background-color: rgba(49,162,139, 0.9);
       overflow-x: hidden;
       transition: 0.5s;
+
+    }
+
+    .blurred {
+        backdrop-filter:blur(5px);
+        -webkit-backdrop-filter:blur(5px);
     }
 
     .overlay-content {
@@ -169,7 +175,7 @@
       text-decoration: none;
       font-size: 36px;
       color: white;
-      display: block;
+      display: inline-block;
       transition: 0.3s;
     }
 
@@ -182,6 +188,7 @@
       top: 0;
       right: 18px;
       font-size: 60px;
+      z-index: 1;ø
     }
 
     @media screen and (max-height: 450px) {

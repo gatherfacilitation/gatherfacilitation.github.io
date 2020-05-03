@@ -25,12 +25,18 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div id="menu-container">
+        <div id="menu-wrapper">
+            <div id="hamburger-menu" onclick="toggleNav()"><span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+
     <div class="container">
 	  <a class="navbar-brand" href="#"><strong>Gather</strong> <br/><span class="logo-facilitation">Facilitation</span></a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" >
-	            <span id="hamburger-button" onclick="openNav()">&#9776;</span>
-	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
 	    <ul id="menu-main-nav" class="navbar-nav nav-fill w-100">
             <li class="nav-item dropdown">
@@ -68,7 +74,8 @@
     <nav>
         <div id="mobileNav" class="overlay">
 
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<!--             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ -->
             <div class="overlay-content">
 
             <ul>
@@ -448,7 +455,10 @@
 
 <script>
 
+
      // MOBILE FULL WIDTH NAV
+
+    var navStatus = 'closed';
 
     function openNav() {
       document.getElementById("mobileNav").style.width = "100%";
@@ -460,6 +470,22 @@
       document.getElementById("mobileNav").style.width = "0%";
         document.getElementsByClassName("overlay")[0].classList.remove('blurred');
         document.getElementsByTagName("BODY")[0].style.overflow = "initial";
+    }
+
+    function toggleNav() {
+        if (navStatus == 'open') {
+            closeNav();
+            navStatus = 'closed';
+
+            console.log(navStatus);
+        }
+
+        else if (navStatus == 'closed') {
+            openNav();
+            navStatus = 'open';
+
+            console.log(navStatus);
+        }
     }
 
     (function() {
@@ -484,6 +510,22 @@
 
 
             getScript('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js',function() {});
+
+            // Animated hamburger button
+
+            $(function() {
+              function slideMenu() {
+                var activeState = $("#menu-container .menu-list").hasClass("active");
+              }
+              $("#menu-wrapper").click(function(event) {
+                event.stopPropagation();
+                $("#hamburger-menu").toggleClass("open");
+                $("#menu-container .menu-list").toggleClass("active");
+                slideMenu();
+
+              });
+            }); 
+
 
             // Check if touch device
 
@@ -550,11 +592,13 @@
                     if (st > lastScrollTop && st > navbarHeight){
                         // Scroll Down
                         $('nav').removeClass('nav-down').addClass('nav-up');
+                        $('#hamburger-menu').css('display', 'none');
                             
                     } else {
                         // Scroll Up
                         if(st + $(window).height() < $(document).height()) {
                             $('nav').removeClass('nav-up').addClass('nav-down');
+                            $('#hamburger-menu').css('display', 'block');
                         }
                     }
                     

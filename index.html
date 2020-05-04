@@ -22,15 +22,19 @@
 
      <!-- Custom Styles -->
     <link rel="stylesheet" href="CSS/custom.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 
   </head>
   <body>
 
-    <div id="menu-container">
-        <div id="menu-wrapper">
-            <div id="hamburger-menu" onclick="toggleNav()"><span></span><span></span><span></span>
-            </div>
-        </div>
+    <div id="hamburger-menu" onclick="toggleNav()"><span></span><span></span><span></span>
     </div>
 
     <nav class="navbar navbar-expand-lg">
@@ -419,7 +423,62 @@
 
     <a class="anchor" name="contact"></a>
     <div class="container">
-        <a name="form185555046" id="formAnchor185555046"></a>
+<!--         <a name="form185555046" id="formAnchor185555046"></a> -->
+
+<!-- modify this form HTML and place wherever you want your form -->
+
+
+
+
+    <div class="contact1">
+        <div class="container-contact1">
+            <div class="contact1-pic js-tilt" data-tilt>
+                <img src="IMG/mail-message.png" alt="E-mail flying">
+            </div>
+
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/meqrqanp" method="post" class="contact1-form validate-form">
+                <span class="contact1-form-title">
+                    Get in touch or schedule a free consulation!
+                </span>
+
+  <fieldset id="fs-frm-inputs">
+    <label for="full-name">Full Name</label>
+    <div class="wrap-input1 validate-input" data-validate = "Name is required">
+            <input type="text" class="input1" name="name" id="full-name" placeholder="Name" required="">
+                    <span class="shadow-input1"></span>
+                </div>
+
+    <label for="email-address">Email Address</label>
+
+            <div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <input class="input1" type="email" name="_replyto" id="email-address" placeholder="Email" required="">
+                    <span class="shadow-input1"></span>
+                </div>
+
+    <label for="message">Message</label>
+    
+
+    <div class="wrap-input1 validate-input" data-validate = "Subject is required">
+                    <textarea class="input1" rows="5" name="message" id="message" placeholder="Subject" required=""></textarea>
+                    <span class="shadow-input1"></span>
+                </div>
+    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+  </fieldset>
+
+  <div class="container-contact1-form-btn">
+                    <button class="button" type="submit" value="Submit">
+                        <span>
+                            Send
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </span>
+
+
+                    </button>
+
+                </div>
+</form>        </div>
+    </div>
+
     </div>
 </section>
 
@@ -453,7 +512,21 @@
     <!--  JS defer jQuery & formsite -->
 <!--     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
 
+<!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script >
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+
 <script>
+
+
 
 
      // MOBILE FULL WIDTH NAV
@@ -476,15 +549,12 @@
         if (navStatus == 'open') {
             closeNav();
             navStatus = 'closed';
-
-            console.log(navStatus);
         }
 
         else if (navStatus == 'closed') {
             openNav();
             navStatus = 'open';
 
-            console.log(navStatus);
         }
     }
 
@@ -514,15 +584,9 @@
             // Animated hamburger button
 
             $(function() {
-              function slideMenu() {
-                var activeState = $("#menu-container .menu-list").hasClass("active");
-              }
-              $("#menu-wrapper").click(function(event) {
+              $("#hamburger-menu").click(function(event) {
                 event.stopPropagation();
                 $("#hamburger-menu").toggleClass("open");
-                $("#menu-container .menu-list").toggleClass("active");
-                slideMenu();
-
               });
             }); 
 
@@ -592,13 +656,16 @@
                     if (st > lastScrollTop && st > navbarHeight){
                         // Scroll Down
                         $('nav').removeClass('nav-down').addClass('nav-up');
-                        $('#hamburger-menu').css('display', 'none');
+                        $('#hamburger-menu').addClass('d-none');
                             
                     } else {
                         // Scroll Up
                         if(st + $(window).height() < $(document).height()) {
                             $('nav').removeClass('nav-up').addClass('nav-down');
-                            $('#hamburger-menu').css('display', 'block');
+                            
+                            if ($(window).width() < 992) {
+                                $('#hamburger-menu').removeClass('d-none');
+                            }
                         }
                     }
                     
@@ -652,10 +719,10 @@
             })();
 </script>
 
-<script src="https://fs8.formsite.com/include/form/embedManager.js?185555046"></script>
-
+<!-- <script src="https://fs8.formsite.com/include/form/embedManager.js?185555046"></script>
+ -->
 <!-- Contact Form -->`
-<script defer>EmbedManager.embed({    key: "https://fs8.formsite.com/res/showFormEmbed?EParam=bJeI6E3QIKB_a3G9Zzepx6_3bsAv-gQi&185555046", width: "initial"});</script>
+<!-- <script defer>EmbedManager.embed({    key: "https://fs8.formsite.com/res/showFormEmbed?EParam=bJeI6E3QIKB_a3G9Zzepx6_3bsAv-gQi&185555046", width: "initial"});</script> -->
 
 
     <!-- Optional JavaScript -->

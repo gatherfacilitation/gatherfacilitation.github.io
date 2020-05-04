@@ -55,7 +55,9 @@
     }
 
     a:hover {
-        color: #31A28B;
+        color: white;
+        border-bottom: 1px solid white;
+        transition: 0.1s;
     }
 
     hr {
@@ -137,8 +139,7 @@
 
 /*        BEGIN MOBILE FULL-WIDTH NAV*/
 
-
-    #menu-wrapper #hamburger-menu {
+    #hamburger-menu {
         position: fixed;
         width: 25px;
         height: 20px;
@@ -146,9 +147,11 @@
         right: 15px;
         top: 15px;
         z-index: 999999;
+        cursor: pointer;
+        display: block;
     }
 
-        #menu-wrapper #hamburger-menu span {
+        #hamburger-menu span {
             opacity: 1;
             left: 0;
             display: block;
@@ -162,23 +165,23 @@
             transition: .4s ease-in-out;
         }
 
-        #menu-wrapper #hamburger-menu span:nth-child(1) {
+        #hamburger-menu span:nth-child(1) {
             top: 0;
         }
-        #menu-wrapper #hamburger-menu span:nth-child(2) {
+        #hamburger-menu span:nth-child(2) {
             top: 9px;
         }
-        #menu-wrapper #hamburger-menu span:nth-child(3) {
+        #hamburger-menu span:nth-child(3) {
             top: 18px;
         }
-        #menu-wrapper #hamburger-menu.open span:nth-child(1) {
+        #hamburger-menu.open span:nth-child(1) {
             transform: translateY(9px) rotate(135deg);
         }
-        #menu-wrapper #hamburger-menu.open span:nth-child(2) {
+        #hamburger-menu.open span:nth-child(2) {
             opacity: 0;
             transform: translateX(-60px);
         }
-        #menu-wrapper #hamburger-menu.open span:nth-child(3) {
+        #hamburger-menu.open span:nth-child(3) {
             transform: translateY(-9px) rotate(-135deg);
         }
 
@@ -264,6 +267,7 @@
         margin: 0 auto;
         border: 2px solid #156756;
         border-radius: 8px;
+        font-family: 'Montserrat', sans-serif;
     }
 
     .button:hover {
@@ -409,7 +413,7 @@
     }
 
     #contact-section {
-        background: #125245;
+        background: #9DD4C9;
     }
 
     .why-gather-bg {
@@ -726,8 +730,12 @@
         width: 100%;
     }
 
-    #menu-wrapper #hamburger-menu {
+    #hamburger-menu {
         display: none;
+    }
+
+    #contact-section {
+        padding: 80px 0;
     }
 
 }

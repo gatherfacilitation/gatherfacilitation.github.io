@@ -431,15 +431,17 @@
 
 
     <div class="contact1">
-        <div class="container-contact1">
-            <div class="contact1-pic js-tilt" data-tilt>
-                <img src="IMG/mail-message.png" alt="E-mail flying">
-            </div>
 
-            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/meqrqanp" method="post" class="contact1-form validate-form">
-                <span class="contact1-form-title">
+        
+
+        <div class="container-contact1">
+
+            <span class="contact1-form-title">
                     Get in touch or schedule a free consulation!
                 </span>
+
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/meqrqanp" method="post" class="contact1-form validate-form">
+                
 
   <fieldset id="fs-frm-inputs">
     <label for="full-name">Full Name</label>
@@ -453,6 +455,42 @@
             <div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
                         <input class="input1" type="email" name="_replyto" id="email-address" placeholder="Email" required="">
                     <span class="shadow-input1"></span>
+                </div>
+
+    <label for="interested-in">Interested in?</label>
+
+            <div class="wrap-checkmarks">
+
+                        <div class="wrap-input1 validate-input">
+                            <input type="checkbox" class="checkmark" id="check-counseling">
+                            <label>1:1 Counseling</label>
+                        </div>
+
+                        <div class="wrap-input1 validate-input">
+                            <input type="checkbox" class="checkmark" id="check-conflict-transformation">
+                            <label>Conflict Transformation</label>
+                        </div>
+                        
+                        <div class="wrap-input1 validate-input">
+                            <input type="checkbox" class="checkmark" id="check-group-facilitation">
+                            <label>Group Facilitation</label>
+                        </div>
+                        
+                        <div class="wrap-input1 validate-input">
+                            <input type="checkbox" class="checkmark" id="check-events">
+                            <label>Events</label>
+                        </div>
+
+                       <div class="wrap-input1 validate-input">
+                            <input type="checkbox" class="checkmark" id="check-other">
+                            <label>Other</label>
+                        </div>
+
+                        <div class="wrap-input1 validate-input">
+                        
+                            <input class="input1" type="text" name="interested-in-other" id="other">
+                        </div> 
+
                 </div>
 
     <label for="message">Message</label>

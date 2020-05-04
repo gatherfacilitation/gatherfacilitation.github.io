@@ -187,6 +187,14 @@ textarea.input1 + .shadow-input1 {
   }
 }
 
+#required-blurb {
+  color: grey;
+  float:right;
+  margin: 20px;
+  font-weight: 300;
+
+}
+
 /*---------------------------------------------*/
 .container-contact1-form-btn {
   display: -webkit-box;

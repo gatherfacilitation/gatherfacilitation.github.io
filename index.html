@@ -444,13 +444,13 @@
                 
 
   <fieldset id="fs-frm-inputs">
-    <label for="full-name">Full Name</label>
+    <label for="full-name">Full Name *</label>
     <div class="wrap-input1 validate-input" data-validate = "Name is required">
             <input type="text" class="input1" name="name" id="full-name" placeholder="Name" required="">
                     <span class="shadow-input1"></span>
                 </div>
 
-    <label for="email-address">Email Address</label>
+    <label for="email-address">Email Address *</label>
 
             <div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
                         <input class="input1" type="email" name="_replyto" id="email-address" placeholder="Email" required="">
@@ -493,11 +493,13 @@
 
                 </div>
 
-    <label for="message">Message</label>
+    <label for="message">Message *</label>
     
 
     <div class="wrap-input1 validate-input" data-validate = "Subject is required">
                     <textarea class="input1" rows="5" name="message" id="message" placeholder="Subject" required=""></textarea>
+                    <span id="required-blurb">(* required)</span>
+
                     <span class="shadow-input1"></span>
                 </div>
     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">

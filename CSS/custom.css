@@ -55,9 +55,9 @@
     }
 
     a:hover {
-        color: white;
         border-bottom: 1px solid white;
         transition: 0.1s;
+        color: black;
     }
 
     hr {
@@ -92,6 +92,9 @@
 		color: white;
         text-decoration: none;
 	}
+    .nav-link:hover {
+        color: white;
+    }
 
     .dropdown-item {
         font-family: 'Arapey', serif;
@@ -254,6 +257,48 @@
 /*        END MOBILE FULL WIDTH NAV
 */
 
+    .alert {
+        position: fixed;
+        bottom: 0;
+        z-index: 999;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        text-align: left;
+        color: white;
+        background: #125245;
+        border: 0;
+        line-height: 1.5;
+    }
+
+    .alert-CTA {
+        position: absolute;
+        border: 2px solid white;
+        border-radius: 8px;
+        color: white;
+        padding: 5px;
+        display: inline-block;
+        width: 150px;
+        right: 15vw;
+        margin-right: -50px;
+        bottom:15px;
+        text-align: center;
+    }
+
+    .alert-CTA:hover {
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+    }
+
+    #snackbar-event-title {
+        font-weight: bolder;
+    }
+
+    .close:hover {
+        color: white;
+    }
+
     .button {
         line-height: 2.3;
         font-size: 1.2rem;
@@ -300,7 +345,7 @@
         height: 600px;
         margin-bottom: 0;
         position: relative;
-        z-index: 999;
+        z-index: 1;
 	}
 
 	#overview .lead {
@@ -364,17 +409,6 @@
         color: white;
         z-index: 9;
     }
-
-/*    #approach {
-        background: url('../IMG/blindfold3.jpg');
-        background-size: cover;
-        background-position: left top;
-        width: 100%;
-        background-repeat: no-repeat;
-        height: 100%;
-        background-attachment: scroll;
-        background-attachment: fixed;
-    }*/
 
     .approach-credit {
         position: fixed;
@@ -636,6 +670,17 @@
 
 #overview {height: 500px;}
 
+.alert-CTA {
+    position: static;
+    border:0;
+    padding: 0;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    padding-bottom: 0px;
+    width: 100px;
+    border-radius: 0;
+}
+
 }
 
 @media screen and (min-width : 767px)  {
@@ -795,8 +840,8 @@
     }
 
     #approach-wrapper2 {
-        background-size: 230vh;
-        background-position: -100px top;
+        background-size: 250%;
+        background-position: 00px top;
     }
 
     .offerings {

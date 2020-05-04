@@ -39,9 +39,30 @@ button:hover {
 	cursor: pointer;
 }
 
-
-
-
+.contact-form-symbol {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.contact-form-symbol img {
+  max-width: 49px;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ Contact 1 ]*/
@@ -83,7 +104,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 
-  padding: 50px;
+  padding: 35px 50px;
 }
 
 /*------------------------------------------------------------------
@@ -261,17 +282,15 @@ textarea.input1 + .shadow-input1 {
 
 /*------------------------------------------------------------------
 [ Responsive ]*/
+@media screen and (max-width: 992px) {
+  .contact-form-symbol {
+    display: none;
+  }
+}
 
-  
-
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container-contact1 {
     padding: 50px;
-  }
-
-  .contact1-pic {
-    display: none;
   }
 
   .contact1-form {
@@ -279,7 +298,7 @@ textarea.input1 + .shadow-input1 {
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .container-contact1 {
     padding: 30px 25px;
   }

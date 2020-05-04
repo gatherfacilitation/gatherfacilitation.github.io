@@ -23,11 +23,6 @@
      <!-- Custom Styles -->
     <link rel="stylesheet" href="CSS/custom.css">
 <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="CSS/contact.css">
 <!--===============================================================================================-->
 
@@ -84,19 +79,19 @@
 
             <ul>
 
-                    <li><a href="#approach" onclick="closeNav()" >Approach</a></li>
+                    <li><a href="#approach" onclick="toggleNav()" >Approach</a></li>
 
-                    <li><a href="#offerings" onclick="closeNav()" >Offerings</a></li>
+                    <li><a href="#offerings" onclick="toggleNav()" >Offerings</a></li>
 
-                    <li><a href="#about" onclick="closeNav()" >Bio</a></li>
+                    <li><a href="#about" onclick="toggleNav()" >Bio</a></li>
 
-                    <li><a href="#events" onclick="closeNav()" >Events</a></li>
+                    <li><a href="#events" onclick="toggleNav()" >Events</a></li>
 
-                    <li><a href="#background" onclick="closeNav()" >Background</a></li>
+                    <li><a href="#background" onclick="toggleNav()" >Background</a></li>
 
-                    <li><a href="#partners" onclick="closeNav()" >Partners</a></li>
+                    <li><a href="#partners" onclick="toggleNav()" >Partners</a></li>
 
-                    <li><a href="#contact" onclick="closeNav()" >Contact</a></li>
+                    <li><a href="#contact" onclick="toggleNav()" >Contact</a></li>
             </ul>
           </div>
         </div>
@@ -109,19 +104,6 @@
             <p class="lead">Facilitation for personal healing journeys, conflict transformation, group processes & creative community building.</p>
           </div>
         </div>
-
-<!-- <div id="approach-wrapper">
-    <div class="scroll-fix" id="approach">
-        <a class="anchor" name="approach"></a>
-
-        <div class="container">
-            <h1>Approach</h1>
-            <p>My approach is informed by my studies in Hakomi somatic psychotherapy &amp; Process Work facilitation. I have trained in conflict mediation, social justice frameworks &amp; anti-oppression modalities. To my work, I bring five years of professional experience in operations &amp; people management.</p><br/><p>My facilitation style is always infused with humor, creativity & play, incorporating elements of visual art, movement, improv and storytelling.</p>
-          </div>
-
-          <p class="approach-credit">Photo by <a href="http://www.juliamaryanska.com/" target="_blank">Julia Maryanska</a></p>
-    </div>
-</div> -->
 
 <a class="anchor" name="approach"></a>
 
@@ -423,18 +405,14 @@
 
     <a class="anchor" name="contact"></a>
     <div class="container">
-<!--         <a name="form185555046" id="formAnchor185555046"></a> -->
-
-<!-- modify this form HTML and place wherever you want your form -->
-
-
-
 
     <div class="contact1">
 
-        
-
         <div class="container-contact1">
+
+            <span class="contact-form-symbol">
+                <img src="IMG/email-symbol.png" alt="E-mail symbol">
+            </span>
 
             <span class="contact1-form-title">
                     Get in touch or schedule a free consulation!
@@ -450,10 +428,10 @@
                     <span class="shadow-input1"></span>
                 </div>
 
-    <label for="email-address">Email Address *</label>
+    <label for="email-address">E-mail Address *</label>
 
             <div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                        <input class="input1" type="email" name="_replyto" id="email-address" placeholder="Email" required="">
+                        <input class="input1" type="email" name="_replyto" id="email-address" placeholder="E-mail" required="">
                     <span class="shadow-input1"></span>
                 </div>
 
@@ -462,28 +440,38 @@
             <div class="wrap-checkmarks">
 
                         <div class="wrap-input1 validate-input">
-                            <input type="checkbox" class="checkmark" id="check-counseling">
-                            <label>1:1 Counseling</label>
+                             <label>
+                                <input type="checkbox" class="checkmark" name="check-counseling" value="yes"> 
+                                1:1 Counseling
+                             </label>
                         </div>
 
                         <div class="wrap-input1 validate-input">
-                            <input type="checkbox" class="checkmark" id="check-conflict-transformation">
-                            <label>Conflict Transformation</label>
+                            <label>
+                                <input type="checkbox" class="checkmark" name="check-conflict-transformation" value="yes"> 
+                                Conflict Transformation
+                             </label>
                         </div>
                         
                         <div class="wrap-input1 validate-input">
-                            <input type="checkbox" class="checkmark" id="check-group-facilitation">
-                            <label>Group Facilitation</label>
+                            <label>
+                                <input type="checkbox" class="checkmark" name="check-group-facilitation" value="yes"> 
+                                Group Facilitation
+                             </label>
                         </div>
                         
                         <div class="wrap-input1 validate-input">
-                            <input type="checkbox" class="checkmark" id="check-events">
-                            <label>Events</label>
+                            <label>
+                                <input type="checkbox" class="checkmark" name="check-events" value="yes"> 
+                                Events
+                             </label>
                         </div>
 
                        <div class="wrap-input1 validate-input">
-                            <input type="checkbox" class="checkmark" id="check-other">
-                            <label>Other</label>
+                            <label>
+                                <input type="checkbox" class="checkmark" name="check-other" value="yes"> 
+                                Other
+                             </label>
                         </div>
 
                         <div class="wrap-input1 validate-input">
@@ -497,7 +485,7 @@
     
 
     <div class="wrap-input1 validate-input" data-validate = "Subject is required">
-                    <textarea class="input1" rows="5" name="message" id="message" placeholder="Subject" required=""></textarea>
+                    <textarea class="input1" rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
                     <span id="required-blurb">(* required)</span>
 
                     <span class="shadow-input1"></span>
@@ -549,20 +537,11 @@
 
 </div>
 
-    <!--  JS defer jQuery & formsite -->
-<!--     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
-
 <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
     <script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-    <script src="vendor/tilt/tilt.jquery.min.js"></script>
-    <script >
-        $('.js-tilt').tilt({
-            scale: 1.1
-        })
-    </script>
 
 <script>
 
@@ -583,6 +562,7 @@
       document.getElementById("mobileNav").style.width = "0%";
         document.getElementsByClassName("overlay")[0].classList.remove('blurred');
         document.getElementsByTagName("BODY")[0].style.overflow = "initial";
+        document.getElementById("hamburger-menu").classList.remove('open');
     }
 
     function toggleNav() {

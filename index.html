@@ -725,7 +725,7 @@ getScript('https://code.jquery.com/jquery-3.4.1.slim.min.js',function() {
               // Max number of pixels until block disappear
               var imgTop = winH + parentH;
               // Porcentage between start showing until disappearing
-              var imgPercent = (-100 + ((imgBottom / imgTop) * 100)) + (50 - (speed * 50));
+              var imgPercent = (50 + ((imgBottom / imgTop) * 100)) + (50 - (speed * 50));
             }
             img.css({
               top: 0 + '%',

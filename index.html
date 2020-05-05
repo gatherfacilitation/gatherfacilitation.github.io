@@ -114,7 +114,7 @@
 <div id="main-content">
 
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <em id="snackbar-event-title">Terra Incognita</em> — Exploring Creativity & Conflict | Oct. 30 - Nov. 1, 2020<br/>An Embodied Retreat For Your Creative Soul — Join us for a special journey into the unknown! <a href="#current-event" class="alert-CTA">Apply Now</a>
+      <em id="snackbar-event-title">Terra Incognita</em> — Exploring Creativity & Conflict | Oct. 30 - Nov. 1, 2020<br/>An Embodied Retreat For Your Creative Soul — Join us for a special journey into the unknown! <a href="#current-event" class="alert-CTA" onclick="closeNav()">Apply Now</a>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -127,7 +127,7 @@
                 <div class="container">
 
                 <a class="anchor" name="approach"></a>
-                
+
                     <h1>Approach</h1>
                     <p>My approach is informed by my studies in Hakomi somatic psychotherapy &amp; Process Work facilitation. I have trained in conflict mediation, social justice frameworks &amp; anti-oppression modalities. To my work, I bring five years of professional experience in operations &amp; people management.</p><br/><p>My facilitation style is always infused with humor, creativity & play, incorporating elements of visual art, movement, improv and storytelling.</p>
                 </div>
@@ -152,12 +152,11 @@
     </div>
 </section>
 
+<a class="anchor" name="offerings"></a>
+
 <section>
 
     <div class="offerings-container">
-        <a class="anchor" name="offerings"></a>
-
-        
 
         <h1 id="offeringsTitle">Offerings</h1>
         <div class="row">
@@ -377,12 +376,8 @@
             <li>Restorative Justice Training | <a class="ed-links" href="http://ousd.org">Oakland Unified School District</a> | Oakland, CA | 2017</li><li>Jewish Service Corps | <a class="ed-links" href="http:avodah.net">Avodah</a> | New Orleans | 2011</li>
         </ul>
 
-
-
-<a id="linked-in" href="https://www.linkedin.com/in/elenapinsky/" target="_blank">See full background on <strong>Linked-in >></strong></a>
-        </ul>
-        </p>
-
+        <a id="linked-in" href="https://www.linkedin.com/in/elenapinsky/" target="_blank">See full background on <strong>Linked-in >></strong></a>
+        
         <br/>
         <hr>
 
@@ -552,8 +547,6 @@
 <script>
 
 
-
-
      // MOBILE FULL WIDTH NAV
 
     var navStatus = 'closed';
@@ -567,9 +560,21 @@
     function closeNav() {
       document.getElementById("mobileNav").style.width = "0%";
         document.getElementsByClassName("overlay")[0].classList.remove('blurred');
-        document.getElementsByTagName("BODY")[0].style.overflow = "initial";
+        document.getElementsByTagName("body")[0].style.overflow = "initial";
         document.getElementById("hamburger-menu").classList.remove('open');
+
+        setTimeout( function () {
+            hideNav();
+        }, 2000);
+            
+        }
+
+    function hideNav () {
+        document.getElementsByTagName("nav")[0].classList.remove('nav-down');
+        document.getElementsByTagName("nav")[0].classList.add('nav-up');
+        document.getElementById("hamburger-menu").classList.add('d-none');
     }
+    
 
     function toggleNav() {
         if (navStatus == 'open') {
@@ -607,6 +612,7 @@
 
             getScript('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js',function() {});
 
+
             // Animated hamburger button
 
             $(function() {
@@ -629,10 +635,11 @@
                 return false;
             }
 
+            var scrolledY = $(window).scrollTop();
+
             // fixed position mobile fix
             $(window).scroll(function() {
-
-                var scrolledY = $(window).scrollTop();
+                
 
                     { if (isTouchSupported())
                         $('#approach-wrapper2').css('background-position-y', (0 + (scrolledY / 1)) + 'px');

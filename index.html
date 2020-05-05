@@ -22,9 +22,7 @@
 
      <!-- Custom Styles -->
     <link rel="stylesheet" href="CSS/custom.css">
-<!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="CSS/contact.css">
-<!--===============================================================================================-->
 
   </head>
   <body>
@@ -702,6 +700,10 @@
                     lastScrollTop = st;
                 }
 
+}
+
+// INDEPENDENT OF JQUERY WAIT
+
 
         //Parallax script
         $('.img-parallax').each(function(){
@@ -727,7 +729,7 @@
               // Max number of pixels until block disappear
               var imgTop = winH + parentH;
               // Porcentage between start showing until disappearing
-              var imgPercent = (50 + ((imgBottom / imgTop) * 100)) + (50 - (speed * 50));
+              var imgPercent = (-60 + ((imgBottom / imgTop) * 100)) + (50 - (speed * 50));
             }
             img.css({
               top: 0 + '%',
@@ -747,14 +749,7 @@
 
         document.getElementById("current-year").innerHTML = new Date().getFullYear();
 
-                });
-            })();
 </script>
-
-<!-- <script src="https://fs8.formsite.com/include/form/embedManager.js?185555046"></script>
- -->
-<!-- Contact Form -->`
-<!-- <script defer>EmbedManager.embed({    key: "https://fs8.formsite.com/res/showFormEmbed?EParam=bJeI6E3QIKB_a3G9Zzepx6_3bsAv-gQi&185555046", width: "initial"});</script> -->
 
 
     <!-- Optional JavaScript -->

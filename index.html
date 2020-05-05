@@ -705,6 +705,8 @@
 
         //Parallax script
         $('.img-parallax').each(function(){
+
+        var scrolledY = $(window).scrollTop();
           var img = $(this);
           var imgParent = $(this).parent();
           function parallaxImg () {

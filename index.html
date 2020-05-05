@@ -637,7 +637,7 @@
                 
 
                     { if (isTouchSupported())
-                        $('#approach-wrapper2').css('background-position-y', (0 + (scrolledY / 1)) + 'px');
+                        $('#approach-wrapper2').css('background-position', '-115px ' + (100 + (scrolledY / 1.2)) + 'px');
                     }
 
                 // console.log(scrolledY);
@@ -702,44 +702,45 @@
 
 
         //Parallax script
-        $('.img-parallax').each(function(){
+        // $('.img-parallax').each(function(){
 
-        var scrolledY = $(window).scrollTop();
-          var img = $(this);
-          var imgParent = $(this).parent();
-          function parallaxImg () {
-            var speed = img.data('speed');
-            var imgY = imgParent.offset().top;
-            var winY = $(this).scrollTop();
-            var winH = $(this).height();
-            var parentH = imgParent.innerHeight();
+        // var scrolledY = $(window).scrollTop();
+        //   var img = $(this);
+        //   var imgParent = $(this).parent();
+        //   function parallaxImg () {
+        //     var speed = img.data('speed');
+        //     var imgY = imgParent.offset().top;
+        //     var winY = $(this).scrollTop();
+        //     var winH = $(this).height();
+        //     var parentH = imgParent.innerHeight();
 
 
-            // The next pixel to show on screen      
-            var winBottom = winY + winH;
+        //     // The next pixel to show on screen      
+        //     var winBottom = winY + winH;
 
-            // If block is shown on screen
-            if (winBottom > imgY && winY < imgY + parentH) {
-              // Number of pixels shown after block appear
-              var imgBottom = ((winBottom - imgY) * speed);
-              // Max number of pixels until block disappear
-              var imgTop = winH + parentH;
-              // Porcentage between start showing until disappearing
-              var imgPercent = (0 + ((imgBottom / imgTop) * 100)) + (speed * 50);
-            }
-            img.css({
-              top: 0 + '%',
-              transform: 'translate(0%, ' + imgPercent + '%)'
-            });
-          }
-          $(document).on({
-            scroll: function () {
-              parallaxImg();
-            }, ready: function () {
-              parallaxImg();
-            }
-          });
-        });
+        //     // If block is shown on screen
+        //     if (winBottom > imgY && winY < imgY + parentH) {
+        //       // Number of pixels shown after block appear
+        //       var imgBottom = ((winBottom - imgY) * speed);
+        //       // Max number of pixels until block disappear
+        //       var imgTop = winH + parentH;
+        //       // Porcentage between start showing until disappearing
+        //       var imgPercent = (0 + ((imgBottom / imgTop) * 100)) + (speed * 50);
+        //     }
+        //     img.css({
+        //       top: 0 + '%',
+        //       transform: 'translate(0%, ' + imgPercent + '%)'
+        //     });
+        //     console.log(imgPercent);
+        //   }
+        //   $(document).on({
+        //     scroll: function () {
+        //       parallaxImg();
+        //     }, ready: function () {
+        //       parallaxImg();
+        //     }
+        //   });
+        // });
 
         // Get current year for copyright
 

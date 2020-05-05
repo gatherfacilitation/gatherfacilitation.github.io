@@ -551,17 +551,25 @@
 
     var navStatus = 'closed';
 
+    // Animated hamburger button
+
+    function toggleHamburger() {
+
+        $("#hamburger-menu").toggleClass("open");
+    }
+
     function openNav() {
       document.getElementById("mobileNav").style.width = "100%";
       document.getElementsByClassName("overlay")[0].classList.add('blurred');
       document.getElementsByTagName("BODY")[0].style.overflow = "hidden";
+      toggleHamburger();
     }
 
     function closeNav() {
       document.getElementById("mobileNav").style.width = "0%";
         document.getElementsByClassName("overlay")[0].classList.remove('blurred');
         document.getElementsByTagName("body")[0].style.overflow = "initial";
-
+        toggleHamburger();
         setTimeout( function () {
             hideNav();
         }, 2000);
@@ -610,16 +618,6 @@
 
 
             getScript('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js',function() {});
-
-
-            // Animated hamburger button
-
-            $(function() {
-              $("#hamburger-menu").click(function(event) {
-                event.stopPropagation();
-                $("#hamburger-menu").toggleClass("open");
-              });
-            }); 
 
 
             // Check if touch device

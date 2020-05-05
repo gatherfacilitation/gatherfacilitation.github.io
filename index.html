@@ -544,6 +544,9 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
+
+
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <script>
@@ -581,7 +584,7 @@
     function hideNav () {
         document.getElementsByTagName("nav")[0].classList.remove('nav-down');
         document.getElementsByTagName("nav")[0].classList.add('nav-up');
-        document.getElementById("hamburger-menu")[0].classList.add('d-none');
+        document.getElementById("hamburger-menu").classList.add('d-none');
     }
     
 
@@ -598,111 +601,86 @@
         }
     }
 
-    (function() {
-      function getScript(url,success){
-        var script=document.createElement('script');
-        script.src=url;
-        var head=document.getElementsByTagName('head')[0],
-            done=false;
-        script.onload=script.onreadystatechange = function(){
-          if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
-            done=true;
-            success();
-            script.onload = script.onreadystatechange = null;
-            head.removeChild(script);
-          }
-        };
-        head.appendChild(script);
-      }
+    // Check if touch device
 
-    // EXECUTE AFTER JQUERY LOADS
-        // getScript('https://code.jquery.com/jquery-3.4.1.slim.min.js',function() {
+    function isTouchSupported() {
+        var msTouchEnabled = window.navigator.msMaxTouchPoints;
+        var generalTouchEnabled = "ontouchstart" in document.createElement("div");
+     
+        if (msTouchEnabled || generalTouchEnabled) {
+            return true;
+        }
+        return false;
+    }
 
+    var scrolledY = $(window).scrollTop();
 
-        //     getScript('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js',function() {});
+    // fixed position mobile fix
+    $(window).scroll(function() {
+        
+        { if (isTouchSupported())
+            $('#approach-wrapper2').css('background-position', (-15 + (scrolledY / 1.2)) + 'px');
+        }
 
+        // console.log(scrolledY);
 
-            // Check if touch device
+        // Hide Approach photo credit when scrolled down
 
-            function isTouchSupported() {
-                var msTouchEnabled = window.navigator.msMaxTouchPoints;
-                var generalTouchEnabled = "ontouchstart" in document.createElement("div");
-             
-                if (msTouchEnabled || generalTouchEnabled) {
-                    return true;
-                }
-                return false;
+        if (scrolledY > 1500) {
+            $('.approach-credit').css('display', 'none');
+            $('#approach-wrapper2').css('display', 'none');
+        }
+
+        else {
+            $('.approach-credit').css('display', 'block');
+            $('#approach-wrapper2').css('display', 'block');
+        }
+    });
+
+        // HIDE NAV WHILE SCROLLING DOWN
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('nav').outerHeight();
+
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
             }
+        }, 250);
 
-            var scrolledY = $(window).scrollTop();
-
-            // fixed position mobile fix
-            $(window).scroll(function() {
-                
-
-                    { if (isTouchSupported())
-                        $('#approach-wrapper2').css('background-position', '-115px ' + (100 + (scrolledY / 1.2)) + 'px');
-                    }
-
-                // console.log(scrolledY);
-
-                // Hide Approach photo credit when scrolled down
-
-                if (scrolledY > 1500) {
-                    $('.approach-credit').css('display', 'none');
-                    $('#approach-wrapper2').css('display', 'none');
-                }
-
-                else {
-                    $('.approach-credit').css('display', 'block');
-                    $('#approach-wrapper2').css('display', 'block');
-                }
-            });
-
-                // HIDE NAV WHILE SCROLLING DOWN
-                var didScroll;
-                var lastScrollTop = 0;
-                var delta = 5;
-                var navbarHeight = $('nav').outerHeight();
-
-                $(window).scroll(function(event){
-                    didScroll = true;
-                });
-
-                setInterval(function() {
-                    if (didScroll) {
-                        hasScrolled();
-                        didScroll = false;
-                    }
-                }, 250);
-
-                function hasScrolled() {
-                    var st = $(this).scrollTop();
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+            
+            // Make sure they scroll more than delta
+            if(Math.abs(lastScrollTop - st) <= delta)
+                return;
+            
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > lastScrollTop && st > navbarHeight){
+                // Scroll Down
+                $('nav').removeClass('nav-down').addClass('nav-up');
+                $('#hamburger-menu').addClass('d-none');
                     
-                    // Make sure they scroll more than delta
-                    if(Math.abs(lastScrollTop - st) <= delta)
-                        return;
+            } else {
+                // Scroll Up
+                if(st + $(window).height() < $(document).height()) {
+                    $('nav').removeClass('nav-up').addClass('nav-down');
                     
-                    // If they scrolled down and are past the navbar, add class .nav-up.
-                    // This is necessary so you never see what is "behind" the navbar.
-                    if (st > lastScrollTop && st > navbarHeight){
-                        // Scroll Down
-                        $('nav').removeClass('nav-down').addClass('nav-up');
-                        $('#hamburger-menu').addClass('d-none');
-                            
-                    } else {
-                        // Scroll Up
-                        if(st + $(window).height() < $(document).height()) {
-                            $('nav').removeClass('nav-up').addClass('nav-down');
-                            
-                            if ($(window).width() < 992) {
-                                $('#hamburger-menu').removeClass('d-none');
-                            }
-                        }
+                    if ($(window).width() < 992) {
+                        $('#hamburger-menu').removeClass('d-none');
                     }
-                    
-                    lastScrollTop = st;
                 }
+            }
+            
+            lastScrollTop = st;
+        }
 
 
         //Parallax script
@@ -749,8 +727,6 @@
         // Get current year for copyright
 
         document.getElementById("current-year").innerHTML = new Date().getFullYear();
-
-                });
 </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

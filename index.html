@@ -561,7 +561,6 @@
       document.getElementById("mobileNav").style.width = "0%";
         document.getElementsByClassName("overlay")[0].classList.remove('blurred');
         document.getElementsByTagName("body")[0].style.overflow = "initial";
-        document.getElementById("hamburger-menu").classList.remove('open');
 
         setTimeout( function () {
             hideNav();
@@ -572,7 +571,7 @@
     function hideNav () {
         document.getElementsByTagName("nav")[0].classList.remove('nav-down');
         document.getElementsByTagName("nav")[0].classList.add('nav-up');
-        document.getElementById("hamburger-menu").classList.add('d-none');
+        document.getElementById("hamburger-menu")[0].classList.add('d-none');
     }
     
 

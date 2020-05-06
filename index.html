@@ -620,9 +620,9 @@
 
         var scrolledY = $(window).scrollTop();
         
-        { if (isTouchSupported()) 
-                $('#approach-wrapper2').css('background-position', (-100 + (scrolledY / 1.2)) + 'px');
-                // console.log(scrolledY);
+        { if ($(window).width() < 992) 
+                $('#approach-wrapper2').css('background-position', '00' - scrolledY/4 + 'px');
+                console.log(scrolledY);
             
         }
 

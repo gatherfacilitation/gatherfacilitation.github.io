@@ -285,7 +285,11 @@
         text-align: center;
     }
 
-    .alert-CTA:hover {
+    .alert-CTA button {
+        color: white;
+    }
+
+    .alert-CTA button:hover {
         text-decoration: none;
         color: white;
         font-weight: bolder;
@@ -313,6 +317,10 @@
         border: 2px solid #156756;
         border-radius: 8px;
         font-family: 'Montserrat', sans-serif;
+    }
+
+    button {
+        color: white;
     }
 
     .button:hover {
@@ -677,7 +685,7 @@
     text-decoration: none;
     border-bottom: 2px solid white;
     padding-bottom: 0px;
-    width: 100px;
+    width: 110px;
     border-radius: 0;
 }
 

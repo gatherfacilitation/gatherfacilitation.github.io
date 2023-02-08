@@ -501,6 +501,18 @@
 
 	}
 
+    .testimonials-copy p {
+        padding:0 20px 0px 20px;
+        line-height: 1.5;
+    }
+
+	.testimonials-copy {
+		background: rgba(49, 162, 139, 0.92);
+		padding: 10px;
+		margin: 0 0 20px 0;
+        border-radius: 8px;
+	}
+
     .offerings-copy p {
         padding:0 20px 20px 20px;
         font-size:1.1rem;
